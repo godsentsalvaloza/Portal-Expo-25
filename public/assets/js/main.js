@@ -113,5 +113,157 @@
 				});
 
 			});
+// Menu.
+var $menu = $('#menu');
 
+$menu.wrapInner('<div class="inner"></div>');
+
+$menu._locked = false;
+
+$menu._lock = function() {
+
+	if ($menu._locked)
+		return false;
+
+	$menu._locked = true;
+
+	window.setTimeout(function() {
+		$menu._locked = false;
+	}, 350);
+
+	return true;
+
+};
+
+$menu._show = function() {
+
+	if ($menu._lock())
+		$body.addClass('is-menu-visible');
+
+};
+
+$menu._hide = function() {
+
+	if ($menu._lock())
+		$body.removeClass('is-menu-visible');
+
+};
+
+$menu._toggle = function() {
+
+	if ($menu._lock())
+		$body.toggleClass('is-menu-visible');
+
+};
+
+$menu
+	.appendTo($body)
+	.on('click', function(event) {
+		event.stopPropagation();
+	})
+	.on('click', 'a', function(event) {
+
+		var href = $(this).attr('href');
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		// Hide.
+			$menu._hide();
+
+		// Redirect.
+			if (href == '#menu')
+				return;
+
+			window.setTimeout(function() {
+				window.location.href = href;
+			}, 350);
+
+	})
+	.append('<a class="close" href="#menu">Close</a>');
+$body
+	.on('click', 'a[href="#menu"]', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$menu._toggle();
+	})
+	.on('click', function() {
+		$menu._hide();
+	})
+	.on('keydown', function(e) {
+		if (e.keyCode == 27) $menu._hide();
+	});
+
+$menu.on('click', function(e) {
+	e.stopPropagation();
+});
 })(jQuery);
+
+    var closeButton = document.querySelector("#menu a.close")
+  
+    if (closeButton) {
+      // Remove any text nodes directly inside the close button
+      Array.from(closeButton.childNodes).forEach((node) => {
+        if (node.nodeType === 3) {
+          // Text node
+          closeButton.removeChild(node)
+        }
+      })
+  
+      // Add an empty span that can be targeted by screen readers if needed
+      var span = document.createElement("span")
+      span.className = "sr-only"
+      span.textContent = "Close menu"
+      span.style.position = "absolute"
+      span.style.width = "1px"
+      span.style.height = "1px"
+      span.style.padding = "0"
+      span.style.margin = "-1px"
+      span.style.overflow = "hidden"
+      span.style.clip = "rect(0, 0, 0, 0)"
+      span.style.whiteSpace = "nowrap"
+      span.style.border = "0"
+      closeButton.appendChild(span)
+    }
+  // Menu functionality
+;(($) => {
+    var $body = $("body"),
+      $menu = $("#menu"),
+      $menuToggle = $(".menuToggle"),
+      $menuClose = $menu.find(".close")
+  
+    // Menu toggle
+    $menuToggle.on("click", (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      $body.toggleClass("is-menu-visible")
+    })
+  
+    // Close menu when clicking on the close button
+    $menuClose.on("click", (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      $body.removeClass("is-menu-visible")
+    })
+  
+    // Close menu when clicking outside
+    $body.on("click", (e) => {
+      if ($body.hasClass("is-menu-visible") && !$(e.target).closest("#menu").length) {
+        e.preventDefault()
+        e.stopPropagation()
+        $body.removeClass("is-menu-visible")
+      }
+    })
+  
+    // Prevent clicks inside menu from closing it
+    $menu.on("click", (e) => {
+      e.stopPropagation()
+    })
+  
+    // Close menu with escape key
+    $(document).on("keydown", (e) => {
+      if (e.keyCode == 27 && $body.hasClass("is-menu-visible")) {
+        $body.removeClass("is-menu-visible")
+      }
+    })
+  })(jQuery);
