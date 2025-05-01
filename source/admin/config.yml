@@ -12,8 +12,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{identifier}}"
     fields:
-      - { label: "Tags (post)", name: "tags", widget: "string" }
       - { label: "Art Name", name: "product_name", widget: "string" }
+      - { label: "Tags (post)", name: "tags", widget: "string" }
       - { label: "Identifier", name: "identifier", widget: "string" }
       - { label: "Section", name: "product_section", widget: "string" }
       - {
@@ -27,4 +27,4 @@ collections:
           name: "product_image_alternative_text",
           widget: "string",
         }
-      - { label: "Members", name: "mambers", widget: "markdown" }
+      - { label: "Members", name: "members", widget: "markdown" }
