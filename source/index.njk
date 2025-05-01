@@ -28,6 +28,25 @@
         </h1>
       </div>
     </header>
+    <!-- Menu Toggle -->
+    <a
+      href="#menu"
+      class="menuToggle"
+      style="background-color: black; border-radius: 20%; font-size: 1.2em"
+      ><span>Menu</span></a
+    >
+    <!-- Menu -->
+    <nav id="menu">
+      <a href="#" class="close"><span>Close</span></a>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Ipsum veroeros</a></li>
+        <li><a href="#">Tempus etiam</a></li>
+        <li><a href="#">Consequat dolor</a></li>
+        <li><a href="#">Elements</a></li>
+      </ul>
+    </nav>
 
     <!-- Main -->
     <div id="main">
@@ -56,54 +75,32 @@
       <section id="two">
         <h2>Recent Work</h2>
         <div class="row">
+          {%- for post in collections.post -%}
           <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/01.jpg" class="image fit thumb"
-              ><img src="images/thumbs/01.jpg" alt=""
-            /></a>
-            <h3>Magna sed consequat tempus</h3>
-            Magna sed consequat tempus
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+            <a href="{{ post.data.product_image }}" class="image fit thumb"
+              ><img
+                src="{{ post.data.product_image }}"
+                alt=""
+                style="
+                  aspect-ratio: 1 / 1;
+                  object-fit: cover;
+                  width: 100%;
+                  height: auto;
+                "
+              />
+            </a>
+            <h3 style="font-size: 1.25rem; font-weight: bold">
+              {{ post.data.product_name }}
+            </h3>
+            <p style="font-size: 1rem; font-weight: bold">
+              {{ post.data.product_section }}
+            </p>
+            <p style="font-size: 1rem">
+              {{ post.data.product_description }} <a href="#">Learn More</a>
+            </p>
           </article>
-
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/02.jpg" class="image fit thumb"
-              ><img src="images/thumbs/02.jpg" alt=""
-            /></a>
-            <h3>Ultricies lacinia interdum</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          </article>
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/03.jpg" class="image fit thumb"
-              ><img src="images/thumbs/03.jpg" alt=""
-            /></a>
-            <h3>Tortor metus commodo</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          </article>
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/04.jpg" class="image fit thumb"
-              ><img src="images/thumbs/04.jpg" alt=""
-            /></a>
-            <h3>Quam neque phasellus</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          </article>
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/05.jpg" class="image fit thumb"
-              ><img src="images/thumbs/05.jpg" alt=""
-            /></a>
-            <h3>Nunc enim commodo aliquet</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          </article>
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/06.jpg" class="image fit thumb"
-              ><img src="images/thumbs/06.jpg" alt=""
-            /></a>
-            <h3>Risus ornare lacinia</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          </article>
+          {%- endfor -%}
         </div>
-        <ul class="actions">
-          <li><a href="/products" class="button">Full Portfolio</a></li>
-        </ul>
       </section>
     </div>
 

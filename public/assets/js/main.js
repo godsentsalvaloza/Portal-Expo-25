@@ -4,266 +4,246 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
+  var $window = $(window),
+    $body = $("body"),
+    $header = $("#header"),
+    $footer = $("#footer"),
+    $main = $("#main"),
+    settings = {
+      // Parallax background effect?
+      parallax: true,
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
+      // Parallax factor (lower = more intense, higher = less intense).
+      parallaxFactor: 20,
+    };
 
-			// Parallax background effect?
-				parallax: true,
+  // Breakpoints.
+  breakpoints({
+    xlarge: ["1281px", "1800px"],
+    large: ["981px", "1280px"],
+    medium: ["737px", "980px"],
+    small: ["481px", "736px"],
+    xsmall: [null, "480px"],
+  });
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-		};
+  // Touch?
+  if (browser.mobile) {
+    // Turn on touch mode.
+    $body.addClass("is-touch");
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+    // Height fix (mostly for iOS).
+    window.setTimeout(function () {
+      $window.scrollTop($window.scrollTop() + 1);
+    }, 0);
+  }
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Footer.
+  breakpoints.on("<=medium", function () {
+    $footer.insertAfter($main);
+  });
 
-	// Touch?
-		if (browser.mobile) {
+  breakpoints.on(">medium", function () {
+    $footer.appendTo($header);
+  });
 
-			// Turn on touch mode.
-				$body.addClass('is-touch');
+  // Header.
 
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
+  // Parallax background.
 
-		}
+  // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+  if (browser.name == "ie" || browser.mobile) settings.parallax = false;
 
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+  if (settings.parallax) {
+    breakpoints.on("<=medium", function () {
+      $window.off("scroll.strata_parallax");
+      $header.css("background-position", "");
+    });
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+    breakpoints.on(">medium", function () {
+      $header.css("background-position", "left 0px");
 
-	// Header.
+      $window.on("scroll.strata_parallax", function () {
+        $header.css(
+          "background-position",
+          "left " +
+            -1 * (parseInt($window.scrollTop()) / settings.parallaxFactor) +
+            "px"
+        );
+      });
+    });
 
-		// Parallax background.
+    $window.on("load", function () {
+      $window.triggerHandler("scroll");
+    });
+  }
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
+  // Main Sections: Two.
 
-			if (settings.parallax) {
+  // Lightbox gallery.
+  $window.on("load", function () {
+    $("#two").poptrox({
+      caption: function ($a) {
+        return $a.next("h3").text();
+      },
+      overlayColor: "#2c2c2c",
+      overlayOpacity: 0.85,
+      popupCloserText: "",
+      popupLoaderText: "",
+      selector: ".work-item a.image",
+      usePopupCaption: true,
+      usePopupDefaultStyling: false,
+      usePopupEasyClose: false,
+      usePopupNav: true,
+      windowMargin: breakpoints.active("<=small") ? 0 : 50,
+    });
+  });
+  // Menu.
+  var $menu = $("#menu");
 
-				breakpoints.on('<=medium', function() {
+  $menu.wrapInner('<div class="inner"></div>');
 
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
+  $menu._locked = false;
 
-				});
+  $menu._lock = function () {
+    if ($menu._locked) return false;
 
-				breakpoints.on('>medium', function() {
+    $menu._locked = true;
 
-					$header.css('background-position', 'left 0px');
+    window.setTimeout(function () {
+      $menu._locked = false;
+    }, 350);
 
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
+    return true;
+  };
 
-				});
+  $menu._show = function () {
+    if ($menu._lock()) $body.addClass("is-menu-visible");
+  };
 
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
+  $menu._hide = function () {
+    if ($menu._lock()) $body.removeClass("is-menu-visible");
+  };
 
-			}
+  $menu._toggle = function () {
+    if ($menu._lock()) $body.toggleClass("is-menu-visible");
+  };
 
-	// Main Sections: Two.
+  $menu
+    .appendTo($body)
+    .on("click", function (event) {
+      event.stopPropagation();
+    })
+    .on("click", "a", function (event) {
+      var href = $(this).attr("href");
 
-		// Lightbox gallery.
-			$window.on('load', function() {
+      event.preventDefault();
+      event.stopPropagation();
 
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
+      // Hide.
+      $menu._hide();
 
-			});
-// Menu.
-var $menu = $('#menu');
+      // Redirect.
+      if (href == "#menu") return;
 
-$menu.wrapInner('<div class="inner"></div>');
+      window.setTimeout(function () {
+        window.location.href = href;
+      }, 350);
+    })
+    .append('<a class="close" href="#menu">Close</a>');
+  $body
+    .on("click", 'a[href="#menu"]', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $menu._toggle();
+    })
+    .on("click", function () {
+      $menu._hide();
+    })
+    .on("keydown", function (e) {
+      if (e.keyCode == 27) $menu._hide();
+    });
 
-$menu._locked = false;
-
-$menu._lock = function() {
-
-	if ($menu._locked)
-		return false;
-
-	$menu._locked = true;
-
-	window.setTimeout(function() {
-		$menu._locked = false;
-	}, 350);
-
-	return true;
-
-};
-
-$menu._show = function() {
-
-	if ($menu._lock())
-		$body.addClass('is-menu-visible');
-
-};
-
-$menu._hide = function() {
-
-	if ($menu._lock())
-		$body.removeClass('is-menu-visible');
-
-};
-
-$menu._toggle = function() {
-
-	if ($menu._lock())
-		$body.toggleClass('is-menu-visible');
-
-};
-
-$menu
-	.appendTo($body)
-	.on('click', function(event) {
-		event.stopPropagation();
-	})
-	.on('click', 'a', function(event) {
-
-		var href = $(this).attr('href');
-
-		event.preventDefault();
-		event.stopPropagation();
-
-		// Hide.
-			$menu._hide();
-
-		// Redirect.
-			if (href == '#menu')
-				return;
-
-			window.setTimeout(function() {
-				window.location.href = href;
-			}, 350);
-
-	})
-	.append('<a class="close" href="#menu">Close</a>');
-$body
-	.on('click', 'a[href="#menu"]', function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		$menu._toggle();
-	})
-	.on('click', function() {
-		$menu._hide();
-	})
-	.on('keydown', function(e) {
-		if (e.keyCode == 27) $menu._hide();
-	});
-
-$menu.on('click', function(e) {
-	e.stopPropagation();
-});
+  $menu.on("click", function (e) {
+    e.stopPropagation();
+  });
 })(jQuery);
 
-    var closeButton = document.querySelector("#menu a.close")
-  
-    if (closeButton) {
-      // Remove any text nodes directly inside the close button
-      Array.from(closeButton.childNodes).forEach((node) => {
-        if (node.nodeType === 3) {
-          // Text node
-          closeButton.removeChild(node)
-        }
-      })
-  
-      // Add an empty span that can be targeted by screen readers if needed
-      var span = document.createElement("span")
-      span.className = "sr-only"
-      span.textContent = "Close menu"
-      span.style.position = "absolute"
-      span.style.width = "1px"
-      span.style.height = "1px"
-      span.style.padding = "0"
-      span.style.margin = "-1px"
-      span.style.overflow = "hidden"
-      span.style.clip = "rect(0, 0, 0, 0)"
-      span.style.whiteSpace = "nowrap"
-      span.style.border = "0"
-      closeButton.appendChild(span)
+var closeButton = document.querySelector("#menu a.close");
+
+if (closeButton) {
+  // Remove any text nodes directly inside the close button
+  Array.from(closeButton.childNodes).forEach((node) => {
+    if (node.nodeType === 3) {
+      // Text node
+      closeButton.removeChild(node);
     }
-  // Menu functionality
-;(($) => {
-    var $body = $("body"),
-      $menu = $("#menu"),
-      $menuToggle = $(".menuToggle"),
-      $menuClose = $menu.find(".close")
-  
-    // Menu toggle
-    $menuToggle.on("click", (e) => {
-      e.preventDefault()
-      e.stopPropagation()
-      $body.toggleClass("is-menu-visible")
-    })
-  
-    // Close menu when clicking on the close button
-    $menuClose.on("click", (e) => {
-      e.preventDefault()
-      e.stopPropagation()
-      $body.removeClass("is-menu-visible")
-    })
-  
-    // Close menu when clicking outside
-    $body.on("click", (e) => {
-      if ($body.hasClass("is-menu-visible") && !$(e.target).closest("#menu").length) {
-        e.preventDefault()
-        e.stopPropagation()
-        $body.removeClass("is-menu-visible")
-      }
-    })
-  
-    // Prevent clicks inside menu from closing it
-    $menu.on("click", (e) => {
-      e.stopPropagation()
-    })
-  
-    // Close menu with escape key
-    $(document).on("keydown", (e) => {
-      if (e.keyCode == 27 && $body.hasClass("is-menu-visible")) {
-        $body.removeClass("is-menu-visible")
-      }
-    })
-  })(jQuery);
+  });
+
+  // Add an empty span that can be targeted by screen readers if needed
+  var span = document.createElement("span");
+  span.className = "sr-only";
+  span.textContent = "Close menu";
+  span.style.position = "absolute";
+  span.style.width = "1px";
+  span.style.height = "1px";
+  span.style.padding = "0";
+  span.style.margin = "-1px";
+  span.style.overflow = "hidden";
+  span.style.clip = "rect(0, 0, 0, 0)";
+  span.style.whiteSpace = "nowrap";
+  span.style.border = "0";
+  closeButton.appendChild(span);
+}
+// Menu functionality
+(($) => {
+  var $body = $("body"),
+    $menu = $("#menu"),
+    $menuToggle = $(".menuToggle"),
+    $menuClose = $menu.find(".close");
+
+  // Menu toggle
+  $menuToggle.on("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    $body.toggleClass("is-menu-visible");
+  });
+
+  // Close menu when clicking on the close button
+  $menuClose.on("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    $body.removeClass("is-menu-visible");
+  });
+
+  // Close menu when clicking outside
+  $body.on("click", (e) => {
+    if (
+      $body.hasClass("is-menu-visible") &&
+      !$(e.target).closest("#menu").length
+    ) {
+      e.preventDefault();
+      e.stopPropagation();
+      $body.removeClass("is-menu-visible");
+    }
+  });
+
+  // Prevent clicks inside menu from closing it
+  $menu.on("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // Close menu with escape key
+  $(document).on("keydown", (e) => {
+    if (e.keyCode == 27 && $body.hasClass("is-menu-visible")) {
+      $body.removeClass("is-menu-visible");
+    }
+  });
+})(jQuery);
