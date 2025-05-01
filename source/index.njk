@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Strata by HTML5 UP</title>
+    <title>Portal System - EXPO'25</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -19,12 +19,11 @@
     <header id="header">
       <div class="inner">
         <a href="#" class="image avatar"
-          ><img src="images/avatar.jpg" alt=""
+          ><img src="images/logo.jpg" alt=""
         /></a>
         <h1>
-          <strong>I am Strata</strong>, a super simple<br />
-          responsive site template freebie<br />
-          crafted by <a href="http://html5up.net">HTML5 UP</a>.
+          <strong>I am Project 1164!</strong>, a super simple Portal System<br />
+          crafted for STI Marikina's SHS Expo '25!
         </h1>
       </div>
     </header>
@@ -40,11 +39,8 @@
       <a href="#" class="close"><span>Close</span></a>
       <h2>Menu</h2>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Ipsum veroeros</a></li>
-        <li><a href="#">Tempus etiam</a></li>
-        <li><a href="#">Consequat dolor</a></li>
-        <li><a href="#">Elements</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/arts">Arts</a></li>
       </ul>
     </nav>
 
@@ -54,26 +50,26 @@
       <section id="one">
         <header class="major">
           <h2>
-            Ipsum lorem dolor aliquam ante commodo<br />
-            magna sed accumsan arcu neque.
+            Welcome to the Portal System of<br />
+            STI Marikina's SHS Expo '25!
           </h2>
         </header>
         <p>
-          Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi
-          lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis
-          tortor primis integer massa adipiscing id nisi accumsan pellentesque
-          commodo blandit enim arcu non at amet id arcu magna. Accumsan orci
-          faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque
-          cubilia.
+          So I start a revolution from my bed 'Cause you said the brains I had
+          went to my head Step outside, summertime's in bloom Stand up beside
+          the fireplace Take that look from off your face You ain't ever gonna
+          burn my heart out And so, Sally can wait She knows it's too late as
+          we're walkin' on by Her soul slides away "But don't look back in
+          anger," I heard you say
         </p>
         <ul class="actions">
-          <li><a href="/products" class="button">Learn More</a></li>
+          <li><a href="/arts" class="button">Learn More</a></li>
         </ul>
       </section>
 
       <!-- Two -->
       <section id="two">
-        <h2>Recent Work</h2>
+        <h2 style="font-size: 2em">Recent Arts</h2>
         <div class="row">
           {%- for post in collections.post -%}
           <article class="col-6 col-12-xsmall work-item">
@@ -89,14 +85,19 @@
                 "
               />
             </a>
+
             <h3 style="font-size: 1.25rem; font-weight: bold">
-              {{ post.data.product_name }}
+              <a href="/arts#{{ post.data.identifier }}">
+                {{ post.data.product_name }}
+              </a>
             </h3>
+
             <p style="font-size: 1rem; font-weight: bold">
               {{ post.data.product_section }}
             </p>
             <p style="font-size: 1rem">
-              {{ post.data.product_description }} <a href="#">Learn More</a>
+              {{ post.data.product_description }}
+              <a href="/arts#{{ post.data.identifier }}">Learn More</a>
             </p>
           </article>
           {%- endfor -%}
@@ -130,8 +131,7 @@
           </li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Untitled</li>
-          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>&copy; Portal System Team</li>
         </ul>
       </div>
     </footer>
