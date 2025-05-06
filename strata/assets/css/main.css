@@ -2035,6 +2035,11 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+
+/*Article Image*/ 
+.clickable-card {
+	cursor: pointer;
+  }
 /* Image */
 
 	.image {
