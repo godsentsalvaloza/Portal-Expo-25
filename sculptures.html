@@ -46,41 +46,31 @@
 					<h2 class="text-dark">Sculptures</h2>
 
 					<div class="row">
+
 						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
-							  <img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
-							</a>
-							<h3 class="text-dark" id="sculptureTitle">Sculpture 1</h3>
-							<h6 class="text-secondary" id="sculptureSection">ICTE201A</h6>
-							<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							<div>
+								<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
+									<img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
+								</a>
+								<h3 class="text-dark border-dark" id="sculptureTitle">Sculpture 1</h3>
+								<h6 class="text-secondary" id="sculptureSection">ICTE201A</h6>
+								<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</div>
+							<div class="members-container" style="display: none;">
+								<p class="text-secondary mb-1">Members:</p>
+								<p class="text-secondary mb-0">John Doe1</p>
+								<p class="text-secondary mb-0">John Doe2</p>
+								<p class="text-secondary mb-0">John Doe3</p>
+								<p class="text-secondary mb-0">John Doe4</p>
+							</div>
+							<div class="d-flex justify-content-center my-3">
+								<button class="btn btn-primary px-5" id="sculptureButton">
+									See more
+								</button>
+							</div>
 						</article>
 						
-						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
-							  <img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
-							</a>
-							<h3 class="text-dark" id="sculptureTitle">Sculpture 2</h3>
-							<h6 class="text-secondary" id="sculptureSection">ICTE202B</h6>
-							<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-						</article>
-						 
-						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
-							  <img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
-							</a>
-							<h3 class="text-dark" id="sculptureTitle">Sculpture 3</h3>
-							<h6 class="text-secondary" id="sculptureSection">ICTE203C</h6>
-							<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-						</article>
 						
-						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
-							  <img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
-							</a>
-							<h3 class="text-dark" id="sculptureTitle">Sculpture 4</h3>
-							<h6 class="text-secondary" id="sculptureSection">ICTE201D</h6>
-							<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-						</article>
 					</div>
 				</section>
 
@@ -102,18 +92,30 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script>
-				document.querySelectorAll('.clickable-card').forEach(card => {
+		<script>
+			document.querySelectorAll('.clickable-card').forEach(card => {
 				card.addEventListener('click', function (e) {
-					if (e.target.tagName.toLowerCase() === 'a') return;
-			
+					if (e.target.tagName.toLowerCase() === 'a' || e.target.id === 'sculptureButton') return;
+		
 					const link = card.querySelector('a');
 					if (link) {
-					link.click();
+						link.click();
 					}
 				});
-				});
-			</script>
+			});
+		
+
+			document.getElementById('sculptureButton').addEventListener('click', function () {
+				const membersContainer = document.querySelector('.members-container');
+				if (membersContainer.style.display === 'none') {
+					membersContainer.style.display = 'block';
+					this.textContent = 'See less';
+				} else {
+					membersContainer.style.display = 'none';
+					this.textContent = 'See more';
+				}
+			});
+		</script>
 			<script src="assets/js/strata/jquery.min.js"></script>
 			<script src="assets/js/strata/jquery.poptrox.min.js"></script>
 			<script src="assets/js/strata/browser.min.js"></script>
