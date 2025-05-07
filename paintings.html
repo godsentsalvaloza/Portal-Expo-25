@@ -55,18 +55,34 @@
 								<h6 class="text-secondary" id="paintingSection">ICTE201A</h6>
 								<p class="text-secondary" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</div>
-							<div class="members-container" style="display: none;">
+							<style>
+								.members-container {
+										max-height: 0;
+										overflow: hidden;
+										transition: max-height 0.5s ease, padding 0.5s ease;
+										padding-top: 0;
+										padding-bottom: 0;
+									}
+									
+									.members-container.show {
+										max-height: 200px; /* Adjust as needed */
+										padding-top: 10px;
+										padding-bottom: 10px;
+									}
+									
+							</style>
+							<div class="members-container" id="membersContainer">
 								<p class="text-secondary mb-1">Members:</p>
 								<p class="text-secondary mb-0">John Doe1</p>
 								<p class="text-secondary mb-0">John Doe2</p>
 								<p class="text-secondary mb-0">John Doe3</p>
 								<p class="text-secondary mb-0">John Doe4</p>
 							</div>
+							
 							<div class="d-flex justify-content-center my-3">
-								<button class="btn btn-primary px-5" id="paintingButton">
-									See more
-								</button>
+								<button class="btn btn-primary px-5" id="paintingButton">See more</button>
 							</div>
+							
 						</article>
 					</div>
 				</section>
@@ -103,15 +119,18 @@
 			
 
 				document.getElementById('paintingButton').addEventListener('click', function () {
-					const membersContainer = document.querySelector('.members-container');
-					if (membersContainer.style.display === 'none') {
-						membersContainer.style.display = 'block';
-						this.textContent = 'See less';
-					} else {
-						membersContainer.style.display = 'none';
+					const membersContainer = document.getElementById('membersContainer');
+					const isOpen = membersContainer.classList.contains('show');
+				
+					if (isOpen) {
+						membersContainer.classList.remove('show');
 						this.textContent = 'See more';
+					} else {
+						membersContainer.classList.add('show');
+						this.textContent = 'Hide';
 					}
 				});
+				
 			</script>
 			<script src="assets/js/strata/jquery.min.js"></script>
 			<script src="assets/js/strata/jquery.poptrox.min.js"></script>
