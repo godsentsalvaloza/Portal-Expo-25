@@ -15,33 +15,122 @@
 		
 	</head>
 	<body class="is-preload">
-	<!-- <body class="is-preload" style="background-color: #002366;"> -->
+		<style>
 
+			body {
+				background-color: #D4AF37;
+			}
+			#header {
+				background-color: #012350ff;
+				background-image: none;
+				transition: height 0.3s ease;
+				color: white;
+			  }
+						  
+			  @media (max-width: 992px) {
+				#header {
+				  min-height: 180px;
+				}
+			}
+			  
+			  @media (max-width: 768px) {
+				#header {
+				  min-height: 160px;
+				}
+			}
+			  @media (max-width: 576px) {
+				#header {
+				  height: 470px;
+				}
+			}
+			  
+/* Footer */
+
+#footer {
+	background-color: #012350ff;
+	background-image: none;
+	padding: 2.5rem;
+  }
+  
+  #footer .icons a {
+	font-size: 1.5rem;
+  }
+  
+  #footer .copyright {
+	font-size: 1em;
+	gap: 1rem;
+  }
+  
+  @media (max-width: 960px) {
+	#footer {
+	  padding: 2rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.4rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.85em;
+	  gap: 0.75rem;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	#footer {
+	  background-image: none;
+	  padding: 1.5rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.3rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.8em;
+	  gap: 0.5rem;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	#footer {
+	background-image: none;
+	  padding: 1rem;
+	}
+  
+	#footer .icons {
+		background-image: none;
+	  gap: 0.75rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.2rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.75em;
+	  flex-direction: column;
+	  gap: 0.25rem;
+	}
+  }
+  
+
+  #sculptureButton {
+	background-color: #012350ff;
+	color: white;
+  }
+			  
+		</style>
 		<!-- Header  -->
-			<header id="header" style="background-image: url('images/overlay.png'), url('images/bg.jpg');" >
+			<header id="header" >
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>I am Strata</strong>, a super simple<br />
-					responsive site template freebie<br />
-					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+					<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt="" /></a>
+					<h1 class="text-white">Sentro de Museo </h1>
+					<p class="text-white">Featuring local festivals reimagined through futuristic art and sculpture by STI College Marikina’s Grade 12 students.</p>
 				</div>
 			</header>
-		  
 		<!-- Main -->
 			<div id="main">
-
-				<!-- One -->
-					<!-- <section id="one">
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</section> -->
-
 					<style>
 						/* Animation */
 						.titles-container {
@@ -83,49 +172,49 @@
 						}
 					</style>
 					
-					<section id="two">
-						<h2 class="text-dark">Senior High School Researches</h2>
+					<section id="one">
+						<h2 class="text-white">Senior High School Researches</h2>
 						<div>
-							<button class="border-0 bg-transparent" id="toggleButton">ICT</button>
+							<button class="text-white border-0 bg-transparent" id="toggleButton">ICT</button>
 							
 	
 							<div class="titles-container" id="titlesContainer">
 								<article>
-									<a href="#" class="sidebar-top-posts-widget__link" 
+									<a href="#" class="text-white sidebar-top-posts-widget__link" 
 									   data-title="Example Title 1" 
 									   data-abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
-									   data-link="https://example.com/1">Example Title 1</a>
+									   >Example Title 1</a>
 								</article>
 					
 								<article>
-									<a href="#" class="sidebar-top-posts-widget__link" 
+									<a href="#" class="text-white sidebar-top-posts-widget__link" 
 									   data-title="Example Title 2" 
 									   data-abstract="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." 
-									   data-link="https://example.com/2">Example Title 2</a>
+									   >Example Title 2</a>
 								</article>
 					
 								<article>
-									<a href="#" class="sidebar-top-posts-widget__link" 
-									   data-title="Example Title 3" 
+									<a href="#" class="text-white sidebar-top-posts-widget__link" 
+									   data-title=" Example Title 3" 
 									   data-abstract="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." 
-									   data-link="https://example.com/3">Example Title 3</a>
+									   >Example Title 3</a>
 								</article>
 					
 								<article>
-									<a href="#" class="sidebar-top-posts-widget__link" 
+									<a href="#" class="text-white sidebar-top-posts-widget__link" 
 									   data-title="Example Title 4" 
 									   data-abstract="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-									   data-link="https://example.com/4">Example Title 4</a>
+									  >Example Title 4</a>
 								</article>
 							</div>
 						</div>
 					</section>
 					
 					<!-- Dialog -->
-					<dialog id="popupDialog" class="popup-dialog col-12 col-md-10 col-lg-6 col-sm-12 col-xs-12 mx-auto">
+					<dialog id="popupDialog" class="popup-dialog col-12 col-md-10 col-lg-6 col-sm-12 col-xs-12 mx-auto" open>
 						<div class="popup-content">
 							<button class="close-btn">&times;</button>
-							<h3 class="popup-title"></h3>
+							<h3 class="text-dark popup-title"></h3>
 							<h5>Abstract</h5>
 							<p class="popup-abstract"></p>
 						</div>

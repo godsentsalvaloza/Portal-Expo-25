@@ -14,47 +14,136 @@
 		
 	</head>
 	<body class="is-preload">
-	<!-- <body class="is-preload" style="background-color: #002366;"> -->
+		<style>
 
+			body {
+				background-color: #D4AF37;
+			}
+			#header {
+				background-color: #012350ff;
+				background-image: none;
+				transition: height 0.3s ease;
+				color: white;
+			  }
+						  
+			  @media (max-width: 992px) {
+				#header {
+				  min-height: 180px;
+				}
+			}
+			  
+			  @media (max-width: 768px) {
+				#header {
+				  min-height: 160px;
+				}
+			}
+			  @media (max-width: 576px) {
+				#header {
+				  height: 470px;
+				}
+			}
+			  
+/* Footer */
+
+#footer {
+	background-color: #012350ff;
+	background-image: none;
+	padding: 2.5rem;
+  }
+  
+  #footer .icons a {
+	font-size: 1.5rem;
+  }
+  
+  #footer .copyright {
+	font-size: 1em;
+	gap: 1rem;
+  }
+  
+  @media (max-width: 960px) {
+	#footer {
+	  padding: 2rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.4rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.85em;
+	  gap: 0.75rem;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	#footer {
+	  background-image: none;
+	  padding: 1.5rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.3rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.8em;
+	  gap: 0.5rem;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	#footer {
+	background-image: none;
+	  padding: 1rem;
+	}
+  
+	#footer .icons {
+		background-image: none;
+	  gap: 0.75rem;
+	}
+  
+	#footer .icons a {
+	  font-size: 1.2rem;
+	}
+  
+	#footer .copyright {
+	  font-size: 0.75em;
+	  flex-direction: column;
+	  gap: 0.25rem;
+	}
+  }
+  
+
+  #sculptureButton {
+	background-color: #012350ff;
+	color: white;
+  }
+			  
+		</style>
 		<!-- Header  -->
-			<header id="header" style="background-image: url('images/overlay.png'), url('images/bg.jpg');" >
+			<header id="header" >
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>I am Strata</strong>, a super simple<br />
-					responsive site template freebie<br />
-					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+					<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt="" /></a>
+					<h1 class="text-white">Sentro de Museo </h1>
+					<p class="text-white">Featuring local festivals reimagined through futuristic art and sculpture by STI College Marikina’s Grade 12 students.</p>
 				</div>
 			</header>
 		  
 		<!-- Main -->
 			<div id="main">
-
-				<!-- One -->
-					<!-- <section id="one">
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</section> -->
-
-				<!-- Two -->
+				<!-- one -->
 				<section id="two">
-					<h2 class="text-dark">Sculptures</h2>
+					<h2 class="text-white">Sculptures</h2>
 
 					<div class="row">
-
 						<article class="col-6 col-12-xsmall work-item clickable-card">
 							<div>
 								<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
 									<img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
 								</a>
-								<h3 class="text-dark border-dark" id="sculptureTitle">Sculpture 1</h3>
-								<h6 class="text-secondary" id="sculptureSection">ICTE201A</h6>
-								<p class="text-secondary" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<h3 class="text-white" id="sculptureTitle">Sculpture 1</h3>
+								<h6 class="text-white" id="sculptureSection">ICTE201A</h6>
+								<p class="text-white" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</div>
 							<style>
 								.members-container {
@@ -73,39 +162,35 @@
 									
 							</style>
 							<div class="members-container" id="membersContainer">
-								<p class="text-secondary mb-1">Members:</p>
-								<p class="text-secondary mb-0">John Doe1</p>
-								<p class="text-secondary mb-0">John Doe2</p>
-								<p class="text-secondary mb-0">John Doe3</p>
-								<p class="text-secondary mb-0">John Doe4</p>
+								<p class="text-white mb-1">Members:</p>
+								<p class="text-white mb-0">John Doe1</p>
+								<p class="text-white mb-0">John Doe2</p>
+								<p class="text-white mb-0">John Doe3</p>
+								<p class="text-white mb-0">John Doe4</p>
 							</div>
+							
 							<div class="d-flex justify-content-center my-3">
-								<button class="btn btn-primary px-5" id="sculptureButton">
-									See more
-								</button>
+								<button class="btn btn-primary px-5" id="sculptureButton">See more</button>
 							</div>
+							
 						</article>
-						
-						
 					</div>
 				</section>
 
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Sentro de Museo</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+				<footer id="footer">
+				<div class="inner" id="innerfooter">
+				  <ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter text-white"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-github text-white"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble text-white"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope text-white"><span class="label">Email</span></a></li>
+				  </ul>
+				  <ul class="copyright text-white">
+					<li>&copy; Sentro de Museo</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				  </ul>
 				</div>
-			</footer>
+			  </footer>
 
 		<!-- Scripts -->
 		<script>
@@ -132,8 +217,9 @@
 					membersContainer.classList.add('show');
 					this.textContent = 'Hide';
 				}
-			});			
-		</script>
+			});
+			
+		</script>	
 			<script src="assets/js/strata/jquery.min.js"></script>
 			<script src="assets/js/strata/jquery.poptrox.min.js"></script>
 			<script src="assets/js/strata/browser.min.js"></script>
