@@ -2647,7 +2647,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 9em;
 		}
 
 /* Footer */
@@ -2696,7 +2696,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
