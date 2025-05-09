@@ -165,122 +165,122 @@ collections:
       - {
           label: "Main Section Title",
           name: "main_section_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Main Section Description",
           name: "main_section_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "Main Section Image",
           name: "main_section_image",
-          widtet: "image",
+          widget: "image",
         }
       - {
           label: "Main Section Image - Alt",
           name: "main_section_image_alt",
-          widtet: "image",
+          widget: "image",
         }
       - {
           label: "Second Section Title",
           name: "second_section_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Second Section Description",
           name: "second_section_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "First Article Title",
           name: "first_article_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "First Article Description",
           name: "first_article_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "First Article Image",
           name: "first_article_image",
-          widtet: "image",
+          widget: "image",
         }
       - {
           label: "First Article Image - Alt",
           name: "first_article_alt_image",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "First Article Link",
           name: "first_article_link",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Second Article Title",
           name: "second_article_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Second Article Description",
           name: "second_article_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "Second Article Image",
           name: "second_article_image",
-          widtet: "image",
+          widget: "image",
         }
       - {
           label: "Second Article Image - Alt",
           name: "second_article_alt_image",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Second Article Link",
           name: "second_article_link",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Third Article Title",
           name: "third_article_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Third Article Description",
           name: "third_article_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "Third Article Image",
           name: "third_article_image",
-          widtet: "image",
+          widget: "image",
         }
       - {
           label: "Second Article Image - Alt",
-          name: "third_article_description",
-          widtet: "string",
+          name: "third_article_alt_image",
+          widget: "string",
         }
       - {
           label: "Third Article Link",
           name: "third_article_link",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Fourth Article Title",
           name: "fourth_section_title",
-          widtet: "string",
+          widget: "string",
         }
       - {
           label: "Fourth Article Description",
           name: "fourth_section_description",
-          widtet: "markdown",
+          widget: "markdown",
         }
       - {
           label: "Third Article Link",
           name: "fourth_section_link",
-          widtet: "string",
+          widget: "string",
         }
   - name: "sculpture"
     label: "Sculpture"
