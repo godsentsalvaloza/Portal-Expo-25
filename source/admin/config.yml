@@ -3,9 +3,45 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "public/images/products"
-public_folder: "images/products"
+public_folder: "/images/products"
 
 collections:
+  - name: "index"
+    label: "Homepage"
+    folder: "/source/commands/index"
+    create: false
+    fields:
+      - {
+          label: "Main Section Title",
+          name: "main_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Main Section Description",
+          name: "main_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Section Title",
+          name: "first_section_title",
+          widget: "string",
+        }
+      - {
+          label: "First Section Description",
+          name: "first_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Section Image",
+          name: "first_section_image",
+          widget: "image",
+        }
+      - {
+          label: "First Section Image Alt Text",
+          name: "first_section_alternative_image",
+          widget: "string",
+        }
+
   - name: "arts"
     label: "Command Center | Arts"
     folder: "source/posts"

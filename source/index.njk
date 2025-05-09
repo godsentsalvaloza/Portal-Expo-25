@@ -1,141 +1,200 @@
 <!DOCTYPE html>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
+  {%- for post in collections.index -%}
   <head>
-    <title>Portal System - EXPO'25</title>
+    <title>Home | Sentro de Museo</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/noscript.css"
+    /></noscript>
   </head>
   <body class="is-preload">
-    <!-- Header -->
-    <header id="header">
-      <div class="inner">
-        <a href="#" class="image avatar"
-          ><img src="images/logo.jpg" alt=""
-        /></a>
-        <h1>
-          <strong>I am Project 1164!</strong>, a super simple Portal System<br />
-          crafted for STI Marikina's SHS Expo '25!
-        </h1>
-      </div>
-    </header>
-    <!-- Menu Toggle -->
-    <a
-      href="#menu"
-      class="menuToggle"
-      style="background-color: black; border-radius: 20%; font-size: 1.2em"
-      ><span>Menu</span></a
-    >
-    <!-- Menu -->
-    <nav id="menu">
-      <a href="#" class="close"><span>Close</span></a>
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/arts">Arts</a></li>
-      </ul>
-    </nav>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <!-- <a href="index.html" class="logo"><strong>SHS EXPO 2025</strong></a> -->
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
 
-    <!-- Main -->
-    <div id="main">
-      <!-- One -->
-      <section id="one">
-        <header class="major">
-          <h2>
-            Welcome to the Portal System of<br />
-            STI Marikina's SHS Expo '25!
-          </h2>
-        </header>
-        <p>
-          So I start a revolution from my bed 'Cause you said the brains I had
-          went to my head Step outside, summertime's in bloom Stand up beside
-          the fireplace Take that look from off your face You ain't ever gonna
-          burn my heart out And so, Sally can wait She knows it's too late as
-          we're walkin' on by Her soul slides away "But don't look back in
-          anger," I heard you say
-        </p>
-        <ul class="actions">
-          <li><a href="/arts" class="button">Learn More</a></li>
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/landing">Sentro De Museo</a></li>
+          <li><a href="/paintings">Paintings</a></li>
+          <li><a href="/sculptures">Sculptures</a></li>
+          <li><a href="/researches">SHS Researches</a></li>
         </ul>
-      </section>
+        <ul class="actions stacked">
+          <li><a href="/landing" class="button primary fit">Get Started</a></li>
+        </ul>
+      </nav>
 
-      <!-- Two -->
-      <section id="two">
-        <h2 style="font-size: 2em">Recent Arts</h2>
-        <div class="row">
-          {%- for post in collections.post -%}
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="{{ post.data.product_image }}" class="image fit thumb"
-              ><img
-                src="{{ post.data.product_image }}"
-                alt=""
-                style="
-                  aspect-ratio: 1 / 1;
-                  object-fit: cover;
-                  width: 100%;
-                  height: auto;
-                "
-              />
-            </a>
-
-            <h3 style="font-size: 1.25rem; font-weight: bold">
-              <a href="/arts#{{ post.data.identifier }}">
-                {{ post.data.product_name }}
-              </a>
-            </h3>
-
-            <p style="font-size: 1rem; font-weight: bold">
-              {{ post.data.product_section }}
+      <!-- Banner -->
+      <section id="banner" class="major">
+        <div class="inner">
+          <header class="major">
+            <h1>{{ post.data.main_section_title }}</h1>
+          </header>
+          <div class="content">
+            <p style="text-align: justify">
+              {{ post.data.main_section_description | safe }}
             </p>
-            <p style="font-size: 1rem">
-              {{ post.data.product_description }}
-              <a href="/arts#{{ post.data.identifier }}">Learn More</a>
-            </p>
-          </article>
-          {%- endfor -%}
+            <ul class="actions">
+              <li>
+                <a href="/landing" class="button next scrolly">Get Started</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-    </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li>
-            <a href="#" class="icon brands fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-github"
-              ><span class="label">Github</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-dribbble"
-              ><span class="label">Dribbble</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon solid fa-envelope"
-              ><span class="label">Email</span></a
-            >
-          </li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; Portal System Team</li>
-        </ul>
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+        <section id="one" class="tiles">
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.first_section_image }}"
+                alt="{{ post.data.first_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.first_section_title }}</h3>
+              <p>{{ post.data.first_section_description }}</p>
+            </header>
+          </article>
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.second_section_image }}"
+                alt="{{ post.data.second_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.second_section_title }}</h3>
+              <p>{{ post.data.second_section_description }}</p>
+            </header>
+          </article>
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.third_section_image }}"
+                alt="{{ post.data.third_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.third_section_title }}</h3>
+              <p>{{ post.data.third_section_description }}</p>
+            </header>
+          </article>
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.fourth_section_image }}"
+                alt="{{ post.data.fourth_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.fourth_section_title }}</h3>
+              <p>{{ post.data.fourth_section_description }}</p>
+            </header>
+          </article>
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.fifth_section_image }}"
+                alt="{{ post.data.fifth_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.fifth_section_title }}</h3>
+              <p>{{ post.data.fifth_section_title }}</p>
+            </header>
+          </article>
+          <article>
+            <span class="image">
+              <img
+                src="{{ post.data.sixth_section_image }}"
+                alt="{{ post.data.sixth_section_description }}"
+              />
+            </span>
+            <header class="major">
+              <h3>{{ post.data.sixth_section_title }}</h3>
+              <p>{{ post.data.sixth_section_title }}</p>
+            </header>
+          </article>
+        </section>
+
+        <!-- Two -->
+        <section id="two">
+          <div class="inner">
+            <header class="major">
+              <h2>About</h2>
+            </header>
+            <p style="text-align: justify">
+              {{ post.data.about_description | safe }}
+            </p>
+            <ul class="actions">
+              <li>
+                <a href="/landing" class="button next">Sentro de Museo</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </footer>
+      {%- endfor -%}
+
+      <!-- Footer -->
+      {%- for post in collections.social -%}
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="{{ post.data.twitter_link }}"
+                class="icon brands alt fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ post.data.facebook_link }}"
+                class="icon brands alt fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ post.data.instagram_link }}"
+                class="icon brands alt fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Sentro de Museo</li>
+            <li>
+              Design:
+              <a href="https://github.com/godsentsalvaloza/Portal-Expo-25"
+                >Portal team Expo '25</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+      {%- endfor -%}
+    </div>
 
     <!-- Scripts -->
     <script>
@@ -149,9 +208,9 @@
         });
       }
     </script>
-
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
