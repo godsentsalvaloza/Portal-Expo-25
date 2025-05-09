@@ -6,6 +6,15 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "social"
+    label: "Social Media - Links"
+    folder: "/source/commands/social"
+    create: false
+    fields:
+      - { label: "Twiter - Link", name: "twitter_link:", widget: "string" }
+      - { label: "Facebook - Link", name: "facebook_link:", widget: "string" }
+      - { label: "Instagram - Link", name: "instagram_link:", widget: "string" }
+
   - name: "index"
     label: "Homepage"
     folder: "/source/commands/index"
@@ -41,7 +50,112 @@ collections:
           name: "first_section_alternative_image",
           widget: "string",
         }
+      - {
+          label: "Second Section Title",
+          name: "second_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Second Section Description",
+          name: "second_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Second Section Image",
+          name: "second_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Second Section Image Alt Text",
+          name: "second_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Third Section Title",
+          name: "third_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Third Section Description",
+          name: "third_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Third Section Image",
+          name: "third_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Third Section Image Alt Text",
+          name: "third_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Section Title",
+          name: "fourth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Section Description",
+          name: "fourth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Fourth Section Image",
+          name: "fourth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Fourth Section Image Alt Text",
+          name: "fourth_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Fifth Section Title",
+          name: "fifth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "fifth Section Description",
+          name: "fifth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Fifth Section Image",
+          name: "fifth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Fifth Section Image Alt Text",
+          name: "fifth_section_alternative_image",
+          widget: "string",
+        }
 
+      - {
+          label: "Sixth Section Title",
+          name: "sixth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Sixth Section Description",
+          name: "sixth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Sixth Section Image",
+          name: "sixth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Sixth Section Image Alt Text",
+          name: "sixth_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "About - Description",
+          name: "about_description",
+          widget: "markdown",
+        }
   - name: "arts"
     label: "Command Center | Arts"
     folder: "source/posts"
