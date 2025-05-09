@@ -17,7 +17,7 @@ about_description: STI College Marikina’s SHS EXPO 2025 stands as a premier
 third_section_description: Tes3 Ipsum dolor sit amet
 first_section_title: Test 1
 first_section_description: Test Ipsum dolor sit amet
-first_section_image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Ftv-signal-test-screen-retro-television-color-test_8071-37928.jpg%3Fw%3D2000&f=1&nofb=1&ipt=456719c0a4ccc3c71877018f71ccb636ea5c8719a3f6f44f7bd1dcdb1fa72fb2
+first_section_image: /images/uploads/491834053_122208929354148139_3871647963572559278_n.jpg
 second_section_title: Test 2
 sixth_section_title: Test 6
 second_section_image: /images/uploads/pic02.jpg
