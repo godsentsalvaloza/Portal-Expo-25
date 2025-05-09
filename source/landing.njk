@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  {%- for post in collections.landing -%}
   <head>
     <title>Landing | Sentro de Museo</title>
     <meta charset="utf-8" />
@@ -7,6 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="/assets/css/noscript.css"
@@ -42,15 +44,17 @@
       <section id="banner" class="style2">
         <div class="inner">
           <span class="image">
-            <img src="/images/landing/pic03.jpg" alt="" />
+            <img
+              src="{{ post.data.main_section_image }}"
+              alt="main_section_image_alt"
+            />
           </span>
           <header class="major">
-            <h1>Sentro de Museo</h1>
+            <h1>{{ post.data.main_section_title }}</h1>
           </header>
           <div class="content">
             <p>
-              Lorem ipsum dolor sit amet nullam consequat<br />
-              sed veroeros. tempus adipiscing nulla.
+              {{ post.data.main_section_description | safe }}
             </p>
           </div>
         </div>
@@ -62,16 +66,10 @@
         <section id="one">
           <div class="inner">
             <header class="major">
-              <h2>Sed amet aliquam</h2>
+              <h2>{{ post.data.second_section_title }}</h2>
             </header>
             <p>
-              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-              magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-              urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-              Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-              libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-              sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-              ligula tate urna.
+              {{ post.data.second_section_description | safe }}
             </p>
           </div>
         </section>
@@ -79,79 +77,79 @@
         <!-- Two -->
         <section id="two" class="spotlights">
           <section>
-            <a href="/paintings" class="image">
+            <a href="{{ post.data.first_article_link }}" class="image">
               <img
-                src="/images/landing/pic08.jpg"
-                alt=""
+                src="{{ post.data.first_article_image }}"
+                alt="{{ post.data.first_article_alt_image }}"
                 data-position="center center"
               />
             </a>
             <div class="content">
               <div class="inner">
                 <header class="major">
-                  <h3>Paintings</h3>
+                  <h3>{{ post.data.first_article_title }}</h3>
                 </header>
                 <p>
-                  Nullam et orci eu lorem consequat tincidunt vivamus et
-                  sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-                  ligula tate urna. Maecenas massa sed magna lacinia magna
-                  pellentesque lorem ipsum dolor. Nullam et orci eu lorem
-                  consequat tincidunt. Vivamus et sagittis tempus.
+                  {{ post.data.first_article_description | safe }}
                 </p>
                 <ul class="actions">
-                  <li><a href="/paintings" class="button">Learn more</a></li>
+                  <li>
+                    <a href="{{ post.data.first_article_link }}" class="button"
+                      >Learn more</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <a href="/sculptures" class="image">
+            <a href="{{ post.data.second_article_link }}" class="image">
               <img
-                src="/images/landing/pic09.jpg"
-                alt=""
+                src="{{ post.data.second_article_image }}"
+                alt="{{ post.data.second_article_alt_image }}"
                 data-position="top center"
               />
             </a>
             <div class="content">
               <div class="inner">
                 <header class="major">
-                  <h3>Sculptures</h3>
+                  <h3>{{ post.data.second_article_title }}</h3>
                 </header>
                 <p>
-                  Nullam et orci eu lorem consequat tincidunt vivamus et
-                  sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-                  ligula tate urna. Maecenas massa sed magna lacinia magna
-                  pellentesque lorem ipsum dolor. Nullam et orci eu lorem
-                  consequat tincidunt. Vivamus et sagittis tempus.
+                  {{ post.data.second_article_description | safe }}
                 </p>
                 <ul class="actions">
-                  <li><a href="/sculptures" class="button">Learn more</a></li>
+                  <li>
+                    <a href="{{ post.data.second_article_link }}" class="button"
+                      >Learn more</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <a href="/researches" class="image">
+            <a href="{{ post.data.third_article_link }}" class="image">
               <img
-                src="/images/landing/pic10.jpg"
-                alt=""
+                src="{{ post.data.third_article_image }}"
+                alt="{{ post.data.third_article_alt_image }} "
                 data-position="25% 25%"
               />
             </a>
             <div class="content">
               <div class="inner">
                 <header class="major">
-                  <h3>Research Papers</h3>
+                  <h3>{{ post.data.third_article_title }}</h3>
                 </header>
                 <p>
-                  Nullam et orci eu lorem consequat tincidunt vivamus et
-                  sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-                  ligula tate urna. Maecenas massa sed magna lacinia magna
-                  pellentesque lorem ipsum dolor. Nullam et orci eu lorem
-                  consequat tincidunt. Vivamus et sagittis tempus.
+                  {{ post.data.third_article_description | safe }}
                 </p>
                 <ul class="actions">
-                  <li><a href="/researchers" class="button">Learn more</a></li>
+                  <li>
+                    <a href="{{ post.data.third_article_link }}" class="button"
+                      >Learn more</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -162,62 +160,77 @@
         <section id="three">
           <div class="inner">
             <header class="major">
-              <h2>Massa libero</h2>
+              <h2>{{ post.data.fourth_section_title }}</h2>
             </header>
             <p>
-              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-              libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-              Pellentesque condimentum sem. In efficitur ligula tate urna.
-              Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-              Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-              libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra
-              et feugiat tempus.
+              {{ post.data.fourth_section_description | safe }}
             </p>
             <ul class="actions">
-              <li><a href="#" class="button next">Get Started</a></li>
+              <li>
+                <a
+                  href="{{ post.data.fourth_section_link }}"
+                  class="button next"
+                  >Get Started</a
+                >
+              </li>
             </ul>
           </div>
         </section>
       </div>
       <!-- Footer -->
+      <!-- Footer -->
+      {%- for post in collections.social -%}
       <footer id="footer">
         <div class="inner">
           <ul class="icons">
             <li>
-              <a href="#" class="icon brands alt fa-twitter"
+              <a
+                href="{{ post.data.twitter_link }}"
+                class="icon brands alt fa-twitter"
                 ><span class="label">Twitter</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-facebook-f"
+              <a
+                href="{{ post.data.facebook_link }}"
+                class="icon brands alt fa-facebook-f"
                 ><span class="label">Facebook</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-instagram"
+              <a
+                href="{{ post.data.instagram_link }}"
+                class="icon brands alt fa-instagram"
                 ><span class="label">Instagram</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands alt fa-github"
-                ><span class="label">GitHub</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands alt fa-linkedin-in"
-                ><span class="label">LinkedIn</span></a
               >
             </li>
           </ul>
           <ul class="copyright">
-            <li>&copy; SHS EXPO 2025</li>
-            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Sentro de Museo</li>
+            <li>
+              Design:
+              <a href="https://github.com/godsentsalvaloza/Portal-Expo-25"
+                >Portal team Expo '25</a
+              >
+            </li>
           </ul>
         </div>
       </footer>
+      {%- endfor -%}
     </div>
 
     <!-- Scripts -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.scrolly.min.js"></script>
     <script src="/assets/js/jquery.scrollex.min.js"></script>
@@ -225,5 +238,6 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
+    {%- endfor -%}
   </body>
 </html>

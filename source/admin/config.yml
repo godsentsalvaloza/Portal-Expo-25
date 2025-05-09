@@ -156,8 +156,134 @@ collections:
           name: "about_description",
           widget: "markdown",
         }
-  - name: "arts"
-    label: "Command Center | Arts"
+
+  - name: "landing"
+    label: "Landing Page"
+    folder: "/source/commands/landing"
+    create: false
+    fields:
+      - {
+          label: "Main Section Title",
+          name: "main_section_title",
+          widtet: "string",
+        }
+      - {
+          label: "Main Section Description",
+          name: "main_section_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "Main Section Image",
+          name: "main_section_image",
+          widtet: "image",
+        }
+      - {
+          label: "Main Section Image - Alt",
+          name: "main_section_image_alt",
+          widtet: "image",
+        }
+      - {
+          label: "Second Section Title",
+          name: "second_section_title",
+          widtet: "string",
+        }
+      - {
+          label: "Second Section Description",
+          name: "second_section_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "First Article Title",
+          name: "first_article_title",
+          widtet: "string",
+        }
+      - {
+          label: "First Article Description",
+          name: "first_article_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "First Article Image",
+          name: "first_article_image",
+          widtet: "image",
+        }
+      - {
+          label: "First Article Image - Alt",
+          name: "first_article_alt_image",
+          widtet: "markdown",
+        }
+      - {
+          label: "First Article Link",
+          name: "first_article_link",
+          widtet: "string",
+        }
+      - {
+          label: "Second Article Title",
+          name: "second_article_title",
+          widtet: "string",
+        }
+      - {
+          label: "Second Article Description",
+          name: "second_article_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "Second Article Image",
+          name: "second_article_image",
+          widtet: "image",
+        }
+      - {
+          label: "Second Article Image - Alt",
+          name: "second_article_alt_image",
+          widtet: "string",
+        }
+      - {
+          label: "Second Article Link",
+          name: "second_article_link",
+          widtet: "string",
+        }
+      - {
+          label: "Third Article Title",
+          name: "third_article_title",
+          widtet: "string",
+        }
+      - {
+          label: "Third Article Description",
+          name: "third_article_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "Third Article Image",
+          name: "third_article_image",
+          widtet: "image",
+        }
+      - {
+          label: "Second Article Image - Alt",
+          name: "third_article_description",
+          widtet: "string",
+        }
+      - {
+          label: "Third Article Link",
+          name: "third_article_link",
+          widtet: "string",
+        }
+      - {
+          label: "Fourth Article Title",
+          name: "fourth_section_title",
+          widtet: "string",
+        }
+      - {
+          label: "Fourth Article Description",
+          name: "fourth_section_description",
+          widtet: "markdown",
+        }
+      - {
+          label: "Third Article Link",
+          name: "fourth_section_link",
+          widtet: "string",
+        }
+  - name: "sculpture"
+    label: "Sculpture"
     folder: "source/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{identifier}}"
