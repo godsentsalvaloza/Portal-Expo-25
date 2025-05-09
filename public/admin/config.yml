@@ -180,7 +180,7 @@ collections:
       - {
           label: "Main Section Image - Alt",
           name: "main_section_image_alt",
-          widget: "image",
+          widget: "string",
         }
       - {
           label: "Second Section Title",
