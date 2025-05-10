@@ -56,7 +56,7 @@
 			}
 
 			#footer .copyright {
-			font-size: 1em;
+			font-size: 0.7em;
 			gap: 1rem;
 			}
 
@@ -112,12 +112,6 @@
 				gap: 0.25rem;
 			}
 			}
-
-
-			#sculptureButton {
-			background-color: #012350ff;
-			color: white;
-			}
 		</style>
 		<!-- Header  -->
 			<header id="header" >
@@ -137,47 +131,31 @@
 							transition: max-height 0.5s ease, padding 0.5s ease;
 							padding-top: 0;
 							padding-bottom: 0;
-						}
-					
+						}			
 						.titles-container.show {
 							max-height: 200px;
 							padding-top: 10px;
 							padding-bottom: 10px;
 						}
 					
-						/* Dialog */
-						.popup-dialog {
-							padding: 20px;
-							border: none;
-							border-radius: 8px;
-							box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-							position: relative;
-							margin: auto;  
+
+						
+						 #button:hover {
+							color: #012350ff;
 						}
-					
-						.popup-dialog::backdrop {
-							background-color: rgba(0, 0, 0, 0.5);
-						}
-					
-						.close-btn {
-							position: absolute;
-							top: 10px;
-							right: 10px;
-							background: none;
-							border: none;
-							font-size: 18px;
-							cursor: pointer;
-						}
+				
 					</style>
 					
 					<section id="one">
-						<h2 class="text-white">Senior High School Researches</h2>
-						<div>
-							<button class="text-white border-0 bg-transparent" id="toggleButton">ICT</button>
-							
+						<h2 class="text-white border-bottom py-3">Senior High School Researches</h2>
+						<!-- Strand Divider -->
+						<div id="strandDivider">
+							<button type="button" class="text-white border-0 bg-transparent " id="strandButton">ICT</button>
+
 	
 							<div class="titles-container" id="titlesContainer">
-								<article>
+								<div class="border-bottom border-top py-3 w-25">
+									<article>
 									<a href="#" class="text-white sidebar-top-posts-widget__link" 
 									   data-title="Example Title 1" 
 									   data-abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
@@ -204,6 +182,7 @@
 									   data-abstract="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
 									  >Example Title 4</a>
 								</article>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -220,7 +199,7 @@
 					
 					<script>
 					// Toggle Button for Showing Titles
-					document.getElementById('toggleButton').addEventListener('click', function () {
+					document.getElementById('strandButton').addEventListener('click', function () {
 						const titlesContainer = document.getElementById('titlesContainer');
 						titlesContainer.classList.toggle('show');
 					});
@@ -266,18 +245,19 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Sentro de Museo</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+			<div class="inner" id="innerfooter">
+			  <ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter text-white"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-github text-white"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon brands fa-dribbble text-white"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope text-white"><span class="label">Email</span></a></li>
+			  </ul>
+			  <ul class="copyright text-white" >
+				<li style="color: grey;">&copy; Sentro de Museo</li>
+				<li style="color: grey;">Design: HTML5 UP</li>
+			  </ul>
+			</div>
+		  </footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/strata/jquery.min.js"></script>

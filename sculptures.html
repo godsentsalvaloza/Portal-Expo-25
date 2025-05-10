@@ -56,9 +56,10 @@
 			}
 			
 			#footer .copyright {
-				font-size: 1em;
+				font-size: 0.7em;
 				gap: 1rem;
 			}
+			
 			
 			@media (max-width: 960px) {
 				#footer {
@@ -117,32 +118,46 @@
 			#sculptureButton {
 				background-color: #012350ff;
 				color: white;
+				border: none;
+			}	
+			#sculptureButton:hover {
+				background-color: #D4AF37;
+				color: white;
 			}		
 		</style>
 		<!-- Header  -->
 			<header id="header" >
 				<div class="inner">
-					<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt="" /></a>
-					<h1 class="text-white">Sentro de Museo </h1>
-					<p class="text-white">Featuring local festivals reimagined through futuristic art and sculpture by STI College Marikina’s Grade 12 students.</p>
+					<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt="" style="border-radius: 0;"/></a>
 				</div>
 			</header>
 		  
 		<!-- Main -->
 			<div id="main">
-				<!-- one -->
 				<section id="two">
 					<h2 class="text-white">Sculptures</h2>
 
 					<div class="row">
 						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<div>
+							<div class="bg-white py-3 px-3 rounded">
 								<a href="images/fulls/01.jpg" class="image fit thumb" id="sculptureLink">
 									<img src="images/thumbs/01.jpg" alt="" id="sculptureImage"/>
 								</a>
-								<h3 class="text-white" id="sculptureTitle">Sculpture 1</h3>
-								<h6 class="text-white" id="sculptureSection">ICTE201A</h6>
-								<p class="text-white" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<h3 class="text-dark" id="sculptureTitle">Sculpture 1</h3>
+								<h6 class="text-dark" id="sculptureSection">ICTE201A</h6>
+								<p class="text-dark" id="sculptureDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<div class="members-container" id="membersContainer">
+									<p class="text-dark mb-1">Members:</p>
+									<p class="text-dark mb-0">John Doe1</p>
+									<p class="text-dark mb-0">John Doe2</p>
+									<p class="text-dark mb-0">John Doe3</p>
+									<p class="text-dark mb-0">John Doe4</p>
+								</div>
+							
+									<div class="d-flex justify-content-center my-3">
+										<button type="button" class="btn btn-primary px-5" id="sculptureButton">See more</button>
+									</div>
+								</div>
 							</div>
 							<style>
 								.members-container {
@@ -158,24 +173,12 @@
 										padding-top: 10px;
 										padding-bottom: 10px;
 									}
-									
-							</style>
-							<div class="members-container" id="membersContainer">
-								<p class="text-white mb-1">Members:</p>
-								<p class="text-white mb-0">John Doe1</p>
-								<p class="text-white mb-0">John Doe2</p>
-								<p class="text-white mb-0">John Doe3</p>
-								<p class="text-white mb-0">John Doe4</p>
-							</div>
-							
-							<div class="d-flex justify-content-center my-3">
-								<button class="btn btn-primary px-5" id="sculptureButton">See more</button>
-							</div>
-							
-						</article>
-					</div>
-				</section>
 
+
+							</style>
+						</article>
+				</section>
+			</div>
 				<footer id="footer">
 				<div class="inner" id="innerfooter">
 				  <ul class="icons">
@@ -214,7 +217,7 @@
 					this.textContent = 'See more';
 				} else {
 					membersContainer.classList.add('show');
-					this.textContent = 'Hide';
+					this.textContent = 'See less';
 				}
 			});
 			

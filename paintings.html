@@ -24,11 +24,33 @@
 			transition: height 0.3s ease;
 			color: white;
 		  }
-					  
+
+		  #logo img {
+			border-radius: 0; 
+		  }
+				
 		  @media (max-width: 992px) {
 			#header {
 			  min-height: 180px;
+
 			}
+
+			#logo img {
+				width: 13em;
+			}
+			}
+
+		  @media (max-width: 992px) {
+			#header {
+			  min-height: 180px;
+
+			}
+
+			#logo img {
+				width: 13em;
+			}
+			
+
 		}
 		  
 		  @media (max-width: 768px) {
@@ -55,8 +77,28 @@
 		}
 
 		#footer .copyright {
-		font-size: 1em;
+		font-size: 0.7em;
 		gap: 1rem;
+		}
+
+		@media (max-width: 1024px) {
+		#footer {
+		padding: 0em
+		}
+		
+		#footer .icons a {
+		font-size: 1rem
+		}}
+
+		@media (max-width: 992px) {
+
+		#footer {
+		padding: 0em
+		}
+		
+		#footer .icons a {
+		font-size: 1rem
+		}
 		}
 
 		@media (max-width: 960px) {
@@ -109,41 +151,57 @@
 		font-size: 0.75em;
 		flex-direction: column;
 		gap: 0.25rem;
-		}
+			}
 		}
 
 
 		#paintingButton {
 		background-color: #012350ff;
 		color: white;
+		border: none;
 		}
-				
+			
+		#paintingButton:hover {
+				background-color: #D4AF37;
+				color: white;
+			}		
 	</style>
 	<!-- Header  -->
 		<header id="header" >
 			<div class="inner">
-				<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt="" /></a>
-				<h1 class="text-white">Sentro de Museo </h1>
-				<p class="text-white">Featuring local festivals reimagined through futuristic art and sculpture by STI College Marikina’s Grade 12 students.</p>
+				<a id="logo" class="image avatar py-3"><img src="images\Sentro De Museo LOGO.jpg" alt=""/></a>
 			</div>
 		</header>
 		  
 		<!-- Main -->
 			<div id="main">
-
-				<!-- one -->
 				<section id="two">
 					<h2 class="text-white">Paintings</h2>
 
 					<div class="row">
 						<article class="col-6 col-12-xsmall work-item clickable-card">
-							<div>
+							<div class="bg-white py-3 px-3 rounded">
 								<a href="images/fulls/01.jpg" class="image fit thumb" id="paintingLink">
 									<img src="images/thumbs/01.jpg" alt="" id="paintingImage"/>
 								</a>
-								<h3 class="text-white border-dark" id="paintingTitle">Painting 1</h3>
-								<h6 class="text-white" id="paintingSection">ICTE201A</h6>
-								<p class="text-white" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+
+								<h3 class="text-dark border-dark" id="paintingTitle">Painting 1</h3>
+								<h6 class="text-dark" id="paintingSection">ICTE201A</h6>
+								<p class="text-dark" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+
+								<div class="members-container" id="membersContainer">
+									<p class="text-dark mb-1">Members:</p>
+									<p class="text-dark mb-0">John Doe1</p>
+									<p class="text-dark mb-0">John Doe2</p>
+									<p class="text-dark mb-0">John Doe3</p>
+									<p class="text-dark mb-0">John Doe4</p>
+								</div>
+
+									<div class="d-flex justify-content-center my-3">
+										<button class="btn btn-primary px-5" id="paintingButton">See more</button>
+									</div>
+									
+								</div>
 							</div>
 							<style>
 								.members-container {
@@ -161,18 +219,6 @@
 									}
 									
 							</style>
-							<div class="members-container" id="membersContainer">
-								<p class="text-white mb-1">Members:</p>
-								<p class="text-white mb-0">John Doe1</p>
-								<p class="text-white mb-0">John Doe2</p>
-								<p class="text-white mb-0">John Doe3</p>
-								<p class="text-white mb-0">John Doe4</p>
-							</div>
-							
-							<div class="d-flex justify-content-center my-3">
-								<button class="btn btn-primary px-5" id="paintingButton">See more</button>
-							</div>
-							
 						</article>
 					</div>
 				</section>
@@ -188,9 +234,9 @@
 				<li><a href="#" class="icon brands fa-dribbble text-white"><span class="label">Dribbble</span></a></li>
 				<li><a href="#" class="icon solid fa-envelope text-white"><span class="label">Email</span></a></li>
 			  </ul>
-			  <ul class="copyright text-white">
-				<li>&copy; Sentro de Museo</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			  <ul class="copyright text-white" >
+				<li style="color: grey;">&copy; Sentro de Museo</li>
+				<li style="color: grey;">Design: HTML5 UP</li>
 			  </ul>
 			</div>
 		  </footer>
