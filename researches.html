@@ -350,34 +350,46 @@
 <!-- Main -->
 <div id="main">
     <style>
-        .titles-container {
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.1s ease;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+       .titles-container {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.7s ease, padding 0.7s ease;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 
-    .titles-container.show {
-        max-height: 1000px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        transition: 0.7s ease;
-    }
+		.titles-container.show {
+			max-height: 1000px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 
-    .strandDivider, .strandButton {
-        color: white;
-    } 
-	.strandDivider:hover, .strandButton:hover {
-        color: #012350ff;
-    } 
-	
+		.strandDivider, .strandButton {
+			color: white;
+		}
 
+		.strandDivider:hover, .strandButton:hover {
+			color: #012350ff;
+		}
+
+		.strandDivider {
+			opacity: 0;
+			transform: translateX(-20%);
+			animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+			animation-delay: 0.2s;
+		}
+
+		@keyframes slideIn {
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
     </style>
 
     <section id="two">
         <h2 class="text-white border-bottom py-3">Senior High School Researches</h2>
-
+			 <!-- Strand Dividers -->
 			<div class="strandDivider my-4">
 				<button type="button" class="strandButton border-0 bg-transparent w-100 text-start">
 					Information Technology: Mobile App & Web Application Development

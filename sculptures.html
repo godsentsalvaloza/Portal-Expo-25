@@ -380,6 +380,42 @@
 								padding-top: 10px;
 								padding-bottom: 10px;
 							}
+							.image.fit {
+							position: relative;
+							width: 100%;
+							padding-top: 100%; /* 1x1 aspect ratio */
+							overflow: hidden;
+							}
+
+							.image.fit img {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							opacity: 0;
+							transform: scale(0.8);
+							animation: fadeInScale 0.9s ease forwards;
+							transition: transform 0.3s ease, opacity 0.3s ease;
+							}
+
+							.image.fit:hover img {
+							transform: scale(1.05);
+							opacity: 0.9;
+							}
+
+							/* Keyframe Animation */
+							@keyframes fadeInScale {
+							0% {
+								opacity: 0;
+								transform: scale(0.8);
+							}
+							100% {
+								opacity: 1;
+								transform: scale(1);
+							}
+							}
 						</style>
 
 						<article class="col-6 col-12-xsmall work-item">
@@ -546,35 +582,7 @@
 			</div>
 		</footer>
 
-		<!-- Scripts -->
-		<script>
-			document.querySelectorAll('.clickable-card').forEach(card => {
-				card.addEventListener('click', function (e) {
-					if (e.target.tagName.toLowerCase() === 'a' || e.target.id === 'sculptureButton') return;
-		
-					const link = card.querySelector('a');
-					if (link) {
-						link.click();
-					}
-				});
-			});
-		
-
-			document.getElementById('sculptureButton').addEventListener('click', function () {
-				const membersContainer = document.getElementById('membersContainer');
-				const isOpen = membersContainer.classList.contains('show');
-			
-				if (isOpen) {
-					membersContainer.classList.remove('show');
-					this.textContent = 'See more';
-				} else {
-					membersContainer.classList.add('show');
-					this.textContent = 'See less';
-				}
-			});
-			
-		</script>	
-		
+		<!-- Scripts -->	
 		<script src="assets/js/strata/jquery.min.js"></script>
 		<script src="assets/js/strata/jquery.poptrox.min.js"></script>
 		<script src="assets/js/strata/browser.min.js"></script>
