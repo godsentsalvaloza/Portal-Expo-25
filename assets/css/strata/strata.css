@@ -2700,16 +2700,6 @@ input, select, textarea {
 		width: calc(100% - 35%);
 	}
 
-		#main > section {
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
-		}
-
-			#main > section:first-child {
-				margin-top: 0;
-				padding-top: 0;
-			}
-
 /* Poptrox */
 
 	@-moz-keyframes spin {
@@ -3187,8 +3177,8 @@ input, select, textarea {
 			}
 
 				#main > section {
-					margin: 2.25em 0 0 0;
-					padding: 2.25em 0 0 0;
+					margin: 1em 0 0 0;
+					padding: 1em 0 0 0;
 				}
 
 		/* Poptrox */
