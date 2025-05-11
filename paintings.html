@@ -47,17 +47,18 @@
 				padding-bottom: 0.5em;
 			}
 	
-			#paintingButton {
+			.paintingButton {
 				background-color: #012350ff;
 				color: white;
 				border: none;
+				transition: background-color 0.3s ease-in-out;
 			}
 				
-			#paintingButton:hover {
+			.paintingButton:hover {
 				background-color: #D4AF37;
 				color: white;
+				transition: background-color 0.5s ease-in-out;
 			}
-			
 			/* Footer */
 	
 			#footer {
@@ -363,20 +364,34 @@
 			<div id="main">
 				<section id="two">
 					<h2 class="text-white border-bottom border-2 border-light">Paintings</h2>
-
 					<div class="row">
+
+						<style>
+							.membersDescription-container {
+									max-height: 0;
+									overflow: hidden;
+									transition: max-height 0.7s ease, padding 0.7s ease;
+									padding-top: 0;
+									padding-bottom: 0;
+								}
+								
+							.membersDescription-container.show {
+								max-height: 200px; 
+								padding-top: 10px;
+								padding-bottom: 10px;
+							}
+						</style>
 
 						<article class="col-6 col-12-xsmall work-item">
 							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
 								<a href="images/fulls/01.jpg" class="image fit thumb" id="paintingLink">
 									<img src="images/thumbs/01.jpg" alt="" id="paintingImage"/>
 								</a>
-
 								<h3 class="text-dark border-dark" id="paintingTitle">Painting 1</h3>
 								<h6 class="text-dark" id="paintingSection">ICTE201A</h6>
-								<p class="text-dark" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
-								<div class="members-container" id="membersContainer">
+								<div class="membersDescription-container">
+									<p class="text-dark pb-3" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 									<p class="text-dark mb-1">Members:</p>
 									<p class="text-dark mb-0">John Doe1</p>
 									<p class="text-dark mb-0">John Doe2</p>
@@ -385,38 +400,21 @@
 								</div>
 
 								<div class="d-flex justify-content-center my-3">
-									<button class="btn btn-primary px-5" id="paintingButton">See more</button>
+									<button class="paintingButton btn btn-primary px-5" >See more</button>
 								</div>
 							</div>
-
-							<style>
-								.members-container {
-										max-height: 0;
-										overflow: hidden;
-										transition: max-height 0.5s ease, padding 0.5s ease;
-										padding-top: 0;
-										padding-bottom: 0;
-									}
-									
-								.members-container.show {
-									max-height: 200px; 
-									padding-top: 10px;
-									padding-bottom: 10px;
-								}
-							</style>
 						</article>
 
 						<article class="col-6 col-12-xsmall work-item">
-							<div class="bg-white py-3 px-3 rounded clickable-card">
-								<a href="images/fulls/02.jpg" class="image fit thumb" id="paintingLink">
-									<img src="images/thumbs/02.jpg" alt="" id="paintingImage"/>
+							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
+								<a href="images/fulls/01.jpg" class="image fit thumb" id="paintingLink">
+									<img src="images/thumbs/01.jpg" alt="" id="paintingImage"/>
 								</a>
-
 								<h3 class="text-dark border-dark" id="paintingTitle">Painting 2</h3>
 								<h6 class="text-dark" id="paintingSection">ICTE201B</h6>
-								<p class="text-dark" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
-								<div class="members-container" id="membersContainer">
+								<div class="membersDescription-container">
+									<p class="text-dark pb-3" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 									<p class="text-dark mb-1">Members:</p>
 									<p class="text-dark mb-0">John Doe1</p>
 									<p class="text-dark mb-0">John Doe2</p>
@@ -425,38 +423,21 @@
 								</div>
 
 								<div class="d-flex justify-content-center my-3">
-									<button class="btn btn-primary px-5" id="paintingButton">See more</button>
+									<button class="paintingButton btn btn-primary px-5" >See more</button>
 								</div>
 							</div>
-
-							<style>
-								.members-container {
-										max-height: 0;
-										overflow: hidden;
-										transition: max-height 0.5s ease, padding 0.5s ease;
-										padding-top: 0;
-										padding-bottom: 0;
-									}
-									
-								.members-container.show {
-									max-height: 200px; 
-									padding-top: 10px;
-									padding-bottom: 10px;
-								}
-							</style>
 						</article>
 
 						<article class="col-6 col-12-xsmall work-item">
-							<div class="bg-white py-3 px-3 rounded clickable-card">
-								<a href="images/fulls/03.jpg" class="image fit thumb" id="paintingLink">
-									<img src="images/thumbs/03.jpg" alt="" id="paintingImage"/>
+							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
+								<a href="images/fulls/01.jpg" class="image fit thumb" id="paintingLink">
+									<img src="images/thumbs/01.jpg" alt="" id="paintingImage"/>
 								</a>
-
 								<h3 class="text-dark border-dark" id="paintingTitle">Painting 3</h3>
 								<h6 class="text-dark" id="paintingSection">ICTE201C</h6>
-								<p class="text-dark" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
-								<div class="members-container" id="membersContainer">
+								<div class="membersDescription-container">
+									<p class="text-dark pb-3" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 									<p class="text-dark mb-1">Members:</p>
 									<p class="text-dark mb-0">John Doe1</p>
 									<p class="text-dark mb-0">John Doe2</p>
@@ -465,38 +446,21 @@
 								</div>
 
 								<div class="d-flex justify-content-center my-3">
-									<button class="btn btn-primary px-5" id="paintingButton">See more</button>
+									<button class="paintingButton btn btn-primary px-5" >See more</button>
 								</div>
 							</div>
-
-							<style>
-								.members-container {
-										max-height: 0;
-										overflow: hidden;
-										transition: max-height 0.5s ease, padding 0.5s ease;
-										padding-top: 0;
-										padding-bottom: 0;
-									}
-									
-								.members-container.show {
-									max-height: 200px; 
-									padding-top: 10px;
-									padding-bottom: 10px;
-								}
-							</style>
 						</article>
 
 						<article class="col-6 col-12-xsmall work-item">
-							<div class="bg-white py-3 px-3 rounded clickable-card">
-								<a href="images/fulls/04.jpg" class="image fit thumb" id="paintingLink">
-									<img src="images/thumbs/04.jpg" alt="" id="paintingImage"/>
+							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
+								<a href="images/fulls/01.jpg" class="image fit thumb" id="paintingLink">
+									<img src="images/thumbs/01.jpg" alt="" id="paintingImage"/>
 								</a>
-
 								<h3 class="text-dark border-dark" id="paintingTitle">Painting 4</h3>
 								<h6 class="text-dark" id="paintingSection">ICTE201D</h6>
-								<p class="text-dark" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
-								<div class="members-container" id="membersContainer">
+								<div class="membersDescription-container">
+									<p class="text-dark pb-3" id="paintingDescription">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 									<p class="text-dark mb-1">Members:</p>
 									<p class="text-dark mb-0">John Doe1</p>
 									<p class="text-dark mb-0">John Doe2</p>
@@ -505,30 +469,42 @@
 								</div>
 
 								<div class="d-flex justify-content-center my-3">
-									<button class="btn btn-primary px-5" id="paintingButton">See more</button>
+									<button class="paintingButton btn px-5" >See more</button>
 								</div>
 							</div>
-
-							<style>
-								.members-container {
-										max-height: 0;
-										overflow: hidden;
-										transition: max-height 0.5s ease, padding 0.5s ease;
-										padding-top: 0;
-										padding-bottom: 0;
-									}
-									
-								.members-container.show {
-									max-height: 200px; 
-									padding-top: 10px;
-									padding-bottom: 10px;
-								}
-							</style>
 						</article>
 
+						<script>
+							document.querySelectorAll('.clickable-card').forEach(card => {
+							card.addEventListener('click', function (e) {
+								if (e.target.tagName.toLowerCase() === 'a' || e.target.classList.contains('paintingButton')) return;
+
+								const link = card.querySelector('a');
+								if (link) {
+								link.click();
+									}
+								});
+							});
+
+
+							document.querySelectorAll('.paintingButton').forEach(button => {
+							button.addEventListener('click', function () {
+								const membersContainer = this.closest('.clickable-card').querySelector('.membersDescription-container');
+								const isOpen = membersContainer.classList.contains('show');
+
+								if (isOpen) {
+								membersContainer.classList.remove('show');
+								this.textContent = 'See more';
+								} else {
+								membersContainer.classList.add('show');
+								this.textContent = 'See less';
+									}
+								event.stopPropagation();
+								});
+							});
+						</script>
 					</div>
 				</section>
-
 			</div>
 
 		<!-- Footer -->
@@ -548,35 +524,7 @@
 		</footer>
 
 		<!-- Scripts -->
-		<script>
-			document.querySelectorAll('.clickable-card').forEach(card => {
-				card.addEventListener('click', function (e) {
-					if (e.target.tagName.toLowerCase() === 'a' || e.target.id === 'paintingButton') return;
-		
-					const link = card.querySelector('a');
-					if (link) {
-						link.click();
-					}
-				});
-			});
-		
 
-			document.getElementById('paintingButton').addEventListener('click', function () {
-				const membersContainer = document.getElementById('membersContainer');
-				const isOpen = membersContainer.classList.contains('show');
-			
-				if (isOpen) {
-					membersContainer.classList.remove('show');
-					this.textContent = 'See more';
-				} else {
-					membersContainer.classList.add('show');
-					this.textContent = 'See less';
-				}
-			});
-			
-			
-		</script>
-			
 		<script src="assets/js/strata/jquery.min.js"></script>
 		<script src="assets/js/strata/jquery.poptrox.min.js"></script>
 		<script src="assets/js/strata/browser.min.js"></script>
