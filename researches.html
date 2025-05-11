@@ -550,8 +550,26 @@
         </div>
     </dialog>
 
+			<style>
+				.popup-dialog {
+					opacity: 0;
+					transform: scale(0.8);
+					transition: opacity 0.6s ease, transform 0.6s ease;
+					}
+
+					.popup-dialog.showing {
+					opacity: 1;
+					transform: scale(1);
+					}
+
+					.popup-dialog.closing {
+					opacity: 0;
+					transform: scale(0.8);
+					}
+			</style>
+
 			<script>
-						// Toggle Button for Showing Titles
+				// Toggle Button for Showing Titles
 				document.querySelectorAll('.strandDivider').forEach(divider => {
 					const button = divider.querySelector('.strandButton');
 					const container = divider.querySelector('.titles-container');
@@ -576,6 +594,24 @@
 				const popupAbstract = popupDialog.querySelector('.popup-abstract');
 				const closeBtn = popupDialog.querySelector('.close-btn');
 
+				// Open Dialog with Animation
+				function openDialog() {
+					popupDialog.classList.add("showing");
+					popupDialog.classList.remove("closing");
+					popupDialog.showModal();
+				}
+
+				// Close Dialog with Animation
+				function closeDialog() {
+					popupDialog.classList.add("closing");
+					popupDialog.classList.remove("showing");
+					
+					// Wait for the transition to complete before closing
+					setTimeout(() => {
+						popupDialog.close();
+					}, 300);
+				}
+
 				// Attach Event Listeners for Links
 				links.forEach(link => {
 					link.addEventListener('click', function (e) {
@@ -588,23 +624,20 @@
 						popupTitle.textContent = title;
 						popupAbstract.textContent = abstract;
 
-						// Show dialog
-						popupDialog.showModal();
+						// Open dialog with transition
+						openDialog();
 					});
 				});
 
 				// Close Dialog when the close button is clicked
-				closeBtn.addEventListener('click', function () {
-					popupDialog.close();
-				});
+				closeBtn.addEventListener('click', closeDialog);
 
 				// Close Dialog by Clicking Outside
 				popupDialog.addEventListener('click', function (e) {
 					if (e.target === popupDialog) {
-						popupDialog.close();
+						closeDialog();
 					}
 				});
-
 			</script>
 		</div>
 
