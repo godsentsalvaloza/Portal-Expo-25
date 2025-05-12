@@ -2104,6 +2104,15 @@ input, select, textarea {
 				opacity: 1.0;
 			}
 
+			.image.thumb img {
+				transition: all 0.2s ease-in-out;
+			}
+
+			.image.thumb:hover img {
+				transition: all 0.2s ease-in-out;
+				filter: brightness(0.5);
+			}
+
 		.image img {
 			border-radius: 0.35em;
 			display: block;
@@ -2212,6 +2221,7 @@ input, select, textarea {
 
 			ul.icons li .icon:before {
 				font-size: 1.5em;
+				transition: color 0.2s ease-in-out;
 			}
 			ul.icons li .icon:hover:before {
 				font-size: 1.5em;
@@ -3177,8 +3187,8 @@ input, select, textarea {
 			}
 
 				#main > section {
-					margin: 1em 0 0 0;
-					padding: 1em 0 0 0;
+					margin: 0 0 0 0;
+					padding: 0 0 0 0;
 				}
 
 		/* Poptrox */

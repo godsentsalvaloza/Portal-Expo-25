@@ -45,19 +45,24 @@
 			#main h2 {
 				font-weight: 500;
 				padding-bottom: 0.5em;
+				text-shadow: 1px 1px 10px black;
 			}
 	
 			.sculptureButton {
 				background-color: #012350ff;
 				color: white;
 				border: none;
-				transition: background-color 0.3s ease-in-out;
+				transition: background-color 0.25s ease-in-out;
 			}
 				
 			.sculptureButton:hover {
 				background-color: #D4AF37;
 				color: white;
-				transition: background-color 0.5s ease-in-out;
+				transition: background-color 0.25s ease-in-out;
+			}
+
+			.row-item {
+				box-shadow: 0 4px 10px -2px black;
 			}
 			
 			/* Footer */
@@ -364,82 +369,59 @@
 		<!-- Main -->
 			<div id="main">
 				<section id="two">
-					<h2 class="text-white border-bottom border-2 border-light">Sculptures</h2>
+					<h2 class="text-white border-bottom py-3">Sculptures</h2>
 					<div class="row">
 						<style>
 							.membersDescription-container {
-									max-height: 0;
-									overflow: hidden;
-									transition: max-height 0.7s ease, padding 0.7s ease;
-									padding-top: 0;
-									padding-bottom: 0;
-								}
-								
+								height: 0;
+								overflow: hidden;
+								transition: height 0.7s ease, padding 0.7s ease;
+								padding-top: 0;
+								padding-bottom: 0;
+							}
+
 							.membersDescription-container.show {
-								max-height: 100%; 
+								height: auto;
 								padding-top: 10px;
 								padding-bottom: 10px;
 							}
 							.image.fit {
-							position: relative;
-							width: 100%;
-							padding-top: 100%; /* 1x1 aspect ratio */
-							overflow: hidden;
+								position: relative;
+								width: 100%;
+								padding-top: 100%; /* 1x1 aspect ratio */
+								overflow: hidden;
 							}
 
 							.image.fit img {
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-							opacity: 0;
-							transform: scale(0.8);
-							animation: fadeInScale 0.9s ease forwards;
-							transition: transform 0.3s ease, opacity 0.3s ease;
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								opacity: 0;
+								transform: scale(0.8);
+								animation: fadeInScale 0.9s ease forwards;
+								transition: transform 0.3s ease, opacity 0.3s ease;
 							}
 
 							.image.fit:hover img {
-							transform: scale(1.05);
-							opacity: 0.9;
+								transform: scale(1.05);
+								opacity: 0.9;
 							}
 
 							/* Keyframe Animation */
 							@keyframes fadeInScale {
-							0% {
-								opacity: 0;
-								transform: scale(0.8);
-							}
-							100% {
-								opacity: 1;
-								transform: scale(1);
-							}
+								0% {
+									opacity: 0;
+									transform: scale(0.9);
+								}
+								100% {
+									opacity: 1;
+									transform: scale(1);
+								}
 							}
 						</style>
-
-						<article class="col-6 col-12-xsmall work-item">
-							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
-								<a href="images\fulls\1x1ratio.png" class="image fit thumb" id="sculptureLink">
-									<img src="images\thumbs\1x1ratio.png" alt="" id="sculptureImage"/>
-								</a>
-								<h3 class="text-dark border-dark" id="sculptureTitle">Sculpture 1</h3>
-								<h6 class="text-dark pb-1" id="sculptureSection">ICTE201A</h6>
-
-								<div class="membersDescription-container">
-								<p class="text-dark pb-3" id="sculptureDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-								<p class="text-dark mb-1">Members:</p>
-								<p class="text-dark mb-0">Jane Doe1</p>
-								<p class="text-dark mb-0">Jane Doe2</p>
-								<p class="text-dark mb-0">Jane Doe3</p>
-								<p class="text-dark mb-0">Jane Doe4</p>
-								</div>
-
-								<div class="d-flex justify-content-center my-3">
-									<button class="sculptureButton btn  px-5">See more</button>
-								</div>
-							</div>
-						</article>
 
 						<article class="col-6 col-12-xsmall work-item">
 							<div class="row-item bg-white py-3 px-3 rounded clickable-card">
@@ -515,10 +497,11 @@
 								<a href="images\fulls\1x1ratio.png" class="image fit thumb" id="sculptureLink">
 									<img src="images\thumbs\1x1ratio.png" alt="" id="sculptureImage"/>
 								</a>
-								<h3 class="text-dark border-dark" id="sculptureTitle">Sculpture 2</h3>
+								<h3 class="text-dark border-dark" id="sculptureTitle">Sculpture 4</h3>
 								<h6 class="text-dark pb-1" id="sculptureSection">ICTE201D</h6>
-								<p class="text-dark pb-3" id="sculptureDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
 								<div class="membersDescription-container">
+								<p class="text-dark pb-3" id="sculptureDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								<p class="text-dark mb-1">Members:</p>
 								<p class="text-dark mb-0">Jane Doe1</p>
 								<p class="text-dark mb-0">Jane Doe2</p>
@@ -532,6 +515,7 @@
 							</div>
 						</article>
 						
+						<!-- Scripts -->
 						<script>
 							document.querySelectorAll('.clickable-card').forEach(card => {
 								card.addEventListener('click', function (e) {
@@ -548,14 +532,6 @@
 								button.addEventListener('click', function (event) {
 									const membersContainer = this.closest('.clickable-card').querySelector('.membersDescription-container');
 									const isOpen = membersContainer.classList.contains('show');
-
-									// Close all open containers
-									document.querySelectorAll('.membersDescription-container.show').forEach(container => {
-										if (container !== membersContainer) {
-											container.classList.remove('show');
-											container.closest('.clickable-card').querySelector('.sculptureButton').textContent = 'See more';
-										}
-									});
 
 									// Toggle the current container
 									if (isOpen) {
