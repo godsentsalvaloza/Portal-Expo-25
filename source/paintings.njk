@@ -418,7 +418,10 @@
           </style>
           {%- for post in collections.paintings -%}
           <article class="col-6 col-12-xsmall work-item">
-            <div class="row-item bg-white py-3 px-3 rounded clickable-card">
+            <div
+              class="row-item bg-white py-3 px-3 rounded clickable-card"
+              id="{{ post.data.identifier }}"
+            >
               <a
                 href="{{ post.data.art_image }}"
                 class="image fit thumb"
