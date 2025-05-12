@@ -319,6 +319,25 @@ collections:
       - { label: "Members", name: "members", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "hidden", default: "paintings" }
 
+  - name: "research"
+    label: "Research"
+    folder: "/source/post/researches"
+    create: true
+    slug: "{{research_title}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Research Title", name: "research_abstract", widget: "string" }
+      - {
+          label: "Research Abstract",
+          name: "research_abstract",
+          widget: "markdown",
+        }
+      - {
+          label: "Section",
+          name: "tage",
+          widget: "select",
+          options: ["abm", "cart", "humms", "abm", "toper"],
+        }
+
   - name: "sculpture"
     label: "Sculpture"
     folder: "/source/post/sculptures"
