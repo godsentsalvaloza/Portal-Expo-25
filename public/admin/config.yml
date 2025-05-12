@@ -325,7 +325,7 @@ collections:
     create: true
     slug: "{{research_title}}-{{month}}-{{day}}"
     fields:
-      - { label: "Research Title", name: "research_abstract", widget: "string" }
+      - { label: "Research Title", name: "research_title", widget: "string" }
       - {
           label: "Research Abstract",
           name: "research_abstract",

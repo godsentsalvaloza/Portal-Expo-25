@@ -2,10 +2,10 @@
 main_section_title: SHS EXPO 2025
 main_section_description: Featuring local festivals reimagined through
   futuristic art <br /> and sculpture by STI College Marikina’s Grade 12
-  students. imissuu
+  students.
 first_section_title: Test 1
 first_section_description: Test Ipsum dolor sit amet
-first_section_image: /images/uploads/pic11.jpg
+first_section_image: /images/uploads/pic01.jpg
 first_section_alternative_image: test alt img 1
 second_section_title: Test 2
 second_section_description: Test2 Ipsum dolor sit amet
