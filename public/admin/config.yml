@@ -289,9 +289,9 @@ collections:
     create: true
     slug: "{{section}}-{{identifier}}-{{month}}-{{day}}"
     fields:
-      - { label: "Art Name", name: "art_name", widget: "string" }
+      - { label: "Painting Name", name: "art_name", widget: "string" }
       - {
-          label: "Art Description",
+          label: "Painting Description",
           name: "art_description",
           widget: "markdown",
         }
@@ -314,6 +314,42 @@ collections:
       - {
           label: "Painting Image Alt Text",
           name: "art_image_alt_text",
+          widget: "string",
+        }
+      - { label: "Members", name: "members", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "paintings" }
+
+  - name: "sculpture"
+    label: "Sculpture"
+    folder: "/source/post/sculptures"
+    create: true
+    slug: "{{section}}-{{identifier}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Sculpture Name", name: "sculpture_name", widget: "string" }
+      - {
+          label: "Sculpture Description",
+          name: "sculpture_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "select",
+          options:
+            [
+              "ABM-201A",
+              "CART-201A",
+              "HUMMS-201A",
+              "ICTE-201A",
+              "ICTE-202A",
+              "TOPER-201A",
+            ],
+        }
+      - { label: "Identifier", name: "identifier", widget: "string" }
+      - { label: "Sculpture Image", name: "sculpture_image", widget: "image" }
+      - {
+          label: "Sculpture Image Alt Text",
+          name: "sculpture_image_alt_text",
           widget: "string",
         }
       - { label: "Members", name: "members", widget: "markdown" }
