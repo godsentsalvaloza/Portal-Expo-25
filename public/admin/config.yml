@@ -333,7 +333,7 @@ collections:
         }
       - {
           label: "Section",
-          name: "tage",
+          name: "tags",
           widget: "select",
           options: ["abm", "cart", "humms", "abm", "toper"],
         }
