@@ -353,4 +353,4 @@ collections:
           widget: "string",
         }
       - { label: "Members", name: "members", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "hidden", default: "paintings" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "sculptures" }
