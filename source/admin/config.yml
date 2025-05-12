@@ -282,25 +282,39 @@ collections:
           name: "fourth_section_link",
           widget: "string",
         }
-  - name: "sculpture"
-    label: "Sculpture"
-    folder: "source/posts"
+
+  - name: "painting"
+    label: "Painting"
+    folder: "/source/post/paintings"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{identifier}}"
+    slug: "{{section}}-{{identifier}}-{{month}}-{{day}}"
     fields:
-      - { label: "Art Name", name: "product_name", widget: "string" }
-      - { label: "Tags (post)", name: "tags", widget: "string" }
-      - { label: "Identifier", name: "identifier", widget: "string" }
-      - { label: "Section", name: "product_section", widget: "string" }
+      - { label: "Art Name", name: "art_name", widget: "string" }
       - {
-          label: "Product Description",
-          name: "product_description",
+          label: "Art Description",
+          name: "art_description",
           widget: "markdown",
         }
-      - { label: "Art Image", name: "product_image", widget: "image" }
       - {
-          label: "Art Image Alternative Text",
-          name: "product_image_alternative_text",
+          label: "Section",
+          name: "section",
+          widget: "select",
+          options:
+            [
+              "ABM-201A",
+              "CART-201A",
+              "HUMMS-201A",
+              "ICTE-201A",
+              "ICTE-202A",
+              "TOPER-201A",
+            ],
+        }
+      - { label: "Identifier", name: "identifier", widget: "string" }
+      - { label: "Painting Image", name: "art_image", widget: "image" }
+      - {
+          label: "Painting Image Alt Text",
+          name: "art_image_alt_text",
           widget: "string",
         }
       - { label: "Members", name: "members", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "paintings" }
