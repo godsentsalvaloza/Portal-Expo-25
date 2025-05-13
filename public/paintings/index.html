@@ -47,20 +47,26 @@
       #main h2 {
         font-weight: 500;
         padding-bottom: 0.5em;
+        text-shadow: 1px 1px 10px black;
       }
 
       .paintingButton {
         background-color: #012350ff;
         color: white;
         border: none;
-        transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.25s ease-in-out;
       }
 
       .paintingButton:hover {
         background-color: #d4af37;
         color: white;
-        transition: background-color 0.5s ease-in-out;
+        transition: background-color 0.25s ease-in-out;
       }
+
+      .row-item {
+        box-shadow: 0 4px 10px -2px black;
+      }
+
       /* Footer */
 
       #footer {
@@ -92,6 +98,10 @@
         #main {
           padding: 1em;
           width: 96%;
+        }
+
+        #two {
+          margin-top: 0;
         }
 
         #footer {
@@ -367,14 +377,15 @@
         <div class="row">
           <style>
             .membersDescription-container {
-              max-height: 0;
+              height: 0;
               overflow: hidden;
-              transition: max-height 0.7s ease, padding 0.7s ease;
+              transition: height 0.7s ease, padding 0.7s ease;
               padding-top: 0;
               padding-bottom: 0;
             }
+
             .membersDescription-container.show {
-              max-height: 100%;
+              height: auto;
               padding-top: 10px;
               padding-bottom: 10px;
             }
@@ -407,11 +418,7 @@
             @keyframes fadeInScale {
               0% {
                 opacity: 0;
-                transform: scale(0.8);
-              }
-              60% {
-                opacity: 1;
-                transform: scale(1.05);
+                transform: scale(0.9);
               }
               100% {
                 opacity: 1;

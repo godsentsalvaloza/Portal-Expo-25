@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
   <head>
     <title>Sentro de Museo | Sculptures</title>
@@ -52,6 +48,12 @@
       #main h2 {
         font-weight: 500;
         padding-bottom: 0.5em;
+      }
+
+      #main h2,
+      .strandButton,
+      .researchTitle {
+        text-shadow: 1px 1px 10px black;
       }
 
       /* Footer */
@@ -153,6 +155,7 @@
 
         #footer {
           padding: 1rem;
+          margin-top: 3em;
         }
 
         #footer .icons {
@@ -166,6 +169,10 @@
         #footer .copyright {
           font-size: 0.75em;
           flex-direction: column;
+        }
+
+        .popup-title {
+          font-size: 1.2em;
         }
       }
 
@@ -198,6 +205,10 @@
         #footer .copyright {
           font-size: 0.75em;
           flex-direction: column;
+        }
+
+        .popup-title {
+          font-size: 1.2em;
         }
       }
 
@@ -375,6 +386,7 @@
         .strandDivider:hover,
         .strandButton:hover {
           color: #012350ff;
+          transition: color 0.2s ease-in-out;
         }
 
         .strandDivider {
@@ -382,6 +394,11 @@
           transform: translateX(-20%);
           animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
           animation-delay: 0.2s;
+          margin-left: 0.75em;
+        }
+
+        .researchTitles {
+          margin-left: 0.75em;
         }
 
         @keyframes slideIn {
@@ -412,7 +429,7 @@
               <article>
                 <a
                   href="#"
-                  class="text-black sidebar-top-posts-widget__link"
+                  class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
                   >{{ post.data.research_title }}</a
@@ -439,7 +456,7 @@
               <article>
                 <a
                   href="#"
-                  class="text-black sidebar-top-posts-widget__link"
+                  class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
                   >{{ post.data.research_title }}</a
@@ -466,7 +483,7 @@
               <article>
                 <a
                   href="#"
-                  class="text-black sidebar-top-posts-widget__link"
+                  class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
                   >{{ post.data.research_title }}</a
@@ -493,7 +510,7 @@
               <article>
                 <a
                   href="#"
-                  class="text-black sidebar-top-posts-widget__link"
+                  class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
                   >{{ post.data.research_title }}</a
@@ -519,7 +536,7 @@
               <article>
                 <a
                   href="#"
-                  class="text-black sidebar-top-posts-widget__link"
+                  class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
                   >{{ post.data.research_title }}</a
@@ -544,7 +561,7 @@
           </div>
           <h3 class="text-dark popup-title"></h3>
           <h5>Abstract</h5>
-          <p class="popup-abstract"></p>
+          <p class="popup-abstract" style="text-align: justify"></p>
         </div>
       </dialog>
 
