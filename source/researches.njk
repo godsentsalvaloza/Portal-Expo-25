@@ -356,8 +356,11 @@
     <!-- Header  -->
     <header id="header">
       <div class="inner">
-        <a id="logo" class="image avatar py-3"
-          ><img src="/images/SentroDeMuseo.jpg" alt="" style="border-radius: 0"
+        <a id="logo" class="image avatar py-3" href="/"
+          ><img
+            src="/images/SentroDeMuseoMain.jpg"
+            alt=""
+            style="border-radius: 0"
         /></a>
       </div>
     </header>
@@ -410,9 +413,7 @@
       </style>
 
       <section id="two">
-        <h2 class="text-white border-bottom py-3">
-          Senior High School Researches
-        </h2>
+        <h2 class="text-white border-bottom py-3">Grade 12 Researches</h2>
         <!-- Strand Dividers -->
 
         <div class="strandDivider my-4">
@@ -425,18 +426,16 @@
           <div class="titles-container">
             <div class="border-top w-75"></div>
             <div class="my-4">
-              {%- for post in collections.abm -%}
               <article>
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
-              <br />
-              {%- endfor -%}
             </div>
           </div>
           <div class="border-bottom mb-3 w-75"></div>
@@ -459,6 +458,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -480,12 +480,13 @@
             <div class="border-top w-75"></div>
             <div class="my-4">
               {%- for post in collections.humms -%}
-              <article>
+             <article>
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -513,6 +514,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -539,6 +541,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -562,6 +565,8 @@
           <h3 class="text-dark popup-title"></h3>
           <h5>Abstract</h5>
           <p class="popup-abstract" style="text-align: justify"></p>
+          <h5>Members</h5>
+          <p class="popup-members" style="text-align: justify"></p>
         </div>
       </dialog>
 
@@ -611,6 +616,7 @@
         const popupDialog = document.getElementById("popupDialog");
         const popupTitle = popupDialog.querySelector(".popup-title");
         const popupAbstract = popupDialog.querySelector(".popup-abstract");
+        const popupMembers = popupDialog.querySelector(".popup-members");
         const closeBtn = popupDialog.querySelector(".close-btn");
 
         // Open Dialog with Animation
@@ -638,10 +644,15 @@
 
             const title = this.getAttribute("data-title");
             const abstract = this.getAttribute("data-abstract");
+            const members = JSON.parse(this.getAttribute("data-members"));
+
+            // Convert members array to a list with <br>
+            const membersHTML = members.join("<br>");
 
             // Update dialog content
             popupTitle.textContent = title;
             popupAbstract.textContent = abstract;
+            popupMembers.innerHTML = membersHTML;
 
             // Open dialog with transition
             openDialog();

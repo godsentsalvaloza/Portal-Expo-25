@@ -335,9 +335,13 @@ collections:
           label: "Section",
           name: "tags",
           widget: "select",
-          options: ["abm", "cart", "humms", "abm", "toper"],
+          options: ["abm", "cart", "humms", "ict", "toper"],
         }
-
+      - {
+          label: "Members",
+          name: "members",
+          widget: markdown,
+        }
   - name: "sculpture"
     label: "Sculpture"
     folder: "/source/post/sculptures"
