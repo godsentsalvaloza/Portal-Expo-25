@@ -15,6 +15,7 @@
     />
     <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/strata/strata.css" />
+    <link rel="stylesheet" href="/assets/css/strata/menu.css">
 
     <style>
       body {
@@ -364,12 +365,27 @@
       </div>
     </header>
 
+     <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/landing">Sentro De Museo</a></li>
+          <li><a href="/paintings">Paintings</a></li>
+          <li><a href="/sculptures">Sculptures</a></li>
+          <li><a href="/researches">Researches</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="/landing" class="button primary fit">Get Started</a></li>
+        </ul>
+      </nav>
+     
     <!-- Main -->
     <div id="main">
       <section id="two">
-        <h2 class="text-white border-bottom border-2 border-light">
-          Sculptures
-        </h2>
+       <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="text-white mb-0">Sculptures</h2>
+       <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
+</div>
         <div class="row">
           <style>
             .membersDescription-container {
@@ -577,12 +593,14 @@
     {%- endfor -%}
 
     <!-- Scripts -->
-
     <script src="/assets/js/strata/jquery.min.js"></script>
     <script src="/assets/js/strata/jquery.poptrox.min.js"></script>
     <script src="/assets/js/strata/browser.min.js"></script>
     <script src="/assets/js/strata/breakpoints.min.js"></script>
     <script src="/assets/js/strata/util.js"></script>
     <script src="/assets/js/strata/strata.js"></script>
+    <script src="/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
