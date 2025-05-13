@@ -1,5 +1,5 @@
 ---
-art_name: 5 Centimeters per Second
+art_name: ELEMRLEMR
 art_description: 5 Centimeters Per Second captures the delicate and fleeting
   nature of human connections, symbolized through the gentle descent of cherry
   blossom petals. Each petal drifts at a measured pace, reflecting the slow yet
