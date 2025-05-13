@@ -1,18 +1,26 @@
 ---
-art_name: ELEMRLEMR
-art_description: 5 Centimeters Per Second captures the delicate and fleeting
-  nature of human connections, symbolized through the gentle descent of cherry
-  blossom petals. Each petal drifts at a measured pace, reflecting the slow yet
-  inevitable passage of time and the gradual distance that forms between people.
-  The composition is imbued with soft, wistful hues, evoking both the warmth of
-  cherished memories and the cold solitude of growing apart. Through this piece,
-  the artist explores the bittersweet beauty of transience, inviting viewers to
-  pause and contemplate the imperceptible yet profound shifts in their own
-  lives.
-section: ABM-201A
-identifier: centimeter-per-second
-art_image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.hdqwalls.com%2Fdownload%2F5-centimeters-per-second-anime-tv-series-st-3840x2160.jpg&f=1&nofb=1&ipt=433245a04402642689de3eb808784b28bbae19ecf0069b7ba0d003702a978df5
-art_image_alt_text: centimeter-per-second
+art_name: Radiance Of Masskara
+art_description: The painting, made using canvas, acrylic paint, brush, pen, and
+  palette, was created in reference to the Masskara Festival celebrated in
+  Bacolod City. Entitled 'Radiance of Masskara', the piece presents how the
+  ethnic culture of the Filipino continues to shine brightly even as the world
+  progresses. It illustrates traditional dancers in their colorful masks
+  performing in the streets, while also incorporating elements of modern
+  society—such as flying drones, high-rise buildings, and new model jeeps. This
+  fusion of traditional and contemporary imagery captures the essence of how
+  Filipinos preserve their culture of joy despite constant societal changes. The
+  choreography in the painting—expressed through dynamic brushstrokes and vivid
+  colors—depicts the dancers’ hopeful energy, symbolizing the enduring spirit of
+  the Filipino people. The presence of modern technology and towering structures
+  does not clash with the cultural celebration but rather emphasizes its
+  adaptability. 'Radiance of Masskara' symbolizes strength, resilience, and
+  hope—showing how the Filipino spirit continues to smile and shine, even
+  through challenging times, while looking forward to a brighter
+  future.<br>2025<br>12in x 12in<br> *Acryclic on canvas*
+section: ICTE-201A
+identifier: radiance-of-masskara
+art_image: /images/uploads/radiance-of-masskara.jpg
+art_image_alt_text: radiance-of-masskara
 members: <ul><li>Castro, Aneeza Amor</li><li>Erasmo, Ashley
   Ysabelle</li><li>Madrid, Rainier Cale S.</li><li>Piza, Nhiel John
   P.</li><li>Serrano, Jenna Marie C.</li></ul>
