@@ -15,7 +15,7 @@
     />
     <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/strata/strata.css" />
-    <link rel="stylesheet" href="/assets/css/strata/menu.css">
+    <link rel="stylesheet" href="/assets/css/strata/menu.css" />
 
     <style>
       body {
@@ -365,27 +365,27 @@
       </div>
     </header>
 
-     <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/landing">Sentro De Museo</a></li>
-          <li><a href="/paintings">Paintings</a></li>
-          <li><a href="/sculptures">Sculptures</a></li>
-          <li><a href="/researches">Researches</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="/landing" class="button primary fit">Get Started</a></li>
-        </ul>
-      </nav>
-     
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/landing">Sentro De Museo</a></li>
+        <li><a href="/paintings">Paintings</a></li>
+        <li><a href="/sculptures">Sculptures</a></li>
+        <li><a href="/researches">Researches</a></li>
+      </ul>
+      <ul class="actions stacked">
+        <li><a href="/landing" class="button primary fit">Get Started</a></li>
+      </ul>
+    </nav>
+
     <!-- Main -->
     <div id="main">
       <section id="two">
-       <div class="d-flex align-items-center justify-content-between mb-3">
-        <h2 class="text-white mb-0">Sculptures</h2>
-       <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
-</div>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="text-white mb-0">Sculptures</h2>
+          <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
+        </div>
         <div class="row">
           <style>
             .membersDescription-container {
@@ -477,7 +477,7 @@
                   id="paintingDescription"
                   style="font-size: 0.85em; text-align: justify"
                 >
-                  {{ post.data.sculpture_description }}
+                  {{ post.data.sculpture_description | safe }}
                 </p>
                 <p
                   class="text-dark mb-1"

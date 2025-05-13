@@ -8,7 +8,7 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/strata/menu.css"/>
+    <link rel="stylesheet" href="/assets/css/strata/menu.css" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -16,8 +16,7 @@
     />
     <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/strata/strata.css" />
-    <link rel="stylesheet" href="/assets/css/strata/menu.css">
-  
+    <link rel="stylesheet" href="/assets/css/strata/menu.css" />
 
     <style>
       body {
@@ -362,7 +361,6 @@
   </head>
 
   <body class="is-preload">
-    
     <!-- Header  -->
     <header id="header">
       <div class="inner">
@@ -372,29 +370,28 @@
       </div>
     </header>
 
-      <!-- Menu -->
-      <nav id="menu">
-        <ul class="links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/landing">Sentro De Museo</a></li>
-          <li><a href="/paintings">Paintings</a></li>
-          <li><a href="/sculptures">Sculptures</a></li>
-          <li><a href="/researches">Researches</a></li>
-        </ul>
-        <ul class="actions stacked">
-          <li><a href="/landing" class="button primary fit">Get Started</a></li>
-        </ul>
-      </nav>
-    
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/landing">Sentro De Museo</a></li>
+        <li><a href="/paintings">Paintings</a></li>
+        <li><a href="/sculptures">Sculptures</a></li>
+        <li><a href="/researches">Researches</a></li>
+      </ul>
+      <ul class="actions stacked">
+        <li><a href="/landing" class="button primary fit">Get Started</a></li>
+      </ul>
+    </nav>
+
     <!-- Main -->
     <div id="main">
       <section id="two">
-       <div class="d-flex align-items-center justify-content-between mb-3">
-        <h2 class="text-white mb-0">Paintings</h2>
-       <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
-</div>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="text-white mb-0">Paintings</h2>
+          <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
+        </div>
 
-        
         <div class="row">
           <style>
             .membersDescription-container {
@@ -486,7 +483,7 @@
                   id="paintingDescription"
                   style="font-size: 0.85em; text-align: justify"
                 >
-                  {{ post.data.art_description }}
+                  {{ post.data.art_description | safe }}
                 </p>
                 <p
                   class="text-dark mb-1"
