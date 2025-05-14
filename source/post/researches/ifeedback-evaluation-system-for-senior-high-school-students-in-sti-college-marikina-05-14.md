@@ -21,5 +21,7 @@ research_abstract: "This paper seeks to evaluate the effectiveness of iFeedback,
   researchers by providing insights into optimizing feedback processes in
   educational settings."
 tags: ict
-members: Godsent John Salvaloa-Jae Zeann Colesio-Elmer James Condesa
+members: Casin, John Michael P.-Castro, Aneeza Amor-Cortes, Rafael Louise
+  D.-Erasmo, Ashley Ysabelle-Madrid, Rainier Cale S.-Piza, Nhiel John
+  P.-Serrano, Jenna Marie C.-Villegas, Prince Benedict R.
 ---
