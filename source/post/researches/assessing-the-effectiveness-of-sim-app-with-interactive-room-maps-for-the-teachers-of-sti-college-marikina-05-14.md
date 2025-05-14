@@ -1,6 +1,6 @@
 ---
-research_title: Assessing The Effectiveness Of SIM App With Interactive Room
-  Maps For The Teachers Of STI College Marikina
+research_title: ASSESSING THE EFFECTIVENESS OF SIM APP WITH INTERACTIVE ROOM
+  MAPS FOR THE TEACHERS OF STI COLLEGE MARIKINA
 research_abstract: This study evaluates the effectiveness of the STI Integrated
   Map (SIM) application in assisting teachers at STI College Marikina with
   classroom navigation and scheduling. It aims to address scheduling conflicts
