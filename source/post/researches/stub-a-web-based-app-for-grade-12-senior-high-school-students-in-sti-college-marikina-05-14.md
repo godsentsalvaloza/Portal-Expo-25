@@ -24,7 +24,6 @@ research_abstract: This study explores the effectiveness of Study Web-Based App
   learning versus passively receiving information from an instructor. Hence,
   collaborative learning is considered a more effective learning approach.
 tags: ict
-members: Babilonia, Neil Franco L.-Bangayan, Zoei S.-Bernal, Ramwil M.-Cresido,
-  Clyde Dhenzel S. -Tomenio, Noel Angelo S.-Vibar, Miguel Diego M.-Vinuya, Carl
-  Francis Andrei L.
+members: Sendrijas, Paula Mae-Baloloy, Arnie Keisha-Bamba, Deniel-Forte,
+  McJade-Orsine, John Daniel-Osabel, Shaune-Papa, Airesh-Tapado, Kurt Russel
 ---
