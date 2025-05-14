@@ -462,10 +462,10 @@ a.menu-link:hover {
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
-                  data-title="{{ post.data.research_title }}"
-                  data-abstract="{{ post.data.research_abstract }}"
+                  data-title="{{ post.data.research_title | safe }}"
+                  data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title }}</a
+                  >{{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -490,10 +490,10 @@ a.menu-link:hover {
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
-                  data-title="{{ post.data.research_title }}"
-                  data-abstract="{{ post.data.research_abstract }}"
+                  data-title="{{ post.data.research_title | safe }}"
+                  data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title }}</a
+                  >{{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -518,10 +518,10 @@ a.menu-link:hover {
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
-                  data-title="{{ post.data.research_title }}"
-                  data-abstract="{{ post.data.research_abstract }}"
+                  data-title="{{ post.data.research_title | safe }}"
+                  data-abstract="{{ post.data.research_abstract | safe }}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title }}</a
+                  >{{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -546,10 +546,10 @@ a.menu-link:hover {
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
-                  data-title="{{ post.data.research_title }}"
-                  data-abstract="{{ post.data.research_abstract }}"
+                  data-title="{{ post.data.research_title | safe }}"
+                  data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title }}</a
+                  >{{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -573,10 +573,10 @@ a.menu-link:hover {
                 <a
                   href="#"
                   class="text-white sidebar-top-posts-widget__link"
-                  data-title="{{ post.data.research_title }}"
-                  data-abstract="{{ post.data.research_abstract }}"
+                  data-title="{{ post.data.research_title | safe }}"
+                  data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title }}</a
+                  >{{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -688,8 +688,8 @@ a.menu-link:hover {
     const membersHTML = members.join("<br>");
 
     // Update dialog content
-    popupTitle.textContent = title;
-    popupAbstract.textContent = abstract;
+    popupTitle.innerHTML = title;
+    popupAbstract.innerHTML = abstract;
     popupMembers.innerHTML = membersHTML;
 
     // Open dialog with transition
