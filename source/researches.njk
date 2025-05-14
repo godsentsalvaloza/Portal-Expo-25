@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="/assets/css/strata/menu.css" />
 
     <style>
+      a:hover {
+			border-bottom-color: transparent;
+			color: #012350ff !important;
+			text-decoration: none;
+		}
       body {
         background-color: #d4af37;
       }
@@ -350,6 +355,12 @@
           flex-direction: column;
         }
       }
+a.menu-link:hover {
+			border-bottom-color: transparent;
+			color: #D4AF37 !important;
+			text-decoration: none;
+		}
+     
     </style>
   </head>
 
@@ -369,11 +380,11 @@
     <!-- Menu -->
     <nav id="menu">
       <ul class="links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/landing">Sentro De Museo</a></li>
-        <li><a href="/paintings">Paintings</a></li>
-        <li><a href="/sculptures">Sculptures</a></li>
-        <li><a href="/researches">Researches</a></li>
+        <li><a href="/" class="menu-link">Home</a></li>
+        <li><a href="/landing"  class="menu-link">Sentro De Museo</a></li>
+        <li><a href="/paintings"  class="menu-link">Paintings</a></li>
+        <li><a href="/sculptures"  class="menu-link">Sculptures</a></li>
+        <li><a href="/researches"  class="menu-link">Researches</a></li>
       </ul>
       <ul class="actions stacked">
         <li><a href="/landing" class="button primary fit">Get Started</a></li>
@@ -426,6 +437,7 @@
             transform: translateX(0);
           }
         }
+      
       </style>
 
       <section id="two">
@@ -452,7 +464,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
-                  data-members="{{ post.data.members | dump | safe }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -480,7 +492,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
-                  data-members="{{ post.data.members | dump | safe }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -508,7 +520,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
-                  data-members="{{ post.data.members | dump | safe }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -536,7 +548,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
-                  data-members="{{ post.data.members | dump | safe }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -563,7 +575,7 @@
                   class="text-white sidebar-top-posts-widget__link"
                   data-title="{{ post.data.research_title }}"
                   data-abstract="{{ post.data.research_abstract }}"
-                  data-members="{{ post.data.members | dump | safe }}"
+                  data-members='{{ post.data.members | dump | safe }}'
                   >{{ post.data.research_title }}</a
                 >
               </article>
@@ -700,21 +712,21 @@
           <li>
             <a
               href="{{ post.data.twitter_link }}"
-              class="icon brands alt fa-twitter"
+              class="icon brands alt fa-twitter footer-link"
               ><span class="label">Twitter</span></a
             >
           </li>
           <li>
             <a
               href="{{ post.data.facebook_link }}"
-              class="icon brands alt fa-facebook-f"
+              class="icon brands alt fa-facebook-f footer-link"
               ><span class="label">Facebook</span></a
             >
           </li>
           <li>
             <a
               href="{{ post.data.instagram_link }}"
-              class="icon brands alt fa-instagram"
+              class="icon brands alt fa-instagram footer-link"
               ><span class="label">Instagram</span></a
             >
           </li>
