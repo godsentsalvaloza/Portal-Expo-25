@@ -1,23 +1,27 @@
 ---
-research_title: Assessing Tourist’s Satisfaction of Shoe Design and Quality as a
-  Local Product in Marikina City
-research_abstract: This study explores the assessment of tourist satisfaction
-  with C Point shoe design and quality as a local product in Marikina City,
-  analyzing its significance, challenges, and potential impacts. The research
-  delves into factors influencing customer satisfaction, product quality
-  standards, and brand perception, highlighting relevant theories,
-  methodologies, and findings. By examining tourist feedback, market trends, and
-  comparative case studies, this paper aims to provide insights into how C Point
-  shoes meet customer expectations and contribute to Marikina’s reputation as a
-  shoe industry hub. The study employs surveys, and interviews to gather and
-  analyze data, ensuring a comprehensive understanding of the subject matter.
-  The results reveal key drivers of tourist satisfaction, areas for improvement,
-  and competitive advantages of C Point shoes, demonstrating the implications
-  for local shoemakers, business owners, and tourism stakeholders, Ultimately,
-  this research contributes to the enhancement of Marikina’s local shoe
-  industry, offering recommendations for future studies and practical
-  implementations.
+research_title: "Perception of Grade 12 student of STI College Marikina on the
+  Cultural Significance of Traditional Jeepneys "
+research_abstract: This study examines the relationship between public
+  transportation, cultural identity, and community engagement to better
+  understand students’ experiences with traditional modes of transportation in
+  the Philippines. The study's goal is to better understand the cultural
+  significance of traditional jeepneys and how they contribute to community
+  relationships, as well as to discover how to preserve this crucial aspect of
+  Filipino culture. We employed foreign and local studies, as well as foreign
+  and local literature, to determine the significance of public transportation
+  in comparison to traditional jeepneys. Methodologically, the research uses
+  descriptive studies and surveys targeting Grade 12 students about what and how
+  they feel about traditional jeepneys. The study investigates the students'
+  demographic characteristics, assesses awareness and sense of cultural value,
+  compares cultural identity to daily life, and evaluates the safety, driver
+  conduct, and environmental impact of traditional jeeps. Ethical considerations
+  were carefully addressed, including assuring voluntary participation,
+  providing explicit descriptions of the study's objective, and maintaining
+  confidentiality via letter. The study emphasizes the necessity of preserving
+  the cultural value of traditional jeepneys. The findings highlight the
+  complicated linkages between how students wish to commute and how they feel
+  while riding a jeepney.
 tags: toper
-members: Duncara, Shara Kate A. -Daracan, Princess Joy N. -Pardito, Joana Marie
-  M. -Patrocinio, Maelyn S. -Syquia, Krzlyn A.
+members: Abliter, Jenaiza Erich T.-Barrameda, Jenny Rose B. -Dela Torre, John
+  Elijah P. -Gonzales, Claire Anne I. -San Miguel, Princess Chelsea C.
 ---
