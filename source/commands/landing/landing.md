@@ -1,27 +1,43 @@
 ---
-tags: landing
 main_section_title: Sentro de Museo
-main_section_description: Lorem ipsum dolor sit amet nullam consequat<br /> sed veroeros. tempus adipiscing nulla.
-main_section_image: /images/uploads/pic03.jpg
-main_section_image_alt: test alt 1
-second_section_title: Sed amet aliquam
-second_section_description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittismagna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
+main_section_image_alt: sentro-de-museo
+second_section_title: "Sentro de Museo: An Artisan Gallery"
+second_section_description: "Sentro de Museo: The Artisan Gallery presents a
+  variety of artworks that highlights the correlation of modern age and the
+  Philippine Cultural Festivals. The Gallery showcases paintings and sculptures
+  created by the creative minds of STI College Marikina’s Grade 12 students. The
+  artworks demonstrate how technology and innovation can work alongside of
+  culture and customs."
 first_article_title: Paintings
-first_article_description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
-first_article_image: /images/uploads/pic08.jpg
-first_article_alt_image: alt2
+first_article_description: Filled with the brimming bright and wonderful colors
+  of Cultural Festivals, the paintings also touches the contemporary side of the
+  age. The theme, Philippine Festival Scene and Modern Design Influence depicts
+  imaginative sceneries that provokes emotions and thoughts.
+first_article_image: /images/uploads/rhythm-of-the-mask.jpg
+first_article_alt_image: rhythm-of-the-mask
 first_article_link: /paintings
 second_article_title: Sculptures
-second_article_description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
-second_article_image: /images/uploads/pic09.jpg
-second_article_alt_image: alt333
+second_article_description: The hand-crafted paper maché sculpture flaunts the
+  symbolic objects of the country’s cultural festivals with a twist of
+  futuristic visual elements. The sculptures illustrate the significant
+  contribution of the past and the future to the present times.
+second_article_image: /images/uploads/sculpture.jpg
+second_article_alt_image: sculpture
 second_article_link: /sculptures
 third_article_title: Research Papers
-third_article_description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
-third_article_image: /images/uploads/pic09.jpg
-third_article_alt_image: tehrer
+third_article_alt_image: researches
+tags: landing
+main_section_description: Crafted History, Auctioned Today
+main_section_image: /images/uploads/pic03.jpg
+third_article_description: Following the journey of all graduating students of
+  the Senior Highschool in STI Marikina, the culmination of their hardworks—
+  made out of all the combined logical thoughts, supported by their chosen
+  literatures, and sharpened by the administration— their Research Papers.
+third_article_image: /images/uploads/pic03.jpg
 third_article_link: /researches
-fourth_section_title: Massa libero
-fourth_section_description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittislibero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+fourth_section_title: General
+fourth_section_description: Senior High School Exposition 2025 emphasizes the
+  connection of the modern world and the cultivation of culture through exhibits
+  of artworks such as paintings and sculptures.
 fourth_section_link: /
 ---
