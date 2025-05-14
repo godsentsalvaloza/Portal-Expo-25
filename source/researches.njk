@@ -672,26 +672,31 @@ a.menu-link:hover {
         }
 
         // Attach Event Listeners for Links
-        links.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
+       links.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
 
-            const title = this.getAttribute("data-title");
-            const abstract = this.getAttribute("data-abstract");
-            const members = JSON.parse(this.getAttribute("data-members"));
+    const title = this.getAttribute("data-title");
+    const abstract = this.getAttribute("data-abstract");
+     let members = this.getAttribute("data-members") || "";
+    members = members.replace(/^"|"$/g, '');
 
-            // Convert members array to a list with <br>
-            const membersHTML = members.join("<br>");
+    // Convert "-" separated data to a list
+    members = members.split("-").map(item => item.trim());
 
-            // Update dialog content
-            popupTitle.textContent = title;
-            popupAbstract.textContent = abstract;
-            popupMembers.innerHTML = membersHTML;
+    // Convert members array to a list with <br>
+    const membersHTML = members.join("<br>");
 
-            // Open dialog with transition
-            openDialog();
-          });
-        });
+    // Update dialog content
+    popupTitle.textContent = title;
+    popupAbstract.textContent = abstract;
+    popupMembers.innerHTML = membersHTML;
+
+    // Open dialog with transition
+    openDialog();
+  });
+});
+
 
         // Close Dialog when the close button is clicked
         closeBtn.addEventListener("click", closeDialog);
