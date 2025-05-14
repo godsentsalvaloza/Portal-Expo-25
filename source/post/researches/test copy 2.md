@@ -1,6 +1,27 @@
 ---
-research_title: ASSESSING THE EFFECTIVENESS OF SIM APP WITH INTERACTIVE ROOM MAPS FOR THE TEACHERS OF STI COLLEGE MARIKINA
-research_abstract: This study evaluates the effectiveness of the STI Integrated Map (SIM) application in assisting teachers at STI College Marikina with classroom navigation and scheduling. It aims to address scheduling conflicts and room availability issues through an interactive digital mapping system. Using a descriptive quantitative approach, data was gathered from faculty members via structured survey questionnaires and cluster sampling to assess user experience and satisfaction. Following the Input-Process-Output (IPO) framework, the study identifies scheduling challenges (input), implements the SIM app (process), and enhances faculty collaboration and classroom management (output). The system framework details how real-time data integration improves room monitoring. The treatment involved testing the app’s usability in checking room availability and managing schedules. Results show that the SIM app significantly improves classroom management by providing real-time room availability, enhancing collaboration, and minimizing scheduling conflicts. Most respondents found it user-friendly and efficient. Further research is recommended to explore features like administrative access and personalized scheduling.
-members: ["Godsent Salvaloza", "Jae Colesio", "Juan Velasco"]
-tags: cart
+research_title: iFeedback Evaluation System for Senior High School Students in
+  STI College Marikina
+research_abstract: "This paper seeks to evaluate the effectiveness of iFeedback,
+  a web-based evaluation system, in enhancing the learning experience of Senior
+  High School students in STI College Marikina. Utilizing a quantitative
+  descriptive research design, the purpose of this study is to learn the
+  students’ perception regarding the system's accessibility, engaging features,
+  and its influence on teaching methodologies through structured questionnaires
+  utilizing a Likert scale and user testing. The study's key findings reveal
+  that students consider the iFeedback as highly effective for providing a
+  platform for insightful feedback, receiving a 'Very Likely' rating (weighted
+  mean: 3.72) for facilitating feedback and a 'Very Effective' rating (weighted
+  mean: 3.66) for usability, highlighting its role in improving teacher-student
+  interaction and encouraging participation through gamified elements. These
+  findings emphasize iFeedback's contribution to enhancing feedback
+  accessibility and the overall learning experience. This study supports the
+  adoption of digital feedback systems to create a more responsive and
+  interactive learning environment. The findings of this research are expected
+  to benefit school administrators, instructors, web developers, and future
+  researchers by providing insights into optimizing feedback processes in
+  educational settings."
+tags: ict
+members: List \[ "Casin, John Michael P.","Castro, Aneeza Amor","Cortes, Rafael
+  Louise D.","Erasmo, Ashley Ysabelle","Madrid, Rainier Cale S.","Piza, Nhiel
+  John P.","Serrano, Jenna Marie C.","Villegas, Prince Benedict R." ]
 ---
