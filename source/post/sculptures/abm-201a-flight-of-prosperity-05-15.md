@@ -6,7 +6,7 @@ sculpture_description: >-
 
 
   A depiction of a Panagbenga Flower Float in the future. It shows flowers blooming out of a mysterious and glowing cube, carried by an airship made of steel. It represents how technology can be integrated with natural life in order to celebrate a tradition that has been commemorated for decades.
-section: ABM-201A
+section: ABMT-201A
 identifier: flight-of-prosperity
 sculpture_image: /images/uploads/flirghtofprosperity.jpg
 sculpture_image_alt_text: flight-of-prosperity

@@ -4,7 +4,7 @@ art_description: >-
   2025<br> 12" x 12" <br> <i>Acrylic on Canvas</i><br><br>
 
   The artwork showcases the bright colors that the panagbenga festival presents during its season. Panagbenga festival is more than just a festival but it also shows how majestic looking it is, especially how the people include their creativity and give importance to it through clothes and dances.
-section: HUMMS-201A
+section: HUMSS-201A
 identifier: the-dancing-majestic-people-of-panagbenga-festival
 art_image: /images/uploads/the-dancing-majestic-people-of-panagbenga-festival.jpg
 art_image_alt_text: the-dancing-majestic-people-of-panagbenga-festival

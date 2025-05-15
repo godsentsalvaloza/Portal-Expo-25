@@ -4,7 +4,7 @@ sculpture_description: >-
   2025<br>2ft<br><i>Paper, Cardboard, Paints,Paper Maché</i><br><br>
 
   Some fruits are inspired by Genetically Engineered fruits. The Kadayawan Festival took its pride with their Fruit Basket which showcases lots of fruits from their culture and province. It is evident that some fruits are shaped robotically to highlight how Genetically Engineered fruits differ from the naturally produced ones.
-section: HUMMS-201A
+section: HUMSS-201A
 identifier: kadayawan-fruit-generated-basket
 sculpture_image: /images/uploads/kadayawanfruitgeneratedbasket.jpg
 sculpture_image_alt_text: kadayawan-fruit-generated-basket
