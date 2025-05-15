@@ -2104,6 +2104,15 @@ input, select, textarea {
 				opacity: 1.0;
 			}
 
+			.image.thumb img {
+				transition: all 0.2s ease-in-out;
+			}
+
+			.image.thumb:hover img {
+				transition: all 0.2s ease-in-out;
+				filter: brightness(0.5);
+			}
+
 		.image img {
 			border-radius: 0.35em;
 			display: block;

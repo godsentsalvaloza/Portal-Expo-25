@@ -359,10 +359,12 @@ animation: reveal-header 0.35s ease;
     
         a.icon.alt:hover:before {
             color: #D4AF37;
+            transition: color 0.2s ease-in-out;
         }
     
         a.icon.alt:active:before {
             color: #D4AF37;
+            transition: color 0.2s ease-in-out;
         }        
 
 body.is-ie #menu {

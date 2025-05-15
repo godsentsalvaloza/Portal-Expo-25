@@ -21,10 +21,11 @@
 
     <style>
       a:hover {
-			border-bottom-color: transparent;
-			color: #012350ff !important;
-			text-decoration: none;
-		}
+        border-bottom-color: transparent;
+        color: #012350ff !important;
+        text-decoration: none;
+      }
+
       body {
         background-color: #d4af37;
       }
@@ -59,8 +60,12 @@
 
       #main h2,
       .strandButton,
-      .researchTitle {
+      a.text-white {
         text-shadow: 1px 1px 10px black;
+      }
+
+      article {
+        margin-left: 0.75em;
       }
 
       /* Footer */
@@ -356,11 +361,12 @@
           flex-direction: column;
         }
       }
-a.menu-link:hover {
-			border-bottom-color: transparent;
-			color: #D4AF37 !important;
-			text-decoration: none;
-		}
+      
+      a.menu-link:hover {
+        border-bottom-color: transparent;
+        color: #D4AF37 !important;
+        text-decoration: none;
+      }
      
     </style>
   </head>
@@ -446,19 +452,32 @@ a.menu-link:hover {
 
         <style>
           .menuButton {
-              background-color: #012350ff;
-              border: none;
-              color: white;
-              font-size: 1em;
-              font-family: 'Font Awesome 6 Free';
-              transform: translateX(0.5em);
-            }
+            background-color: #012350ff;
+            border: none;
+            color: white;
+            font-size: 1em;
+            font-family: 'Font Awesome 6 Free';
+            transform: translateX(0.5em);
+          }
 
-            .menuButton:hover {
-              color: #D4AF37;
-              background-color: #012350ff;
-              transition: color 0.3s ease;
-            }
+          .menuButton:hover .fa-solid.fa-bars {
+            color: #D4AF37;
+            transition: color 0.3s ease;
+          }
+
+          .menuButton:hover {
+            background-color: #012350ff;
+            transition: color 0.3s ease;
+          }
+
+          .strandButton i {
+            float: right;
+            transition: transform 0.3s ease-in-out
+          }
+
+          .strandButton.open i {
+            transform: rotate(180deg);
+          }
         </style>
 
         <!-- Strand Dividers -->
@@ -469,9 +488,10 @@ a.menu-link:hover {
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
             Accountancy, and Business Management
+            <i class="fas fa-caret-down"></i>
           </button>
           <div class="titles-container">
-            <div class="border-top w-75"></div>
+            <div class="border-top w-100"></div>
             <div class="my-4">
               {%- for post in collections.abm -%}
               <article>
@@ -488,7 +508,7 @@ a.menu-link:hover {
               {%- endfor -%}
             </div>
           </div>
-          <div class="border-bottom mb-3 w-75"></div>
+          <div class="border-bottom mb-3 w-90"></div>
         </div>
 
         <div class="strandDivider my-4">
@@ -497,9 +517,10 @@ a.menu-link:hover {
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
             Culinary Arts
+            <i class="fas fa-caret-down"></i>
           </button>
           <div class="titles-container">
-            <div class="border-top w-75"></div>
+            <div class="border-bottom mb-3 w-90"></div>
             <div class="my-4">
               {%- for post in collections.cart -%}
               <article>
@@ -516,7 +537,7 @@ a.menu-link:hover {
               {%- endfor -%}
             </div>
           </div>
-          <div class="border-bottom mb-3 w-75"></div>
+          <div class="border-bottom mb-3 w-90"></div>
         </div>
 
         <div class="strandDivider my-4">
@@ -525,9 +546,10 @@ a.menu-link:hover {
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
             Humanities and Social Sciences
+            <i class="fas fa-caret-down"></i>
           </button>
           <div class="titles-container">
-            <div class="border-top w-75"></div>
+            <div class="border-bottom mb-3 w-90"></div>
             <div class="my-4">
               {%- for post in collections.humms -%}
               <article>
@@ -544,7 +566,7 @@ a.menu-link:hover {
               {%- endfor -%}
             </div>
           </div>
-          <div class="border-bottom mb-3 w-75"></div>
+          <div class="border-bottom mb-3 w-90"></div>
         </div>
 
         <div class="strandDivider my-4">
@@ -552,10 +574,11 @@ a.menu-link:hover {
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
-            Information Technology in Mobile App & Web Application Development
+            IT in Mobile App and Web Development
+            <i class="fas fa-caret-down"></i>
           </button>
           <div class="titles-container">
-            <div class="border-top w-75"></div>
+            <div class="border-bottom mb-3 w-90"></div>
             <div class="my-4">
               {%- for post in collections.ict -%}
               <article>
@@ -572,7 +595,7 @@ a.menu-link:hover {
               {%- endfor -%}
             </div>
           </div>
-          <div class="border-bottom mb-3 w-75"></div>
+          <div class="border-bottom mb-3 w-90"></div>
         </div>
         <div class="strandDivider my-4">
           <button
@@ -580,9 +603,10 @@ a.menu-link:hover {
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
             Tourism Operations
+            <i class="fas fa-caret-down"></i>
           </button>
           <div class="titles-container">
-            <div class="border-top w-75"></div>
+            <div class="border-bottom mb-3 w-90"></div>
             <div class="my-4">
               {%- for post in collections.toper -%}
               <article>
@@ -599,7 +623,7 @@ a.menu-link:hover {
               {%- endfor -%}
             </div>
           </div>
-          <div class="border-bottom mb-3 w-75"></div>
+          <div class="border-bottom mb-3 w-90"></div>
         </div>
       </section>
 
@@ -621,22 +645,51 @@ a.menu-link:hover {
       </dialog>
 
       <style>
-        .popup-dialog {
-          opacity: 0;
-          transform: scale(0.8);
-          transition: opacity 0.6s ease, transform 0.6s ease;
+				.close-btn {
+					transform: translateX(0.6em) translateY(-0.3em) scale(1.5);
+				}
+
+        h3.popup-title {
+          font-weight: 700;
         }
 
-        .popup-dialog.showing {
-          opacity: 1;
-          transform: scale(1);
-        }
+				.popup-dialog {
+					opacity: 0;
+					transform: scale(0.8);
+					transition: opacity 0.3s ease, transform 0.3s ease;
+					border: none;
+					box-shadow: 0 0 10px black;
+					padding: 1em 1.5em 1em 1.5em;
+				}
 
-        .popup-dialog.closing {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-      </style>
+				.popup-dialog.showing {
+					opacity: 1;
+					transform: scale(1);
+				}
+
+				.popup-dialog.closing {
+					opacity: 0;
+					transform: scale(0.8);
+				}
+
+				.popup-dialog .popup-title {
+					text-align: justify;
+				}
+				
+				.popup-dialog .popup-abstract {
+					font-size: 0.9em;
+					text-align: justify;
+				}
+
+				.popup-dialog::backdrop {
+					background-color: rgba(0, 0, 0, 0);
+					transition: background-color 0.3s ease-in-out;
+				}
+
+				.popup-dialog.open::backdrop {
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			</style>
 
       <script>
         // Toggle Button for Showing Titles
@@ -660,68 +713,70 @@ a.menu-link:hover {
         });
 
         // Popup Dialog
-        const links = document.querySelectorAll(
-          ".sidebar-top-posts-widget__link"
-        );
-        const popupDialog = document.getElementById("popupDialog");
-        const popupTitle = popupDialog.querySelector(".popup-title");
-        const popupAbstract = popupDialog.querySelector(".popup-abstract");
-        const popupMembers = popupDialog.querySelector(".popup-members");
-        const closeBtn = popupDialog.querySelector(".close-btn");
+				const links = document.querySelectorAll('.sidebar-top-posts-widget__link');
+				const popupDialog = document.getElementById('popupDialog');
+				const popupTitle = popupDialog.querySelector('.popup-title');
+				const popupAbstract = popupDialog.querySelector('.popup-abstract');
+				const closeBtn = popupDialog.querySelector('.close-btn');
 
-        // Open Dialog with Animation
-        function openDialog() {
-          popupDialog.classList.add("showing");
-          popupDialog.classList.remove("closing");
-          popupDialog.showModal();
-        }
+				// Open Dialog with Animation
+				function openDialog() {
+					popupDialog.classList.remove("closing");
+					popupDialog.classList.add("open");
+					popupDialog.showModal();
+					popupDialog.classList.add("showing");
+				}
 
-        // Close Dialog with Animation
-        function closeDialog() {
-          popupDialog.classList.add("closing");
-          popupDialog.classList.remove("showing");
+				// Close Dialog with Animation
+				function closeDialog() {
+					popupDialog.classList.remove("showing");
+					popupDialog.classList.remove("open");
+					popupDialog.classList.add("closing");
+					
+					// Wait for the transition to complete before closing
+					setTimeout(() => {
+						popupDialog.close();
+					}, 300);
+				}
 
-          // Wait for the transition to complete before closing
-          setTimeout(() => {
-            popupDialog.close();
-          }, 300);
-        }
+				// Attach Event Listeners for Links
+				links.forEach(link => {
+					link.addEventListener('click', function (e) {
+						e.preventDefault();
 
-        // Attach Event Listeners for Links
-       links.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+						const title = this.getAttribute('data-title');
+						const abstract = this.getAttribute('data-abstract');
 
-    const title = this.getAttribute("data-title");
-    const abstract = this.getAttribute("data-abstract");
-     let members = this.getAttribute("data-members") || "";
-    members = members.replace(/^"|"$/g, '');
+						// Update dialog content
+						popupTitle.textContent = title;
+						popupAbstract.textContent = abstract;
 
-    // Convert "-" separated data to a list
-    members = members.split("-").map(item => item.trim());
+						// Open dialog with transition
+						openDialog();
+					});
+				});
 
-    // Convert members array to a list with <br>
-    const membersHTML = members.join("<br>");
+				// Close Dialog when the close button is clicked
+				closeBtn.addEventListener('click', function(event) {
+					if (event.target === closeBtn || closeBtn.contains(event.target)) {
+						closeDialog();
+					}
+				});
 
-    // Update dialog content
-    popupTitle.innerHTML = title;
-    popupAbstract.innerHTML = abstract;
-    popupMembers.innerHTML = membersHTML;
-
-    // Open dialog with transition
-    openDialog();
-  });
-});
-
-
-        // Close Dialog when the close button is clicked
-        closeBtn.addEventListener("click", closeDialog);
-
-        // Close Dialog by Clicking Outside
-        popupDialog.addEventListener("click", function (e) {
-          if (e.target === popupDialog) {
+				// Close Dialog by Clicking Outside
+				document.querySelector('.popup-dialog').addEventListener('click', function(event) {
+          if (!event.target.closest('.popup-content')) {
             closeDialog();
           }
+        });
+
+        // Dropdown Arrow Icon
+        const buttons = document.querySelectorAll('.strandButton');
+
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            button.classList.toggle('open');
+          });
         });
       </script>
     </div>
