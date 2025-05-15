@@ -1,0 +1,379 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "social"
+    label: "Social Media - Links"
+    folder: "/source/commands/social"
+    create: false
+    fields:
+      - { label: "Twiter - Link", name: "twitter_link", widget: "string" }
+      - { label: "Facebook - Link", name: "facebook_link", widget: "string" }
+      - { label: "Instagram - Link", name: "instagram_link", widget: "string" }
+
+  - name: "index"
+    label: "Homepage"
+    folder: "/source/commands/index"
+    create: false
+    fields:
+      - {
+          label: "Main Section Title",
+          name: "main_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Main Section Description",
+          name: "main_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Section Title",
+          name: "first_section_title",
+          widget: "string",
+        }
+      - {
+          label: "First Section Description",
+          name: "first_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Section Image",
+          name: "first_section_image",
+          widget: "image",
+        }
+      - {
+          label: "First Section Image Alt Text",
+          name: "first_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Second Section Title",
+          name: "second_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Second Section Description",
+          name: "second_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Second Section Image",
+          name: "second_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Second Section Image Alt Text",
+          name: "second_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Third Section Title",
+          name: "third_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Third Section Description",
+          name: "third_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Third Section Image",
+          name: "third_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Third Section Image Alt Text",
+          name: "third_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Section Title",
+          name: "fourth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Section Description",
+          name: "fourth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Fourth Section Image",
+          name: "fourth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Fourth Section Image Alt Text",
+          name: "fourth_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "Fifth Section Title",
+          name: "fifth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "fifth Section Description",
+          name: "fifth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Fifth Section Image",
+          name: "fifth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Fifth Section Image Alt Text",
+          name: "fifth_section_alternative_image",
+          widget: "string",
+        }
+
+      - {
+          label: "Sixth Section Title",
+          name: "sixth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Sixth Section Description",
+          name: "sixth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Sixth Section Image",
+          name: "sixth_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Sixth Section Image Alt Text",
+          name: "sixth_section_alternative_image",
+          widget: "string",
+        }
+      - {
+          label: "About - Description",
+          name: "about_description",
+          widget: "markdown",
+        }
+
+  - name: "landing"
+    label: "Landing Page"
+    folder: "/source/commands/landing"
+    create: false
+    fields:
+      - {
+          label: "Main Section Title",
+          name: "main_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Main Section Description",
+          name: "main_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Main Section Image",
+          name: "main_section_image",
+          widget: "image",
+        }
+      - {
+          label: "Main Section Image - Alt",
+          name: "main_section_image_alt",
+          widget: "string",
+        }
+      - {
+          label: "Second Section Title",
+          name: "second_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Second Section Description",
+          name: "second_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Article Title",
+          name: "first_article_title",
+          widget: "string",
+        }
+      - {
+          label: "First Article Description",
+          name: "first_article_description",
+          widget: "markdown",
+        }
+      - {
+          label: "First Article Image",
+          name: "first_article_image",
+          widget: "image",
+        }
+      - {
+          label: "First Article Image - Alt",
+          name: "first_article_alt_image",
+          widget: "markdown",
+        }
+      - {
+          label: "First Article Link",
+          name: "first_article_link",
+          widget: "string",
+        }
+      - {
+          label: "Second Article Title",
+          name: "second_article_title",
+          widget: "string",
+        }
+      - {
+          label: "Second Article Description",
+          name: "second_article_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Second Article Image",
+          name: "second_article_image",
+          widget: "image",
+        }
+      - {
+          label: "Second Article Image - Alt",
+          name: "second_article_alt_image",
+          widget: "string",
+        }
+      - {
+          label: "Second Article Link",
+          name: "second_article_link",
+          widget: "string",
+        }
+      - {
+          label: "Third Article Title",
+          name: "third_article_title",
+          widget: "string",
+        }
+      - {
+          label: "Third Article Description",
+          name: "third_article_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Third Article Image",
+          name: "third_article_image",
+          widget: "image",
+        }
+      - {
+          label: "Second Article Image - Alt",
+          name: "third_article_alt_image",
+          widget: "string",
+        }
+      - {
+          label: "Third Article Link",
+          name: "third_article_link",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Article Title",
+          name: "fourth_section_title",
+          widget: "string",
+        }
+      - {
+          label: "Fourth Article Description",
+          name: "fourth_section_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Third Article Link",
+          name: "fourth_section_link",
+          widget: "string",
+        }
+
+  - name: "painting"
+    label: "Painting"
+    folder: "/source/post/paintings"
+    create: true
+    slug: "{{section}}-{{identifier}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Painting Name", name: "art_name", widget: "string" }
+      - {
+          label: "Painting Description",
+          name: "art_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "select",
+          options:
+            [
+              "ABM-201A",
+              "CART-201A",
+              "HUMMS-201A",
+              "ICTE-201A",
+              "ICTE-202A",
+              "TOPER-201A",
+            ],
+        }
+      - { label: "Identifier", name: "identifier", widget: "string" }
+      - { label: "Painting Image", name: "art_image", widget: "image" }
+      - {
+          label: "Painting Image Alt Text",
+          name: "art_image_alt_text",
+          widget: "string",
+        }
+      - { label: "Members", name: "members", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "paintings" }
+
+  - name: "research"
+    label: "Research"
+    folder: "/source/post/researches"
+    create: true
+    slug: "{{research_title}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Research Title", name: "research_title", widget: "string" }
+      - {
+          label: "Research Abstract",
+          name: "research_abstract",
+          widget: "markdown",
+        }
+      - {
+          label: "Section",
+          name: "tags",
+          widget: "select",
+          options: ["abm", "cart", "humms", "ict", "toper"],
+        }
+      - {
+          label: "Members",
+          name: "members",
+          widget: markdown,
+        }
+  - name: "sculpture"
+    label: "Sculpture"
+    folder: "/source/post/sculptures"
+    create: true
+    slug: "{{section}}-{{identifier}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Sculpture Name", name: "sculpture_name", widget: "string" }
+      - {
+          label: "Sculpture Description",
+          name: "sculpture_description",
+          widget: "markdown",
+        }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "select",
+          options:
+            [
+              "ABM-201A",
+              "CART-201A",
+              "HUMMS-201A",
+              "ICTE-201A",
+              "ICTE-202A",
+              "TOPER-201A",
+            ],
+        }
+      - { label: "Identifier", name: "identifier", widget: "string" }
+      - { label: "Sculpture Image", name: "sculpture_image", widget: "image" }
+      - {
+          label: "Sculpture Image Alt Text",
+          name: "sculpture_image_alt_text",
+          widget: "string",
+        }
+      - { label: "Members", name: "members", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "sculptures" }
