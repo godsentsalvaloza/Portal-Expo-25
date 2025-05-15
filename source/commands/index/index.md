@@ -4,14 +4,14 @@ main_section_description: Featuring local festivals reimagined through
   futuristic art <br /> and sculpture by STI College Marikina’s Grade 12
   students.
 first_section_title: TOPER
-first_section_description: Tourism Management
+first_section_description: Tourism Operations
 first_section_image: /images/uploads/pic10.jpg
 first_section_alternative_image: toper
 second_section_title: IT-MAWD
-second_section_description: IT in Mobile Application and Web Development
+second_section_description: IT in Mobile App and Web Development
 second_section_image: /images/uploads/pic10.jpg
 second_section_alternative_image: itmawd
-third_section_title: HUMMS
+third_section_title: HUMSS
 third_section_description: Humanities and Social Sciences
 third_section_image: /images/uploads/pic10.jpg
 third_section_alternative_image: humms
@@ -24,7 +24,7 @@ fifth_section_description: "Sentro de Museo: An Artisan Gallery"
 fifth_section_image: /images/uploads/pic10.jpg
 fifth_section_alternative_image: test alt img 5
 sixth_section_title: ABM
-sixth_section_description: Accountancy, and Business Management
+sixth_section_description: Accountancy, Business, and Management
 sixth_section_image: /images/uploads/pic10.jpg
 sixth_section_alternative_image: abm
 about_description: STI College Marikina’s SHS EXPO 2025 stands as a premier
