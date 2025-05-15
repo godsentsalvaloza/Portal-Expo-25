@@ -516,7 +516,7 @@ A depiction of a Panagbenga Flower Float in the future. It shows flowers bloomin
               </div>
 
               <div class="d-flex justify-content-center my-3">
-                <button class="paintingButton btn btn-primary px-5">
+                <button class="sculptureButton btn btn-primary px-5">
                   See more
                 </button>
               </div>
@@ -574,7 +574,7 @@ Nature’s Giant is a monumental sculpture that honors the enduring spirit of Mo
               </div>
 
               <div class="d-flex justify-content-center my-3">
-                <button class="paintingButton btn btn-primary px-5">
+                <button class="sculptureButton btn btn-primary px-5">
                   See more
                 </button>
               </div>
@@ -632,7 +632,7 @@ Some fruits are inspired by Genetically Engineered fruits. The Kadayawan Festiva
               </div>
 
               <div class="d-flex justify-content-center my-3">
-                <button class="paintingButton btn btn-primary px-5">
+                <button class="sculptureButton btn btn-primary px-5">
                   See more
                 </button>
               </div>
@@ -690,7 +690,7 @@ This sculpture replicates that of the "Moriones" from the Moriones Festival who 
               </div>
 
               <div class="d-flex justify-content-center my-3">
-                <button class="paintingButton btn btn-primary px-5">
+                <button class="sculptureButton btn btn-primary px-5">
                   See more
                 </button>
               </div>
@@ -749,7 +749,7 @@ This sculpture replicates that of the "Moriones" from the Moriones Festival who 
               </div>
 
               <div class="d-flex justify-content-center my-3">
-                <button class="paintingButton btn btn-primary px-5">
+                <button class="sculptureButton btn btn-primary px-5">
                   See more
                 </button>
               </div>
@@ -760,7 +760,7 @@ This sculpture replicates that of the "Moriones" from the Moriones Festival who 
               card.addEventListener("click", function (e) {
                 if (
                   e.target.tagName.toLowerCase() === "a" ||
-                  e.target.classList.contains("paintingButton")
+                  e.target.classList.contains("sculptureButton")
                 )
                   return;
 
@@ -771,7 +771,7 @@ This sculpture replicates that of the "Moriones" from the Moriones Festival who 
               });
             });
 
-            document.querySelectorAll(".paintingButton").forEach((button) => {
+            document.querySelectorAll(".sculptureButton").forEach((button) => {
               button.addEventListener("click", function (event) {
                 const membersContainer = this.closest(
                   ".clickable-card"
@@ -786,7 +786,7 @@ This sculpture replicates that of the "Moriones" from the Moriones Festival who 
                       container.classList.remove("show");
                       container
                         .closest(".clickable-card")
-                        .querySelector(".paintingButton").textContent =
+                        .querySelector(".sculptureButton").textContent =
                         "See more";
                     }
                   });
