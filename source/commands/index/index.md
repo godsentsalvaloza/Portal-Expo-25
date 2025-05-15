@@ -24,7 +24,7 @@ fifth_section_description: "Sentro de Museo: An Artisan Gallery"
 fifth_section_image: /images/uploads/pic10.jpg
 fifth_section_alternative_image: test alt img 5
 sixth_section_title: ABM
-sixth_section_description: Accountancy, Business, and Management
+sixth_section_description: Accountancy, Business and Management
 sixth_section_image: /images/uploads/pic10.jpg
 sixth_section_alternative_image: abm
 about_description: STI College Marikina’s SHS EXPO 2025 stands as a premier
