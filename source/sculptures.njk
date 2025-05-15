@@ -8,6 +8,7 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -374,9 +375,6 @@
         <li><a href="/sculptures">Sculptures</a></li>
         <li><a href="/researches">Researches</a></li>
       </ul>
-      <ul class="actions stacked">
-        <li><a href="/landing" class="button primary fit">Get Started</a></li>
-      </ul>
     </nav>
 
     <!-- Main -->
@@ -384,10 +382,24 @@
       <section id="two">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h2 class="text-white mb-0">Sculptures</h2>
-          <a href="#menu" class="btn btn-primary align-self-center">Menu</a>
+          <a href="#menu" class="menuButton btn btn-primary align-self-center text-white"><i class="fa-solid fa-bars"></i></a>
         </div>
         <div class="row">
           <style>
+            .menuButton {
+              background-color: #012350ff;
+              border: none;
+              color: white;
+              font-size: 1em;
+              font-family: 'Font Awesome 6 Free';
+              transform: translateX(0.5em);
+            }
+
+            .menuButton:hover {
+              background-color: #012350ff;
+              transition: color 0.3s ease;
+            }
+            
             .membersDescription-container {
               height: 0;
               overflow: hidden;
