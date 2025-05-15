@@ -382,11 +382,14 @@
       <section id="two">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h2 class="text-white mb-0">Sculptures</h2>
-          <a href="#menu" class="menuButton btn btn-primary align-self-center text-white"><i class="fa-solid fa-bars"></i></a>
+          <div class="button-container">
+            <a href="javascript:history.back()" class="backButton btn btn-primary align-self-center text-white"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="#menu" class="menuButton btn btn-primary align-self-center text-white"><i class="fa-solid fa-bars"></i></a>
+          </div>
         </div>
         <div class="row">
           <style>
-            .menuButton {
+            .menuButton, .backButton {
               background-color: #012350ff;
               border: none;
               color: white;
@@ -395,9 +398,19 @@
               transform: translateX(0.5em);
             }
 
-            .menuButton:hover {
+            .menuButton:hover, .backButton:hover {
               background-color: #012350ff;
               transition: color 0.3s ease;
+            }
+
+            .button-container {
+              display: flex;
+              align-items: center;
+              transform: translateX(0.3em);
+            }
+
+            .backButton, .menuButton {
+              margin: 0 5px;
             }
             
             .membersDescription-container {
