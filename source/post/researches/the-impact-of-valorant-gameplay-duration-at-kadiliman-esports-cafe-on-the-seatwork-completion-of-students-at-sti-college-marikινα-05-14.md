@@ -1,6 +1,5 @@
 ---
-research_title: "THE IMPACT OF VALORANT GAMEPLAY DURATION AT KADILIMAN ESPORTS
-  CAFE ON THE SEATWORK COMPLETION OF STUDENTS AT STI COLLEGE MARIKΙΝΑ "
+research_title: The Impact of Valorant Gameplay Duration at Kadiliman Esports Cafe on the Seatwork Competion of Students at STI College Marikina
 research_abstract: Playing video games over the internet is referred to as
   online gaming. It can be played with friends or gamers from all over the world
   and provides entertainment, social interaction, and competition via computers,
@@ -16,7 +15,7 @@ research_abstract: Playing video games over the internet is referred to as
   Both Tertiary and SHS level students have reported playing Valorant, and
   despite having backlogs, they are still satisfied with their work even after
   playing the game.
-tags: humms
+tags: humss
 members: Albay, Joyce Coleen -Caerlang, Leah Mae -Espiritu, Jasmine -Mangali,
   Matt Raven -Morco, Maxine Isabelle -Perez, Sean Cedric Angelo -Sandro, Saira
   Joy -Yaona, Gielliane

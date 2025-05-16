@@ -563,7 +563,7 @@
           <div class="titles-container">
             <div class="border-bottom mb-3 w-90"></div>
             <div class="my-4">
-              {%- for post in collections.humms -%}
+              {%- for post in collections.humss -%}
               <article>
                 <a
                   href="#"
@@ -703,7 +703,7 @@
 				}
 			</style>
 
-      <script>
+     <script>
         // Toggle Button for Showing Titles
         document.querySelectorAll(".strandDivider").forEach((divider) => {
           const button = divider.querySelector(".strandButton");
@@ -725,70 +725,68 @@
         });
 
         // Popup Dialog
-				const links = document.querySelectorAll('.sidebar-top-posts-widget__link');
-				const popupDialog = document.getElementById('popupDialog');
-				const popupTitle = popupDialog.querySelector('.popup-title');
-				const popupAbstract = popupDialog.querySelector('.popup-abstract');
-				const closeBtn = popupDialog.querySelector('.close-btn');
+        const links = document.querySelectorAll(
+          ".sidebar-top-posts-widget__link"
+        );
+        const popupDialog = document.getElementById("popupDialog");
+        const popupTitle = popupDialog.querySelector(".popup-title");
+        const popupAbstract = popupDialog.querySelector(".popup-abstract");
+        const popupMembers = popupDialog.querySelector(".popup-members");
+        const closeBtn = popupDialog.querySelector(".close-btn");
 
-				// Open Dialog with Animation
-				function openDialog() {
-					popupDialog.classList.remove("closing");
-					popupDialog.classList.add("open");
-					popupDialog.showModal();
-					popupDialog.classList.add("showing");
-				}
+        // Open Dialog with Animation
+        function openDialog() {
+          popupDialog.classList.add("showing");
+          popupDialog.classList.remove("closing");
+          popupDialog.showModal();
+        }
 
-				// Close Dialog with Animation
-				function closeDialog() {
-					popupDialog.classList.remove("showing");
-					popupDialog.classList.remove("open");
-					popupDialog.classList.add("closing");
-					
-					// Wait for the transition to complete before closing
-					setTimeout(() => {
-						popupDialog.close();
-					}, 300);
-				}
+        // Close Dialog with Animation
+        function closeDialog() {
+          popupDialog.classList.add("closing");
+          popupDialog.classList.remove("showing");
 
-				// Attach Event Listeners for Links
-				links.forEach(link => {
-					link.addEventListener('click', function (e) {
-						e.preventDefault();
+          // Wait for the transition to complete before closing
+          setTimeout(() => {
+            popupDialog.close();
+          }, 300);
+        }
 
-						const title = this.getAttribute('data-title');
-						const abstract = this.getAttribute('data-abstract');
+        // Attach Event Listeners for Links
+       links.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
 
-						// Update dialog content
-						popupTitle.textContent = title;
-						popupAbstract.textContent = abstract;
+    const title = this.getAttribute("data-title");
+    const abstract = this.getAttribute("data-abstract");
+     let members = this.getAttribute("data-members") || "";
+    members = members.replace(/^"|"$/g, '');
 
-						// Open dialog with transition
-						openDialog();
-					});
-				});
+    // Convert "-" separated data to a list
+    members = members.split("-").map(item => item.trim());
 
-				// Close Dialog when the close button is clicked
-				closeBtn.addEventListener('click', function(event) {
-					if (event.target === closeBtn || closeBtn.contains(event.target)) {
-						closeDialog();
-					}
-				});
+    // Convert members array to a list with <br>
+    const membersHTML = members.join("<br>");
 
-				// Close Dialog by Clicking Outside
-				document.querySelector('.popup-dialog').addEventListener('click', function(event) {
-          if (!event.target.closest('.popup-content')) {
+    // Update dialog content
+    popupTitle.innerHTML = title;
+    popupAbstract.innerHTML = abstract;
+    popupMembers.innerHTML = membersHTML;
+
+    // Open dialog with transition
+    openDialog();
+  });
+});
+
+
+        // Close Dialog when the close button is clicked
+        closeBtn.addEventListener("click", closeDialog);
+
+        // Close Dialog by Clicking Outside
+        popupDialog.addEventListener("click", function (e) {
+          if (e.target === popupDialog) {
             closeDialog();
           }
-        });
-
-        // Dropdown Arrow Icon
-        const buttons = document.querySelectorAll('.strandButton');
-
-        buttons.forEach(button => {
-          button.addEventListener('click', () => {
-            button.classList.toggle('open');
-          });
         });
       </script>
     </div>

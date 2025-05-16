@@ -301,9 +301,9 @@ collections:
           widget: "select",
           options:
             [
-              "ABM-201A",
+              "ABMT-201A",
               "CART-201A",
-              "HUMMS-201A",
+              "HUMSS-201A",
               "ICTE-201A",
               "ICTE-202A",
               "TOPER-201A",
@@ -335,7 +335,7 @@ collections:
           label: "Section",
           name: "tags",
           widget: "select",
-          options: ["abm", "cart", "humms", "ict", "toper"],
+          options: ["abm", "cart", "humss", "ict", "toper"],
         }
       - {
           label: "Members",
@@ -360,9 +360,9 @@ collections:
           widget: "select",
           options:
             [
-              "ABM-201A",
+              "ABMT-201A",
               "CART-201A",
-              "HUMMS-201A",
+              "HUMSS-201A",
               "ICTE-201A",
               "ICTE-202A",
               "TOPER-201A",

@@ -1,6 +1,5 @@
 ---
-research_title: THE LEVEL OF ACCEPTABILITY OF EATING PUMPKIN SHANGHAI AMONG THE
-  GRADE 12 SENIOR HIGH SCHOOL STUDENT OF STI COLLEGE MARIKINA
+research_title: The Level of Acceptability of Eating Pumpkin Shanghai Among the Grade 12 Senior High School Students of STI College Marikina
 research_abstract: This study assesses the level of acceptability of eating
   Pumpkin Shanghai among Grade 12 students at STI College Marikina, utilizing a
   descriptive-quantitative research design. The research involved a survey

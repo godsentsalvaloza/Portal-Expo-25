@@ -1,6 +1,5 @@
 ---
-research_title: "THE EFFECTIVENESS OF PLANNERLY: A WEB BASED ACADEMIC ORGANIZER
-  AMONG SHS AT STI COLLEGE MARIKINA"
+research_title: "The Effectiveness of Plannerly: A Web-Based Academic Organizer Among SHS at STI College Marikina"
 research_abstract: This study explores the effectiveness of Plannerly, a
   web-based application designed to assist senior high school students at STI
   College Marikina in managing academic tasks and improving time management. The

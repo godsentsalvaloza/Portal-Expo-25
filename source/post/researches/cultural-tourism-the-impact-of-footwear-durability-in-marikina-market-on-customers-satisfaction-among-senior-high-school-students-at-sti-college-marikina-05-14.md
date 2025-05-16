@@ -1,7 +1,5 @@
 ---
-research_title: "CULTURAL TOURISM: THE IMPACT OF FOOTWEAR DURABILITY IN MARIKINA
-  MARKET ON CUSTOMERS SATISFACTION AMONG SENIOR HIGH SCHOOL STUDENTS AT STI
-  COLLEGE MARIKINA"
+research_title: "Cultural Tourism: The Impact of Footwear Durabilty in Marikina Market on Customers Satisfaction Among Senior High School Students at STI College Marikina"
 research_abstract: This study examines the impact of Marikina footwear
   durability on customer satisfaction among Senior High School students at STI
   College Marikina. It focuses on how craftsmanship, longevity, and value for

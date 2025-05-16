@@ -1,5 +1,5 @@
 ---
-research_title: " WEBCRAFT: A WEB-BASED LEARNING  TOOL IN STI COLLEGE MARIKINA "
+research_title: "WebCraft: A Web-Based Learning Tool in STI College Marikina"
 research_abstract: The purpose of our research paper is to analyze how effective
   and how useful our learning tool WebCraft is to all Senior High School
   Students here in STI College Marikina. Our system or learning tool was created

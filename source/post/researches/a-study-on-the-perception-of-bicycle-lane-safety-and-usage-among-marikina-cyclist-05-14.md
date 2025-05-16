@@ -1,6 +1,5 @@
 ---
-research_title: "A STUDY ON THE PERCEPTION OF BICYCLE LANE SAFETY AND USAGE
-  AMONG MARIKINA CYCLIST "
+research_title: A Study on The Perception of Bicycle Lane Safety and Usage Among Marikina Cyclist
 research_abstract: Marikina City is widely recognized as a bicycle-friendly
   city, but this reputation is best assessed from the perspective of the
   cyclists who regularly use its bike lanes. This study aims to evaluate whether
@@ -16,7 +15,7 @@ research_abstract: Marikina City is widely recognized as a bicycle-friendly
   bicycle-friendly city. Despite the lack of physical barriers, its painted bike
   lanes provide a sense of safety and security for cyclists, reinforcing the
   city's reputation as a supportive environment for cycling.
-tags: humms
+tags: humss
 members: Cedeño, Ryan Makhlouf A. -Doral, Nashty Jay M. -Embang, Michael
   L. -Mangrobang, Juaquin B. -Reyes, Prince John V. -Tacorda, John
   Paul -Villaniueva, Zeus C.

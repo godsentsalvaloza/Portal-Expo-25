@@ -16,6 +16,6 @@ research_abstract: This study examines the effectiveness of graphic health
   between government agencies, educational institutions, and health
   organizations to strengthen awareness campaigns and refine warning label
   designs, ensuring they effectively deter youth from e-cigarette use.
-tags: humms
+tags: humss
 members: Barcebal, Aries Andrie S. -Cena, Juliana Crystle A. -Fontiveros, Kyla Marie M.
 ---
