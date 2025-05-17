@@ -20,6 +20,6 @@ research_abstract: This research establishes the acceptability of eggplant fries
   promotion of healthy eating habits. Future studies can explore larger consumer
   groups and other cooking procedures for additional sensory appeal.
 tags: cart
-members: Albert Concepcion-Lorenz Cajocson-MJ Lakandula-Dominic Cordero-Edmond
-  Sorbito-Mel Pascual-Kiat Ralfh
+members: Concepcion, Albert -Cajocson, Lorenz-Lakandula, MJ-Cordero,
+  Dominic-Sorbito, Edmond- Pascual, Mel-Ralfh, Kiat
 ---
