@@ -11,9 +11,6 @@ research_abstract: This study assesses the level of acceptability of eating
   common aversions to vegetables. Findings will provide insight into student
   preferences and satisfaction levels regarding the product.
 tags: cart
-members: >-
-  Fernandez, Keiress -Alejo, Joy -Guerrero, Miggy - Lumbab, Christian-Borlaza,
-  Airen Kate  -Rait,
-
-  Kian
+members: Fernandez, Keiress -Alejo, Joy -Guerrero, Miggy - Lumbab,
+  Christian-Borlaza, Airen Kate  -Rait, Kian
 ---
