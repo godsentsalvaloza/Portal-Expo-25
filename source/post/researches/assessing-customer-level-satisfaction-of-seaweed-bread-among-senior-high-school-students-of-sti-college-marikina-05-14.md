@@ -17,6 +17,6 @@ research_abstract: "This study assess the satisfaction levels of senior high
   to food innovation through the promotion of healthier and more sustainable
   eating habits."
 tags: cart
-members: Ryan Abaygar-Jayb Balboa-Derick Panisa-Marc Taracatac-Kyle
-  Openiano-Rayhan Madayag
+members: Abaygar, Ryan -Balboa, Jayb-Panisa, Derick -Taracatac, Marc -Openiano,
+  Kyle-Madayag, Rayhan
 ---
