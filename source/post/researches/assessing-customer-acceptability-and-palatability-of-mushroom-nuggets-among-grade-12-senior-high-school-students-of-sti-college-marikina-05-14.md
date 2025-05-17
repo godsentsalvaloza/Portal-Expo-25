@@ -1,5 +1,6 @@
 ---
-research_title: Assessing Customer Acceptability and Platability of Mushroom Nuggets Among Grade 12 Senior High School Students of STI College Marikina
+research_title: Assessing Customer Acceptability and Platability of Mushroom
+  Nuggets Among Grade 12 Senior High School Students of STI College Marikina
 research_abstract: Mushrooms are well known for their nutritional value and
   meat-like texture, making them a popular plant-based substitute for
   traditional meat products. As consumers seek healthier and more sustainable
@@ -25,6 +26,6 @@ research_abstract: Mushrooms are well known for their nutritional value and
   Further research on nutritional value, large-scale production, and market
   demand is recommended to enhance the product and promote wider acceptance.
 tags: cart
-members: Reine Zapanta-Tacorda Raymond-Sophia Burac-Darlene Santos-Agatha
-  Mendoza-Nicholas Pascual
+members: Zapanta, Reine -Raymond, Tacorda- Burac, Sophia-Santos,
+  Darlene-Mendoza, Agatha-Pascual, Nicholas
 ---
