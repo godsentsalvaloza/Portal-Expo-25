@@ -28,6 +28,7 @@ research_abstract: This study focused on the effectiveness of an organic-based
   its shorter shelf life reflects its natural, edible composition-free from
   synthetic preservatives-making it a safer, eco-friendly alternative
 tags: cart
-members: Kim Pascual-Austria Sofia-Maritoni Almoete-Sean Clores-Jayr
-  Halayahay-Angelica Rabino
+members: >-
+  
+  Pascual, Kim -Sofia, Austria-Almoete, Maritoni-Clores, Sean-Halayahay, Jayr-Rabino, Angelica
 ---
