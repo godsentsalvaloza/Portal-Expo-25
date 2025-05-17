@@ -114,7 +114,7 @@ research_abstract: The purpose of our research paper is to analyze how effective
   especially Grade 11 and Grade 12 Students who answered poor and one did answer
   very poor.
 tags: ict
-members: Lance Gabrielle Geronimo-Hezekiah Ezekiel Vasquez-Angelo Salles-John
-  David Babia-Cylax Eurrie Ocampo-Dhan Zedric Vasco-Jiamwayne Amor-Nikko Yuan
-  Bayaton
+members: Geronimo, Lance Gabrielle - Vasquez, Hezekiah Ezekiel-Salles, Angelo
+  -Babia, John David - Ocampo, Cylax Eurrie-Vasco, Dhan Zedric-Amor, Jiamwayne
+  -Bayaton, Nikko Yuan
 ---
