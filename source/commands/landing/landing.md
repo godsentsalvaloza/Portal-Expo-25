@@ -1,5 +1,7 @@
 ---
 main_section_title: Sentro de Museo
+main_section_description: Crafted History, Auctioned Today
+main_section_image: /images/uploads/bann3r.jpg
 main_section_image_alt: sentro-de-museo
 second_section_title: "Sentro de Museo: An Artisan Gallery"
 second_section_description: "Sentro de Museo: The Artisan Gallery presents a
@@ -27,8 +29,6 @@ second_article_link: /sculptures
 third_article_title: Research Papers
 third_article_alt_image: researches
 tags: landing
-main_section_description: Crafted History, Auctioned Today
-main_section_image: /images/uploads/pic03.jpg
 third_article_description: Following the journey of all graduating students of
   the Senior Highschool in STI Marikina, the culmination of their hardworks—
   made out of all the combined logical thoughts, supported by their chosen
