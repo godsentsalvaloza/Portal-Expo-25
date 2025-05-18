@@ -13,7 +13,7 @@ section: ICTE-201A
 identifier: a-vibrant-festival-gathering
 art_image: /images/uploads/painting-bg-2-.jpg
 art_image_alt_text: a-vibrant-festival-gathering
-members: <ul><li>Carl Francis Vinuya</li><li>Zoei Bangayan</li><li>Franco
-  Babilonia</li><li>Clyde Dhenzel Cresido</li></ul>
+members: <ul><li>Vinuya, Carl Francis</li><li>Bangayan, Zoei</li><li>Babilonia,
+  Franco</li><li>Cresido, Clyde Dhenzel</li></ul>
 tags: paintings
 ---
