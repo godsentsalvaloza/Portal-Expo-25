@@ -8,8 +8,8 @@ section: ABMT-201A
 identifier: petals-of-tomorrow
 art_image: /images/uploads/painting-bg-14-.jpg
 art_image_alt_text: petals-of-tomorrow
-members: <ul><li>Rish Joren B. Ocampo</li><li>Nicole Clien C.
-  Orfiano</li><li>Pauline S. Abong</li><li>Irish Mae R. Jumayao</li><li>Jhon
-  Carlo G. Oxina</li></ul>
+members: <ul><li>Ocampo, Rish Joren B.</li><li>Orfiano, Nicole Clien
+  C.</li><li>Abong, Pauline S.</li><li>Jumayao, Irish Mae R.</li><li>Oxina, Jhon
+  Carlo G.</li></ul>
 tags: paintings
 ---
