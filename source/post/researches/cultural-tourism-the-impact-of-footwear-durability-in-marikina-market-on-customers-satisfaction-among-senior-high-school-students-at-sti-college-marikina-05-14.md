@@ -16,14 +16,11 @@ research_abstract: This study examines the impact of Marikina footwear
   satisfaction, with students valuing longevity and resilience as key factors in
   their perception of value. However, comfort and affordability also play
   important roles, revealing a complex relationship between product durability
-  and overall user experience. While students appreciate Marikina's artisanal
+  and overall user experience. While students appreciate Marikina&#39;s artisanal
   heritage, concerns about declining craftsmanship and competition with cheaper,
   mass-produced imports highlight challenges facing the industry. The study
   concludes that improving durability, along with addressing comfort and cost,
-  can boost customer loyalty and restore Marikina's reputation as the "Shoe
-  Capital of the Philippines." Recommendations include fostering youth-driven
-  innovation, expanding vocational training, and emphasizing durability in
-  marketing strategies as a key selling point.
+  can boost customer loyalty and restore Marikina&#39;s reputation as the Shoe Capital of the Philippines. Recommendations include fostering youth-driven innovation, expanding vocational training, and emphasizing durability in marketing strategies as a key selling point.
 tags: toper
 members: Delima, Ashly Rose S. -Magbanua, Samatha Nicole I. -Marabulas, Resha
   Mae U. -Rico, Christine M. -Sarmiento, Cris Mae S.

@@ -6,7 +6,7 @@ research_abstract: This study investigates the effectiveness of vintage-style
   students in STI Marikina. It examines how elements of the interior design of
   retro-themed restaurants correlate with several factors, such as ambiance,
   service quality, and food presentation, and how these factors may affect the
-  perception of students' satisfaction levels. These results contribute to the
+  perception of students&#39; satisfaction levels. These results contribute to the
   existing knowledge of how restaurant design influences customer experience and
   satisfaction, particularly within the context of a younger demographic and a
   specific aesthetic. By using quantitative techniques to examine survey data

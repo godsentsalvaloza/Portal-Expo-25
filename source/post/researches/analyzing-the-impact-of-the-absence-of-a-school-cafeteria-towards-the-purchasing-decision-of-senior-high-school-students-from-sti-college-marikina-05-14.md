@@ -16,6 +16,6 @@ research_abstract: >-
 
   highlighting the importance of convenience, price, & meal variety. The design of this research is quantitative descriptive in nature. In data-gathering, we conducted a survey in which the researchers picked the respondents through simple random sampling technique. The results of the study showed that Senior High School students of STI College Marikina prefer to buy meals outside of school as compared to bringing their own meal. Additionally, convenience stores are among the top choices of students in forming their purchasing decision. It scored the highest weighted mean among the choices in all the three (3) factors with a weighted mean of 4.2 in convenience, 3.9 in cost-effectiveness, & 4.07 in food variety. With respect to the results & discussions, the researchers identified agencies that will benefit from the recommendations of this study.
 tags: abm
-members: Fabiala, Leanne Jasmine P.-Corpuz, Alyana Marie S.-Mabato-an, Vea
+members: Fabiala, Leanne Jasmine P.-Corpuz, Alyana Marie S.-Mabato&ndash;an, Vea
   P.-Mayo, Carley Nicolette R.-Quirante, Jonnadel Q.
 ---
