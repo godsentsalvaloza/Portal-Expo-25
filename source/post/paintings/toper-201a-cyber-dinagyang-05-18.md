@@ -1,12 +1,13 @@
 ---
 art_name: "Cyber-Dinagyang: Future Spirits of the Festival "
-art_description: This painting captures the vibrant energy and cultural richness
-  of the Dinagyang Festival, celebrated annually in Iloilo City. Bold, dynamic
-  brushstrokes and vivid colors bring to life the rhythmic movements of Ati
-  warriors, their traditional costumes, and the pulse of tribal music. The
-  artwork celebrates Filipino heritage and highlights the deep devotion to the
-  Santo Niño. It reflects not only festivity, but also unity, faith, and the
-  spirit of community among the people.
+art_description: 2025<br> 12" x 12" <br> <i>Acrylic on Canvas</i><br><br>This
+  painting captures the vibrant energy and cultural richness of the Dinagyang
+  Festival, celebrated annually in Iloilo City. Bold, dynamic brushstrokes and
+  vivid colors bring to life the rhythmic movements of Ati warriors, their
+  traditional costumes, and the pulse of tribal music. The artwork celebrates
+  Filipino heritage and highlights the deep devotion to the Santo Niño. It
+  reflects not only festivity, but also unity, faith, and the spirit of
+  community among the people.
 section: TOPER-201A
 identifier: cyber-dinagyang
 art_image: /images/uploads/painting-bg-1-.jpg
