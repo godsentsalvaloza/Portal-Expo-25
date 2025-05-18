@@ -18,5 +18,7 @@ section: CART-201A
 identifier: digital-smiles
 art_image: /images/uploads/painting-bg-11-.jpg
 art_image_alt_text: digital-smiles
-members: tba
+members: <ul><li>Abaygar, Ryan Jay</li><li>Balboa, Jay-B</li><li>Openiano, Kyle
+  Miguel</li><li>Panisa, Derick</li><li>Madayag, Mark Rayhan</li><li>Taracatac,
+  Marc Angelo</li><li>Guererro, Miguel</li></ul>
 ---
