@@ -1,6 +1,7 @@
 ---
 sculpture_name: Lost in the Code
-sculpture_description: This paper mâché sculpture is inspired by the Maskara
+sculpture_description: 2025<br>2ft<br><i>Paper Maché, Cardboard, Acrylic Paint,
+  Spray Paint</i><br><br>This paper mâché sculpture is inspired by the Maskara
   Festival but shown in a modern, futuristic way. Unlike the usual smiling
   masks, this one has a blank, emotionless face to show how people can slowly
   lose their real emotions because of too much technology and social media, with
