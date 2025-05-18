@@ -487,18 +487,21 @@
                 />
               </a>
               <h3
-                class="text-dark border-dark"
-                id="paintingTitle"
-                style="
-                  font-size: 1.4rem;
-                  margin: 0;
-                  padding: 0;
-                  font-weight: bold;
-                  text-align: center;
-                "
-              >
-                {{ post.data.art_name }}
-              </h3>
+  class="text-dark border-dark paintingTitle"
+  id="paintingTitle"
+  style="
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  "
+>
+  {{ post.data.art_name }}
+</h3>
               <h6 class="text-dark" id="paintingSection" style="font-size: 1em; text-align: center;">
                 {{ post.data.section }}
               </h6>
@@ -533,54 +536,66 @@
 
           <!-- script -->
           <script>
-            document.querySelectorAll(".clickable-card").forEach((card) => {
-              card.addEventListener("click", function (e) {
-                if (
-                  e.target.tagName.toLowerCase() === "a" ||
-                  e.target.classList.contains("paintingButton")
-                )
-                  return;
+  document.querySelectorAll(".clickable-card").forEach((card) => {
+    card.addEventListener("click", function (e) {
+      if (
+        e.target.tagName.toLowerCase() === "a" ||
+        e.target.classList.contains("paintingButton")
+      )
+        return;
 
-                const link = card.querySelector("a");
-                if (link) {
-                  link.click();
-                }
-              });
-            });
+      const link = card.querySelector("a");
+      if (link) {
+        link.click();
+      }
+    });
+  });
 
-            document.querySelectorAll(".paintingButton").forEach((button) => {
-              button.addEventListener("click", function (event) {
-                const membersContainer = this.closest(
-                  ".clickable-card"
-                ).querySelector(".membersDescription-container");
-                const isOpen = membersContainer.classList.contains("show");
+  document.querySelectorAll(".paintingButton").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const card = this.closest(".clickable-card");
+      const membersContainer = card.querySelector(".membersDescription-container");
+      const title = card.querySelector(".paintingTitle");
+      const isOpen = membersContainer.classList.contains("show");
 
-                // Close all open containers
-                document
-                  .querySelectorAll(".membersDescription-container.show")
-                  .forEach((container) => {
-                    if (container !== membersContainer) {
-                      container.classList.remove("show");
-                      container
-                        .closest(".clickable-card")
-                        .querySelector(".paintingButton").textContent =
-                        "See more";
-                    }
-                  });
+      // Close all open containers & reset other titles
+      document.querySelectorAll(".membersDescription-container.show").forEach((container) => {
+        if (container !== membersContainer) {
+          container.classList.remove("show");
+          container.closest(".clickable-card")
+            .querySelector(".paintingButton").textContent = "See more";
+          // Reset title style on other cards
+          const otherTitle = container.closest(".clickable-card").querySelector(".paintingTitle");
+          if (otherTitle) {
+            otherTitle.style.whiteSpace = "nowrap";
+            otherTitle.style.overflow = "hidden";
+            otherTitle.style.textOverflow = "ellipsis";
+          }
+        }
+      });
 
-                // Toggle the current container
-                if (isOpen) {
-                  membersContainer.classList.remove("show");
-                  this.textContent = "See more";
-                } else {
-                  membersContainer.classList.add("show");
-                  this.textContent = "See less";
-                }
+      // Toggle current container
+      if (isOpen) {
+        membersContainer.classList.remove("show");
+        this.textContent = "See more";
+        // Truncate the title
+        title.style.whiteSpace = "nowrap";
+        title.style.overflow = "hidden";
+        title.style.textOverflow = "ellipsis";
+      } else {
+        membersContainer.classList.add("show");
+        this.textContent = "See less";
+        // Show full title
+        title.style.whiteSpace = "normal";
+        title.style.overflow = "visible";
+        title.style.textOverflow = "unset";
+      }
 
-                event.stopPropagation();
-              });
-            });
-          </script>
+      event.stopPropagation();
+    });
+  });
+</script>
+
         </div>
       </section>
     </div>

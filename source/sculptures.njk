@@ -465,115 +465,135 @@
           </style>
           {%- for post in collections.sculptures -%}
           <article class="col-6 col-12-xsmall work-item">
-            <div
-              class="row-item bg-white py-3 px-3 rounded clickable-card"
-              id="{{ post.data.identifier }}"
-            >
-              <a
-                href="{{ post.data.sculpture_image }}"
-                class="image fit thumb"
-                id="paintingLink"
-              >
-                <img
-                  src="{{ post.data.sculpture_image }}"
-                  alt="{{ post.data.sculpture_image_alt_text }}"
-                  id="paintingImage"
-                />
-              </a>
-              <h3
-                class="text-dark border-dark"
-                id="paintingTitle"
-                style="
-                  font-size: 1.4em;
-                  margin: 0;
-                  padding: 0;
-                  font-weight: bold; text-align: center;
-                "
-              >
-                {{ post.data.sculpture_name }}
-              </h3>
-              <h6 class="text-dark" id="paintingSection" style="font-size: 1em; text-align: center;">
-                {{ post.data.section }}
-              </h6>
+  <div
+    class="row-item bg-white py-3 px-3 rounded clickable-card d-flex flex-column justify-content-between"
+    id="{{ post.data.identifier }}"
+    style="min-height: 400px; overflow: hidden;"
+  >
+    <a
+      href="{{ post.data.sculpture_image }}"
+      class="image fit thumb"
+      id="paintingLink"
+    >
+      <img
+        src="{{ post.data.sculpture_image }}"
+        alt="{{ post.data.sculpture_image_alt_text }}"
+        id="paintingImage"
+      />
+    </a>
 
-              <div class="membersDescription-container">
-                <p
-                  class="text-dark pb-3"
-                  id="paintingDescription"
-                  style="font-size: 0.85em; text-align: justify"
-                >
-                  {{ post.data.sculpture_description | safe }}
-                </p>
-                <p
-                  class="text-dark mb-1"
-                  style="font-size: 0.85em; font-weight: bold"
-                >
-                  Members:
-                </p>
-                <div style="font-size: 0.8em; color: black; margin-left: 0.5em;">
-                  {{ post.data.members | safe }}
-                </div>
-              </div>
+    <h3
+      class="text-dark border-dark sculptureTitle"
+      id="paintingTitle"
+      style="
+        font-size: 1.4em;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      "
+    >
+      {{ post.data.sculpture_name }}
+    </h3>
 
-              <div class="d-flex justify-content-center my-3">
-                <button class="sculptureButton btn btn-primary px-5">
-                  See more
-                </button>
-              </div>
-            </div>
-          </article>
+    <h6 class="text-dark" id="paintingSection" style="font-size: 1em; text-align: center;">
+      {{ post.data.section }}
+    </h6>
+
+    <div class="membersDescription-container" style="flex-grow: 1;">
+      <p
+        class="text-dark pb-3"
+        id="paintingDescription"
+        style="font-size: 0.85em; text-align: justify; overflow: hidden; text-overflow: ellipsis;"
+      >
+        {{ post.data.sculpture_description | safe }}
+      </p>
+      <p
+        class="text-dark mb-1"
+        style="font-size: 0.85em; font-weight: bold"
+      >
+        Members:
+      </p>
+      <div style="font-size: 0.8em; color: black; margin-left: 0.5em;">
+        {{ post.data.members | safe }}
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+      <button class="sculptureButton btn btn-primary px-5">
+        See more
+      </button>
+    </div>
+  </div>
+</article>
+
           {%- endfor -%}
 
           <!-- script -->
           <script>
-            document.querySelectorAll(".clickable-card").forEach((card) => {
-              card.addEventListener("click", function (e) {
-                if (
-                  e.target.tagName.toLowerCase() === "a" ||
-                  e.target.classList.contains("sculptureButton")
-                )
-                  return;
+  document.querySelectorAll(".clickable-card").forEach((card) => {
+    card.addEventListener("click", function (e) {
+      if (
+        e.target.tagName.toLowerCase() === "a" ||
+        e.target.classList.contains("sculptureButton")
+      )
+        return;
 
-                const link = card.querySelector("a");
-                if (link) {
-                  link.click();
-                }
-              });
-            });
+      const link = card.querySelector("a");
+      if (link) {
+        link.click();
+      }
+    });
+  });
 
-            document.querySelectorAll(".sculptureButton").forEach((button) => {
-              button.addEventListener("click", function (event) {
-                const membersContainer = this.closest(
-                  ".clickable-card"
-                ).querySelector(".membersDescription-container");
-                const isOpen = membersContainer.classList.contains("show");
+  document.querySelectorAll(".sculptureButton").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const card = this.closest(".clickable-card");
+      const membersContainer = card.querySelector(".membersDescription-container");
+      const title = card.querySelector(".sculptureTitle");
+      const isOpen = membersContainer.classList.contains("show");
 
-                // Close all open containers
-                document
-                  .querySelectorAll(".membersDescription-container.show")
-                  .forEach((container) => {
-                    if (container !== membersContainer) {
-                      container.classList.remove("show");
-                      container
-                        .closest(".clickable-card")
-                        .querySelector(".sculptureButton").textContent =
-                        "See more";
-                    }
-                  });
+      // Close all open containers & reset titles
+      document.querySelectorAll(".membersDescription-container.show").forEach((container) => {
+        if (container !== membersContainer) {
+          container.classList.remove("show");
+          container.closest(".clickable-card")
+            .querySelector(".sculptureButton").textContent = "See more";
+          // Reset title style on other cards
+          const otherTitle = container.closest(".clickable-card").querySelector(".sculptureTitle");
+          if (otherTitle) {
+            otherTitle.style.whiteSpace = "nowrap";
+            otherTitle.style.overflow = "hidden";
+            otherTitle.style.textOverflow = "ellipsis";
+          }
+        }
+      });
 
-                // Toggle the current container
-                if (isOpen) {
-                  membersContainer.classList.remove("show");
-                  this.textContent = "See more";
-                } else {
-                  membersContainer.classList.add("show");
-                  this.textContent = "See less";
-                }
+      // Toggle current container
+      if (isOpen) {
+        membersContainer.classList.remove("show");
+        this.textContent = "See more";
+        // Truncate the title
+        title.style.whiteSpace = "nowrap";
+        title.style.overflow = "hidden";
+        title.style.textOverflow = "ellipsis";
+      } else {
+        membersContainer.classList.add("show");
+        this.textContent = "See less";
+        // Show full title
+        title.style.whiteSpace = "normal";
+        title.style.overflow = "visible";
+        title.style.textOverflow = "unset";
+      }
 
-                event.stopPropagation();
-              });
-            });
-          </script>
+      event.stopPropagation();
+    });
+  });
+</script>
+
         </div>
       </section>
     </div>
