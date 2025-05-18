@@ -693,6 +693,12 @@
 					text-align: justify;
 				}
 
+        .popup-dialog .popup-members {
+					font-size: 0.9em;
+					text-align: justify;
+          margin-left: 0.2em;
+				}
+
 				.popup-dialog::backdrop {
 					background-color: rgba(0, 0, 0, 0);
 					transition: background-color 0.3s ease-in-out;
@@ -701,6 +707,10 @@
 				.popup-dialog.open::backdrop {
 					background-color: rgba(0, 0, 0, 0.5);
 				}
+
+        .no-scroll {
+          overflow: hidden;
+        }
 			</style>
 
      <script>
@@ -736,15 +746,19 @@
 
         // Open Dialog with Animation
         function openDialog() {
-          popupDialog.classList.add("showing");
           popupDialog.classList.remove("closing");
+          popupDialog.classList.add("open");
           popupDialog.showModal();
+          popupDialog.classList.add("showing");
+          document.body.classList.add("no-scroll");
         }
 
         // Close Dialog with Animation
         function closeDialog() {
-          popupDialog.classList.add("closing");
           popupDialog.classList.remove("showing");
+          document.body.classList.remove("no-scroll");
+          popupDialog.classList.add("open");
+          popupDialog.classList.add("closing");
 
           // Wait for the transition to complete before closing
           setTimeout(() => {
@@ -753,30 +767,30 @@
         }
 
         // Attach Event Listeners for Links
-       links.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
 
-    const title = this.getAttribute("data-title");
-    const abstract = this.getAttribute("data-abstract");
-     let members = this.getAttribute("data-members") || "";
-    members = members.replace(/^"|"$/g, '');
+            const title = this.getAttribute("data-title");
+            const abstract = this.getAttribute("data-abstract");
+            let members = this.getAttribute("data-members") || "";
+            members = members.replace(/^"|"$/g, '');
 
-    // Convert "-" separated data to a list
-    members = members.split("-").map(item => item.trim());
+            // Convert "-" separated data to a list
+            members = members.split("-").map(item => item.trim());
 
-    // Convert members array to a list with <br>
-    const membersHTML = members.join("<br>");
+            // Convert members array to a list with <br>
+            const membersHTML = members.join("<br>");
 
-    // Update dialog content
-    popupTitle.innerHTML = title;
-    popupAbstract.innerHTML = abstract;
-    popupMembers.innerHTML = membersHTML;
+            // Update dialog content
+            popupTitle.innerHTML = title;
+            popupAbstract.innerHTML = abstract;
+            popupMembers.innerHTML = membersHTML;
 
-    // Open dialog with transition
-    openDialog();
-  });
-});
+            // Open dialog with transition
+            openDialog();
+          });
+        });
 
 
         // Close Dialog when the close button is clicked
