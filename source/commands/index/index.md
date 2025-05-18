@@ -5,7 +5,7 @@ main_section_description: Featuring local festivals reimagined through
   students.
 first_section_title: TOPER
 first_section_description: Tourism Operations
-first_section_image: /images/uploads/pic10.jpg
+first_section_image: /images/uploads/toper.jpg
 first_section_alternative_image: toper
 second_section_title: IT-MAWD
 second_section_description: IT in Mobile App and Web Development
