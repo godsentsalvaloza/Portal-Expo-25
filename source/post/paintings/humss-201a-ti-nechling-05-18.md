@@ -1,7 +1,8 @@
 ---
 art_name: Ti-nechling
-art_description: 2 robots is seen dancing tinikling, implying that technology
-  innovated, culture, our identity remains.
+art_description: 2025<br> 12" x 12" <br> <i>Acrylic on Canvas</i><br><br>2
+  robots is seen dancing tinikling, implying that technology innovated, culture,
+  our identity remains.
 section: HUMSS-201A
 identifier: ti-nechling
 art_image: /images/uploads/painting-bg-10-.jpg
