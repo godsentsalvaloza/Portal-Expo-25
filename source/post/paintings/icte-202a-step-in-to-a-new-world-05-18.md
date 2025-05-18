@@ -8,9 +8,9 @@ section: ICTE-202A
 identifier: step-in-to-a-new-world
 art_image: /images/uploads/painting-bg-12-.jpg
 art_image_alt_text: step-in-to-a-new-world
-members: <ul><li>Lance Gabrielle Geronimo</li><li>Hezekiah Ezekiel
-  Vasquez</li><li>Angelo Salles</li><li>John David Babia</li><li>Cylax Eurrie
-  Ocampo</li><li>Dhan Zedric Vasco</li><li>Jiamwayne Amor</li><li>Nikko Yuan
-  Bayaton</li></ul>
+members: <ul><li>Geronimo, Lance Gabrielle</li><li>Vasquez, Hezekiah
+  Ezekiel</li><li>Salles, Angelo</li><li>Babia, John David</li><li>Ocampo, Cylax
+  Eurrie</li><li>Vasco, Dhan Zedric</li><li>Amor, Jiamwayne</li><li>Bayaton,
+  Nikko Yuan</li></ul>
 tags: paintings
 ---
