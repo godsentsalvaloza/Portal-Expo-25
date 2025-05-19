@@ -11,7 +11,7 @@ collections:
     folder: "/source/commands/social"
     create: false
     fields:
-      - { label: "Twiter - Link", name: "twitter_link", widget: "string" }
+      - { label: "Facebook - Link", name: "facebook_link", widget: "string" }
       - { label: "Github - Link", name: "github_link", widget: "string" }
 
   - name: "index"
