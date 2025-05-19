@@ -1,5 +1,5 @@
 ---
-art_name: Digital Smiles Maskara Festival in the Age of Modernity
+art_name: "Digital Smiles: Maskara Festival in the Age of Modernity"
 art_description: "2025<br> 12\" x 12\" <br> <i>Acrylic on
   Canvas</i><br><br>Digital Smiles: Maskara Festival in the Age of Innovation
   This artwork reimagines the vibrant spirit of the Maskara Festival by fusing
