@@ -19,14 +19,14 @@ fourth_section_title: CART
 fourth_section_description: Culinary Arts
 fourth_section_image: /images/uploads/hpculart.jpg
 fourth_section_alternative_image: cart
-fifth_section_title: SHS EXPO 2025
-fifth_section_description: "Sentro de Museo: An Artisan Gallery"
-fifth_section_image: /images/uploads/stiexpo.jpg
-fifth_section_alternative_image: test alt img 5
-sixth_section_title: ABM
-sixth_section_description: Accountancy, Business and Management
-sixth_section_image: /images/uploads/hpabm.jpg
-sixth_section_alternative_image: abm
+fifth_section_title: ABM
+fifth_section_description: Accountancy, Business and Management
+fifth_section_image: /images/uploads/hpabm.jpg
+fifth_section_alternative_image: abm
+sixth_section_title: SHS EXPO 2025
+sixth_section_description: "Sentro de Museo: An Artisan Gallery"
+sixth_section_image: /images/uploads/stiexpo.jpg
+sixth_section_alternative_image: test alt img 6
 about_description: STI College Marikina’s SHS EXPO 2025 stands as a premier
   event celebrating the creativity and innovation of its Grade 12 students. This
   year’s highlight is <strong>'Sentro de Museo'</strong>, an <strong>Art
