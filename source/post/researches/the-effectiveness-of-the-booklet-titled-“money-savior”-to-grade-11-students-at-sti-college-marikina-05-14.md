@@ -1,5 +1,6 @@
 ---
-research_title: The Effectivenss of the Booklet Titled &#34;Money Savior&#34; to Grade 11 Students at STI College Marikina
+research_title: The Effectiveness of the Booklet Titled &#34;Money Savior&#34;
+  to Grade 11 Students at STI College Marikina
 research_abstract: The study focuses on the factors that affect the financial
   decision of Grade 11 Senior high school students in relation to financial
   literacy. The researchers chose Grade 11 students as respondents from ABM,
