@@ -161,6 +161,7 @@
             </div>
           </section>
         </section>
+        
         <!-- Three -->
         <section id="three">
           <div class="inner">
@@ -182,7 +183,7 @@
           </div>
         </section>
       </div>
-      <!-- Footer -->
+
       <!-- Footer -->
       {%- for post in collections.social -%}
       <footer id="footer">
@@ -197,26 +198,16 @@
             </li>
             <li>
               <a
-                href="{{ post.data.instagram_link }}"
-                class="icon brands alt fa-instagram"
-                ><span class="label">Instagram</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="{{ post.data.twitter_link }}"
-                class="icon brands alt fa-twitter"
-                ><span class="label">Twitter</span></a
+                href="{{ post.data.github_link }}"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
               >
             </li>
           </ul>
           <ul class="copyright">
             <li>&copy; Sentro de Museo</li>
             <li>
-              Design:
-              <a href="https://github.com/godsentsalvaloza/Portal-Expo-25"
-                >Portal Team EXPO '25</a
-              >
+              Design: Portal Team EXPO '25
             </li>
           </ul>
         </div>

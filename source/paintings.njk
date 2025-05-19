@@ -419,6 +419,31 @@
               margin: 0 5px;
             }
 
+            /* Removes the default blue color when holding the buttons */
+            .menuButton, .backButton, .paintingButton {
+              background-color: #012350ff;
+              border: none;
+              color: white;
+            }
+
+            .menuButton:hover, .backButton:hover {
+              background-color: #012350ff;
+              transition: color 0.3s ease;
+            }
+
+            .menuButton:focus, .backButton:focus,  
+            .menuButton:active, .backButton:active {
+              background-color: #012350ff !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
+
+            .paintingButton:active {
+              background-color: #d4af37 !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
+
             .membersDescription-container {
               height: 0;
               overflow: hidden;
@@ -487,21 +512,21 @@
                 />
               </a>
               <h3
-  class="text-dark border-dark paintingTitle"
-  id="paintingTitle"
-  style="
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  "
->
-  {{ post.data.art_name }}
-</h3>
+                class="text-dark border-dark paintingTitle"
+                id="paintingTitle"
+                style="
+                  font-size: 1.4rem;
+                  margin: 0;
+                  padding: 0;
+                  font-weight: bold;
+                  text-align: center;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              >
+                {{ post.data.art_name }}
+              </h3>
               <h6 class="text-dark" id="paintingSection" style="font-size: 1em; text-align: center;">
                 {{ post.data.section }}
               </h6>
@@ -518,7 +543,7 @@
                   class="text-dark mb-1"
                   style="font-size: 0.85em; font-weight: bold"
                 >
-                  Members:
+                  Artists:
                 </p>
                 <div style="font-size: 0.8em; color: black; margin-left: 0.5em;">
                   {{ post.data.members | safe }}
@@ -536,111 +561,100 @@
 
           <!-- script -->
           <script>
-  document.querySelectorAll(".clickable-card").forEach((card) => {
-    card.addEventListener("click", function (e) {
-      if (
-        e.target.tagName.toLowerCase() === "a" ||
-        e.target.classList.contains("paintingButton")
-      )
-        return;
+            document.querySelectorAll(".clickable-card").forEach((card) => {
+              card.addEventListener("click", function (e) {
+                if (
+                  e.target.tagName.toLowerCase() === "a" ||
+                  e.target.classList.contains("paintingButton")
+                )
+                  return;
 
-      const link = card.querySelector("a");
-      if (link) {
-        link.click();
-      }
-    });
-  });
+                const link = card.querySelector("a");
+                if (link) {
+                  link.click();
+                }
+              });
+            });
 
-  document.querySelectorAll(".paintingButton").forEach((button) => {
-    button.addEventListener("click", function (event) {
-      const card = this.closest(".clickable-card");
-      const membersContainer = card.querySelector(".membersDescription-container");
-      const title = card.querySelector(".paintingTitle");
-      const isOpen = membersContainer.classList.contains("show");
+            document.querySelectorAll(".paintingButton").forEach((button) => {
+              button.addEventListener("click", function (event) {
+                const card = this.closest(".clickable-card");
+                const membersContainer = card.querySelector(".membersDescription-container");
+                const title = card.querySelector(".paintingTitle");
+                const isOpen = membersContainer.classList.contains("show");
 
-      // Close all open containers & reset other titles
-      document.querySelectorAll(".membersDescription-container.show").forEach((container) => {
-        if (container !== membersContainer) {
-          container.classList.remove("show");
-          container.closest(".clickable-card")
-            .querySelector(".paintingButton").textContent = "See more";
-          // Reset title style on other cards
-          const otherTitle = container.closest(".clickable-card").querySelector(".paintingTitle");
-          if (otherTitle) {
-            otherTitle.style.whiteSpace = "nowrap";
-            otherTitle.style.overflow = "hidden";
-            otherTitle.style.textOverflow = "ellipsis";
-          }
-        }
-      });
+                // Close all open containers & reset other titles
+                document.querySelectorAll(".membersDescription-container.show").forEach((container) => {
+                  if (container !== membersContainer) {
+                    container.classList.remove("show");
+                    container.closest(".clickable-card")
+                      .querySelector(".paintingButton").textContent = "See more";
+                    // Reset title style on other cards
+                    const otherTitle = container.closest(".clickable-card").querySelector(".paintingTitle");
+                    if (otherTitle) {
+                      otherTitle.style.whiteSpace = "nowrap";
+                      otherTitle.style.overflow = "hidden";
+                      otherTitle.style.textOverflow = "ellipsis";
+                    }
+                  }
+                });
 
-      // Toggle current container
-      if (isOpen) {
-        membersContainer.classList.remove("show");
-        this.textContent = "See more";
-        // Truncate the title
-        title.style.whiteSpace = "nowrap";
-        title.style.overflow = "hidden";
-        title.style.textOverflow = "ellipsis";
-      } else {
-        membersContainer.classList.add("show");
-        this.textContent = "See less";
-        // Show full title
-        title.style.whiteSpace = "normal";
-        title.style.overflow = "visible";
-        title.style.textOverflow = "unset";
-      }
+                // Toggle current container
+                if (isOpen) {
+                  membersContainer.classList.remove("show");
+                  this.textContent = "See more";
+                  // Truncate the title
+                  title.style.whiteSpace = "nowrap";
+                  title.style.overflow = "hidden";
+                  title.style.textOverflow = "ellipsis";
+                } else {
+                  membersContainer.classList.add("show");
+                  this.textContent = "See less";
+                  // Show full title
+                  title.style.whiteSpace = "normal";
+                  title.style.overflow = "visible";
+                  title.style.textOverflow = "unset";
+                }
 
-      event.stopPropagation();
-    });
-  });
-</script>
+                event.stopPropagation();
+              });
+            });
+          </script>
 
         </div>
       </section>
     </div>
 
     {%- for post in collections.social -%}
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li>
-            <a
-              href="{{ post.data.facebook_link }}"
-              class="icon brands alt fa-facebook-f"
-              ><span class="label">Facebook</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="{{ post.data.instagram_link }}"
-              class="icon brands alt fa-instagram"
-              ><span class="label">Instagram</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="{{ post.data.twitter_link }}"
-              class="icon brands alt fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; Sentro de Museo</li>
-          <li>
-            Design:
-            <a href="https://github.com/godsentsalvaloza/Portal-Expo-25"
-              >Portal Team EXPO '25</a
-            >
-          </li>
-        </ul>
-      </div>
-    </footer>
-    {%- endfor -%}
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="{{ post.data.facebook_link }}"
+                class="icon brands alt fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ post.data.github_link }}"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Sentro de Museo</li>
+            <li>
+              Design: Portal Team EXPO '25
+            </li>
+          </ul>
+        </div>
+      </footer>
+      {%- endfor -%}
 
     <!-- Scripts -->
-
     <script src="/assets/js/strata/jquery.min.js"></script>
     <script src="/assets/js/strata/jquery.poptrox.min.js"></script>
     <script src="/assets/js/strata/browser.min.js"></script>

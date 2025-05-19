@@ -482,12 +482,12 @@
             margin: 0 5px;
           }
 
-          .strandButton i {
+          .strandButton .fas.fa-caret-down {
             float: right;
             transition: transform 0.3s ease-in-out
           }
 
-          .strandButton.open i {
+          .strandButton.open .fas.fa-caret-down {
             transform: rotate(180deg);
           }
         </style>
@@ -731,6 +731,7 @@
 
             // Toggle the clicked container's visibility
             container.classList.toggle("show");
+            button.classList.toggle("open");
           });
         });
 
@@ -757,7 +758,7 @@
         function closeDialog() {
           popupDialog.classList.remove("showing");
           document.body.classList.remove("no-scroll");
-          popupDialog.classList.add("open");
+          popupDialog.classList.remove("open");
           popupDialog.classList.add("closing");
 
           // Wait for the transition to complete before closing
@@ -806,42 +807,32 @@
     </div>
 
     {%- for post in collections.social -%}
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li>
-            <a
-              href="{{ post.data.facebook_link }}"
-              class="icon brands alt fa-facebook-f"
-              ><span class="label">Facebook</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="{{ post.data.instagram_link }}"
-              class="icon brands alt fa-instagram"
-              ><span class="label">Instagram</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="{{ post.data.twitter_link }}"
-              class="icon brands alt fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; Sentro de Museo</li>
-          <li>
-            Design:
-            <a href="https://github.com/godsentsalvaloza/Portal-Expo-25"
-              >Portal Team EXPO '25</a
-            >
-          </li>
-        </ul>
-      </div>
-    </footer>
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="{{ post.data.facebook_link }}"
+                class="icon brands alt fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ post.data.github_link }}"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Sentro de Museo</li>
+            <li>
+              Design: Portal Team EXPO '25
+            </li>
+          </ul>
+        </div>
+      </footer>
     {%- endfor -%}
 
     <!-- Scripts -->
