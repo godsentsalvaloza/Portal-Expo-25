@@ -412,6 +412,31 @@
             .backButton, .menuButton {
               margin: 0 5px;
             }
+
+            /* Removes the default blue color when holding the buttons */
+            .menuButton, .backButton, .sculptureButton {
+              background-color: #012350ff;
+              border: none;
+              color: white;
+            }
+
+            .menuButton:hover, .backButton:hover {
+              background-color: #012350ff;
+              transition: color 0.3s ease;
+            }
+
+            .menuButton:focus, .backButton:focus,  
+            .menuButton:active, .backButton:active {
+              background-color: #012350ff !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
+
+            .sculptureButton:active {
+              background-color: #d4af37 !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
             
             .membersDescription-container {
               height: 0;
@@ -463,7 +488,7 @@
               }
             }
           </style>
-          
+
           {%- for post in collections.sculptures -%}
           <article class="col-6 col-12-xsmall work-item">
             <div

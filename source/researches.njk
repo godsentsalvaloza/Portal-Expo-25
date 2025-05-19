@@ -482,6 +482,25 @@
             margin: 0 5px;
           }
 
+          /* Removes the default blue color when holding the buttons */
+            .menuButton, .backButton {
+              background-color: #012350ff;
+              border: none;
+              color: white;
+            }
+
+            .menuButton:hover, .backButton:hover {
+              background-color: #012350ff;
+              transition: color 0.3s ease;
+            }
+
+            .menuButton:focus, .backButton:focus,  
+            .menuButton:active, .backButton:active {
+              background-color: #012350ff !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
+
           .strandButton .fas.fa-caret-down {
             float: right;
             transition: transform 0.3s ease-in-out
@@ -489,6 +508,10 @@
 
           .strandButton.open .fas.fa-caret-down {
             transform: rotate(180deg);
+          }
+
+          .fa-solid.fa-file-lines {
+            margin-right: 12px;
           }
         </style>
 
@@ -513,7 +536,7 @@
                   data-title="{{ post.data.research_title | safe }}"
                   data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title | safe }}</a
+                  ><i class="fa-solid fa-file-lines"></i> {{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -542,7 +565,7 @@
                   data-title="{{ post.data.research_title | safe }}"
                   data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title | safe }}</a
+                  ><i class="fa-solid fa-file-lines"></i> {{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -571,7 +594,7 @@
                   data-title="{{ post.data.research_title | safe }}"
                   data-abstract="{{ post.data.research_abstract | safe }}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title | safe }}</a
+                  ><i class="fa-solid fa-file-lines"></i> {{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -600,7 +623,7 @@
                   data-title="{{ post.data.research_title | safe }}"
                   data-abstract="{{ post.data.research_abstract  | safe}}"
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title | safe }}</a
+                  ><i class="fa-solid fa-file-lines"></i> {{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
@@ -628,7 +651,7 @@
                   data-title="{{ post.data.research_title | safe }}"
                   data-abstract='{{ post.data.research_abstract  | safe}}'
                   data-members='{{ post.data.members | dump | safe }}'
-                  >{{ post.data.research_title | safe }}</a
+                  ><i class="fa-solid fa-file-lines"></i> {{ post.data.research_title | safe }}</a
                 >
               </article>
               <br />
