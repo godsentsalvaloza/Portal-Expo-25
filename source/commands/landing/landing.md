@@ -35,9 +35,7 @@ third_article_description: Following the journey of all graduating students of
   literatures, and sharpened by the administration— their Research Papers.
 third_article_image: /images/uploads/pic03.jpg
 third_article_link: /researches
-fourth_section_title: General
-fourth_section_description: Senior High School Exposition 2025 emphasizes the
-  connection of the modern world and the cultivation of culture through exhibits
-  of artworks such as paintings and sculptures.
-fourth_section_link: /
+fourth_section_title: SHS Expo 2025 Portal Client Satisfaction Form
+fourth_section_description: The Senior High School Exposition 2025 showcases the fusion of modern life and cultural expression through student-created artworks such as paintings and sculptures. This satisfaction form is designed to gather your feedback on the overall experience, helping us enhance future exhibitions and better celebrate student creativity.
+fourth_section_link: https://docs.google.com/forms/d/e/1FAIpQLScxLHa153O3MHVziACL46e_w-4Z8KZAaziqCdDg7ADbjCktmw/viewform
 ---
