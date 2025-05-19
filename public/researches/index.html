@@ -513,6 +513,14 @@
           .fa-solid.fa-file-lines {
             margin-right: 12px;
           }
+
+          .fa-solid.fa-folder-closed {
+            margin-right: 12px;
+          }
+
+          .fa-solid.fa-folder-open {
+            margin-right: 12px;
+          }
         </style>
 
         <!-- Strand Dividers -->
@@ -522,6 +530,7 @@
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
+            <i class="fa-solid fa-folder-closed"></i>
             Accountancy, Business and Management
             <i class="fas fa-caret-down"></i>
           </button>
@@ -588,6 +597,7 @@ highlighting the importance of convenience, price, & meal variety. The design of
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
+            <i class="fa-solid fa-folder-closed"></i>
             Culinary Arts
             <i class="fas fa-caret-down"></i>
           </button>
@@ -653,6 +663,7 @@ highlighting the importance of convenience, price, & meal variety. The design of
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
+            <i class="fa-solid fa-folder-closed"></i>
             Humanities and Social Sciences
             <i class="fas fa-caret-down"></i>
           </button>
@@ -709,6 +720,7 @@ Recent surveys and disputes showcase the importance of student organization in a
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
+            <i class="fa-solid fa-folder-closed"></i>
             IT in Mobile App and Web Development
             <i class="fas fa-caret-down"></i>
           </button>
@@ -803,6 +815,7 @@ Recent surveys and disputes showcase the importance of student organization in a
             type="button"
             class="strandButton border-0 bg-transparent w-100 text-start"
           >
+            <i class="fa-solid fa-folder-closed"></i>
             Tourism Operations
             <i class="fas fa-caret-down"></i>
           </button>
@@ -923,6 +936,7 @@ Recent surveys and disputes showcase the importance of student organization in a
         document.querySelectorAll(".strandDivider").forEach((divider) => {
           const button = divider.querySelector(".strandButton");
           const container = divider.querySelector(".titles-container");
+          const folderIcon = button.querySelector("i.fa-solid");
 
           button.addEventListener("click", function () {
             // Close any open dividers first
@@ -931,12 +945,26 @@ Recent surveys and disputes showcase the importance of student organization in a
               .forEach((openContainer) => {
                 if (openContainer !== container) {
                   openContainer.classList.remove("show");
+                  const button = openContainer.parentNode.querySelector(".strandButton");
+                  button.classList.remove("open");
+                  const folderIcon = button.querySelector("i.fa-solid");
+                  folderIcon.classList.remove("fa-folder-open");
+                  folderIcon.classList.add("fa-folder-closed");
                 }
               });
 
             // Toggle the clicked container's visibility
             container.classList.toggle("show");
             button.classList.toggle("open");
+
+            // Toggle the folder icon
+            if (button.classList.contains("open")) {
+              folderIcon.classList.remove("fa-folder-closed");
+              folderIcon.classList.add("fa-folder-open");
+            } else {
+              folderIcon.classList.remove("fa-folder-open");
+              folderIcon.classList.add("fa-folder-closed");
+            }
           });
         });
 
