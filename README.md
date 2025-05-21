@@ -6,6 +6,37 @@ Web-based Portal System built for STI Marikina's Senior High School Expo 2025, t
 ## Web Link
 https://stim2025expo.netlify.app/landing/
 
+## 🚀 Getting Started
+
+Follow these steps to set up the project on your local machine:
+
+### 1. Clone the Repository  
+Use Git to clone this project to your computer:
+
+```bash
+git clone https://github.com/godsentsalvaloza/Portal-Expo-25
+```
+
+### 2. Navigate to the Project Folder
+Go to the folder where the project is cloned
+```bash
+cd Portal-Expo-25
+```
+
+### 3. Install Dependencies
+Make sure you have Node.js installed. Then, install the required packages:
+```bash
+npm install
+
+```
+
+### 4. Start the Server
+Run the app:
+```bash
+npm start
+
+```
+
 ## Technologies Used
 - Bootstrap - Style  
 - Decap CMS (Netlify CMS) - CMS  
